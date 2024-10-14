@@ -1,0 +1,752 @@
+{
+  "content": {
+    "common": {
+      "adhaLogInHeading": "Welcome to \n dgcl app",
+      "adhaLogInDescription1": "This is your One Stop Solution for all Your Housing Requirements. Sign in below to continue",
+      "adhaLogInDescription2": "A single trusted digital identity for all citizens, residents and visitors.",
+      "adhaLogInBtnLabel": "Sign in with UAE PASS",
+      "adhaLogInTermsAndConditions": " © 2022 Abu Dhabi Government. All rights reserved.",
+      "adhaUserInfoNameTxt": "Hello",
+      "adhaUserInfoDescription": "Welcome to ADHA!",
+      "adhaUserInfoNameLabel": "Name",
+      "adhaUserInfoContactNumberLabel": "Contact Number",
+      "adhaUserInfoEmiratesIdLabel": "Emirates ID",
+      "adhaUserInfoAddressLabel": "Address",
+      "adhaUserInfoTitle": "My profile",
+      "adhaUserInfoApplicationDetailsTitle": "Application Details",
+      "adhaUserInfoApplicationDetailsHeader": "Please confirm your details to continue",
+      "adhaUserInfoApplicationNumberLabel": "Application Number",
+      "adhaUserInfoServiceTypeLabel": "Service Type",
+      "adhaUserInfoSelectedRegionLabel": "Your Selected Region",
+      "adhaUserInfoConfirmApplicationBtnLabel": "Confirm Application Details",
+      "adhaUserInfoConfirmApplicationChangeBtnLabel": "Change My Application",
+      "adhaUserInfoChangeApplicationPopupHeading": "Are you sure you want to change your application?",
+      "adhaUserInfoChangeApplicationPopupDescription1": "Upon confirming application change, your request will be submitted to the Customer Service team for review.",
+      "adhaUserInfoChangeApplicationPopupDescription2": "We will contact you within 7 working days on this number: 050 123 1234",
+      "adhaUserInfoChangeApplicationTitle": "Change Application Details",
+      "adhaUserInfoChangeApplicationBtnLabel": "Yes, change my application",
+      "adhaUserInfoChangeApplicationPopupHeader": "You have selected to change the following details:",
+      "adhaUserInfoChangeRequestHeading": "Your change request has been sent successfully",
+      "adhaUserInfoChangeRequestDescription1": "Upon confirming application change, your request will be submitted to the Customer Service team for review.",
+      "adhaUserInfoChangeRequestDescription2": "We will contact you within 7 working days on this number: 050 123 1234",
+      "adhaUserInfoApplicationStatusTitle": "Application Status",
+      "adhaUserInfoApplicationStatusWaterfallContent": [
+        {
+          "title": "Application approval",
+          "description": "Your initial application and details"
+        },
+        {
+          "title": "Plot Reservation",
+          "description": "Reserve your plot for a time limit and think through your decision."
+        },
+        {
+          "title": "Plot Confirmation",
+          "description": "Confirm or cancel your decision on the plot selection."
+        },
+        {
+          "title": "Download your title deed",
+          "description": "You can download the title deed on the basis of the plot confirmation."
+        }
+      ],
+      "adhaUserInfoProgressBarContent": [
+        "Application Status",
+        "Plot Reservation",
+        "Plot Confirmation"
+      ],
+      "adhaUserInfoDetailsConfirmationTitle": "Details Confirmed",
+      "adhaUserInfoReservePlotBtnLabel": "Reserve Plot",
+      "adhaUserInfoGoToReservePlotBtnLabel": "Go To Plot Reservation",
+      "adhaUserInfoCardsContent": [
+        {
+          "title": "Choose my Land Plot",
+          "descripiton": "Continue to select your land plot and recieve your title deeds all within the app",
+          "btnLabel": "Find a plot"
+        },
+        {
+          "title": "Book an Appointment",
+          "descripiton": "Want to meet us face-to-face? Let's schedule an appointment together.",
+          "btnLabel": "Book now"
+        }
+      ],
+      "adhaUserNotInPilotScreen": {
+        "title": "Coming Soon",
+        "alertBoxText": "These services will soon be available to you!",
+        "description1": "Meanwhile, watch this video to find out all about our services and how we can help you in the future.",
+        "ourServicesHeader": "Our services",
+        "description2": "lorem ipsum",
+        "tammBtnLabel": "TAMM Services",
+        "videoLink": "https://www.youtube.com/watch?v=cIv8Q9Sh-Lc"
+      },
+      "adhaEnquiryFormTitle": "Enquiry",
+      "adhaEnquiryFormHeader": "How can we help you?",
+      "adhaEnquiryFormDescription": "For all enquires, please email us using the below form:",
+      "adhaEnquiryFormNote": "Your basic information will be shared with ADHA team upon submitting your inquiry",
+      "adhaEnquiryFormNoteLabel": "Attention: ",
+      "adhaEnquiryFormServiceTypeLabel": "Service Type",
+      "adhaEnquiryFormServiceTypeDropdown": [
+        "Land Grant",
+        "Ready House"
+      ],
+      "adhaEnquiryFormMessageLabel": "Message",
+      "adhaEnquiryFormMessageLimitLabel": "510",
+      "adhaEnquiryFormMessageDescription": "Enter your message here",
+      "adhaEnquiryFormSuccessPopupTitle": "Your enquiry has been sent successfully",
+      "adhaEnquiryFormSuccessPopupDescription": "We will contact you within <> working days on this number: ",
+      "adhaEnquiryFormFailurePopupTitle": "Looks like something went wrong. Please try again.",
+      "adhaFAQTitle": "FAQ",
+      "adhaFAQHeader": "Do you need help?",
+      "adhaFAQDescription": "Select from the following list of general or services' specific FAQs to find answers to your queries.",
+      "adhaFAQGeneralLabel": "General",
+      "adhaFAQServicesLabel": "Services",
+      "adhaFAQServicesDropdownLabels": [
+        "Land Grant",
+        "House Construction Loan",
+        "Ready House",
+        "Swap"
+      ],
+      "adhaContactUsTitle": "Contact Us",
+      "adhaContactUsHeader": "We would love to hear from you",
+      "adhaContactUsDescription": "Give us a call or send out an email with your queries ",
+      "adhaContactUsWriteToUsLabel": "Write to us",
+      "adhaContactUsWriteToUsEmail": "adha.services@adha.gov.ae",
+      "adhaContactUsCallUsLabel": "Call us",
+      "adhaContactUsCallUsNumber": "+971 875886898",
+      "adhaContactUsOfficeLabel": "dgcl app Centre",
+      "adhaContactUsOfficeAddress": "ADNEC Al Khaleej Al Arabi Street Next to Aloft Hotel.",
+      "adhaTimeoutPopupHeader": "You are about to be logged out of OSS in due to inactivity",
+      "adhaTimeoutPopupDescription": "Do you wish to continue or log off?",
+      "adhaTimeoutPopupBtnLabel": "Keep me logged in",
+      "adhaHamburgerMenuHeader": "Close",
+      "adhaHamburgerMenuList": [
+        {
+          "title": "About ISKAN",
+          "sub-headers": [
+            "ISKAN Services"
+          ]
+        },
+        {
+          "title": "Terms & Conditions"
+        },
+        {
+          "title": "Privacy Policy"
+        },
+        {
+          "title": "Logout"
+        }
+      ],
+      "adhaLogoutPopupDescription": "Are you sure you want to logout?",
+      "adhaHelpAndSupportTitle": "Help and Support",
+      "adhaLandGrantFAQ": {
+        "header": "Land Grant",
+        "questionaire": [
+          {
+            "title": "Question 1?"
+          },
+          {
+            "title": "Question 2?",
+            "question": "In case of beneficiary death after he/she was granted a loan, can he/she be exempted from paying it back ??",
+            "answer": "lorem ipsum"
+          },
+          {
+            "title": "Question 3?"
+          },
+          {
+            "title": "Question 4?"
+          },
+          {
+            "title": "Question 5?"
+          }
+        ]
+      },
+      "adhaHouseConstructionFAQ": {
+        "header": "House Construction Loan",
+        "questionaire": [
+          {
+            "title": "Question 1?"
+          },
+          {
+            "title": "Question 2?",
+            "question": "In case of beneficiary death after he/she was granted a loan, can he/she be exempted from paying it back ??",
+            "answer": "lorem ipsum"
+          },
+          {
+            "title": "Question 3?"
+          },
+          {
+            "title": "Question 4?"
+          },
+          {
+            "title": "Question 5?"
+          }
+        ]
+      },
+      "adhaReadyHouseFAQ": {
+        "header": "Ready House",
+        "questionaire": [
+          {
+            "title": "Question 1?"
+          },
+          {
+            "title": "Question 2?",
+            "question": "In case of beneficiary death after he/she was granted a loan, can he/she be exempted from paying it back ??",
+            "answer": "lorem ipsum"
+          },
+          {
+            "title": "Question 3?"
+          },
+          {
+            "title": "Question 4?"
+          },
+          {
+            "title": "Question 5?"
+          }
+        ]
+      },
+      "adhaSwapFAQ": {
+        "header": "Swap",
+        "questionaire": [
+          {
+            "title": "Question 1?"
+          },
+          {
+            "title": "Question 2?",
+            "question": "In case of beneficiary death after he/she was granted a loan, can he/she be exempted from paying it back ??",
+            "answer": "lorem ipsum"
+          },
+          {
+            "title": "Question 3?"
+          },
+          {
+            "title": "Question 4?"
+          },
+          {
+            "title": "Question 5?"
+          }
+        ]
+      },
+      "adhaPrivacyPolicyHTML": "<html><head><meta name='viewport' content='width=device-width, initial-scale=1.0'></head><body><h3> Scope </h3><p> We respect the privacy of our users and highly value their trust in us. In this privacy statement, we explain how we collect, use, disclose, and protect your information when you use ISKAN's application.</p><p> The policy, however, might change at any time and for any reason, ISKAN's application will send a notification to you informing them about the updated policy.</p><p> Additionally, we advise you to periodically check and review this page to stay informed of any updates. Using our application, or continuing to use it, means you accept and adhere to our Privacy Policy.</p><h3>ISKAN's Application </h3><h4> Data Collection </h4><p> The type of information we collect includes personal information, derivative data, geolocation information, mobile device access, mobile device data, and push notifications. </p><h4> Personal Information </h4><p> While using our application, we collect Personally Identifiable Information (PII) such as your name and email address, which you voluntarily provide when participating in various interactive activities such as chats, surveys, feedback, requesting information, using services and journeys, and logging in through the SmartPass. Your personal information will be logged and saved on our servers for the purpose of logging and tracking transactional services.</p><h4> Derivative Data </h4><p> We may automatically gather and store certain technical information while you use an application, such as the pages you accessed and the transactions you made. This information is collected with the intent to understand your needs and help you to access information better. </p><h4> Payment Data </h4><p> Our application provides you with the option to pay for multiple services. We do not collect or store any of the financial data such as credit card details. </p><h4> Geo-Location Information </h4><p> When you use ISKAN's application, we request your consent to access and collect data on your geo-location. <br> We use this to determine your current location and provide you with specific services such as map directions and routes to the nearest government entity. The geo tracking service is also used to provide you with services and information related to your geographic location. You can disable the geo-location tracking service, if you wish, through the device's settings. </p><h4> Mobile Device Data </h4><p> Each time you access ISKAN's application we may automatically, based on the permissions you have granted, access certain features from your mobile device and collect information such as the device type you are using, the operating system running on the device, default language, location, and network provider. </p><h4> Mobile Device Access </h4><p> Some of our services, may require you to upload supporting documents such as images. For this kind of services, we may request your permission to access certain features from your mobile device, including camera, contacts, reminders, SMS messages, social media accounts, and other features. <br><br>You can always disable the access permission at any time through the device's settings. </p><h4> Push Notifications </h4><p> With the intent of facilitating your experience in availing our services and keeping you updated, we may request to send you push notifications regarding government services, your account or an application update. You can always disable this type of notifications by turning them off in your device's settings. </p><h4> Use and Disclosure of the Information We Collect </h4><p> The information we collect will only be used to communicate to you the status of the service transactions you initiated and/or to assess your input to improve the content of ISKAN's application. ADHA will not sell, exchange or otherwise distribute the collected data for commercial or marketing purposes. </p><h4> Third Party Links </h4><p> ISKAN's application contains links to other applications and websites. We are not responsible for the content and the privacy policy of the linked applications or websites. We advise you to examine the privacy practices of each of the linked applications or websites to make your own decision regarding the provided material in terms of accuracy, reliability and correctness. </p><h4> Information Security </h4><p> ADHA has appropriate security measures in place to protect against the loss, misuse or alteration of information that has been posted. These measures cover commercial software programmes and a secure technology infrastructure to monitor network traffic, authenticate legitimate users, and identify unauthorised attempts to upload/change information, or otherwise cause damage. </p><h4> Access, Correction and Deletion of Information </h4><p> ADHA will provide authenticated individuals with their personal information that has been collected on them upon request. You are encouraged to correct any errors in your personal information so that the right level of interaction is maintained. Additionally, you have the right to delete any non-Abu Dhabi Government record. To do so, please contact the Abu Dhabi Government Contact Centre for more details </p></body></html>",
+      "adhaTermsAndConditionsHTML": "<html><head><meta name='viewport' content='width=device-width, initial-scale=1.0'></head><body><h3> Agreement</h3><p> By accessing and using “ISKAN” application you are agreeing to these terms and conditions of use. You should read them carefully and if you do not agree to these terms and conditions, kindly refrain from using the application. </p><h3> Modification of the Terms and Conditions </h3><p> Access to the ISKAN's Application is provided by Abu Dhabi Housing Authority (AHDA). By accessing and using the application, you agree that ADHA may update or modify these terms and conditions, other terms, policies or information of or on the website at any time without advance notice. <br>Modified terms and conditions and other terms, policies or information will take effect once posted on the application, unless otherwise stated. You should re-read these terms and conditions every time you visit the application to ensure that you are aware of all current policies applicable. Accordingly, your continued access and use of the app after any modification, is deemed to be acceptance of the modified terms and conditions. </p><h3> Acceptable Use </h3><p> By accessing the app, you agree that you will not: </p><ul> <li>deface, alter or interfere with the front end “look and feel”, content of the app, any linked sites, or the underlying software code.</li> <li>take any action, which imposes an unreasonable or disproportionately large load on the app or related infrastructure. </li> <li>do anything, which will or might damage, interfere with, disrupt access to, interrupt or impair the functionality of the material available on or through ISKAN's app. Nor to upload any material that contains any computer viruses or other codes, files or programmes designed to interrupt, destroy or limit the functionality of any software or equipment. </li> <li>post, distribute or otherwise upload any defamatory, libellous, offensive, infringing, obscene, indecent, harmful, threatening, abusive, tortuous, racially or ethnically objectionable or otherwise unlawful material or information, or send any chain letters, junk mail, 'spamming' material or any other form of bulk communication, advertising or solicitation. </li> <li>upload, post, email or otherwise transmit any materials that you do not have a right to transmit under any law or under a contractual relationship. </li> <li>use ISKAN's application to commit a criminal offence or to encourage others to engage in any conduct which would constitute a criminal offence or give rise to civil liability; </li> <li>obtain or attempt to obtain unauthorized access to ISKAN's application or any private account areas, impersonate anyone or misrepresent your affiliation with another person; </li> <li>post any material that infringes upon or violates the intellectual property rights of another, cause or permit anything to be done that may infringe, damage or interfere with any intellectual property rights of ADHA, the Abu Dhabi Government or third parties. Also, not to do anything that is otherwise unlawful, or which may create any liability on the part of ADHA or the Abu Dhabi Government; or collect or store personal information about others. </li></ul><p> If ADHA considers that you have breached any of these terms and conditions or have otherwise demonstrated inappropriate conduct when using the app, ADHA reserves the right to: </p><ul> <li>warn you that you have breached these terms and conditions, and ask you to stop such conduct; </li> <li>delete any material or content, which you may have posted without informing you; </li> <li>take measures (including terminating, suspending or restricting your access) and prevent you from using ISKAN's app. </li> <li>report your activities to an internet service provider or relevant authority; and/or take legal action against you. </li></ul></body></html>",
+      "adhaHowItWorksScreen": {
+        "title": "How It Works",
+        "description": "We bring you the information about how the whole process works. Please watch the video.",
+        "landGrantHTMLContent": "<div><h3>Land grant</h3><p>Below information will showcase you how the different journeys work along with key features, process and estimated timeline.</p><h4>What is this service?</h4><p>lorem ipsum lorem ipsum lorem ipsum</p><h4>Eligibility</h4><p>Your eligibility depends on your age, what is the time period that the person submitted form, your Emirate and your income limit.</p><h4>Process</h4><p>lorem ipsum lorem ipsum lorem ipsum<ul><li>lorem ipsum dolor sit amet</li><li>lorem ipsum dolor sit amet</li><li>lorem ipsum dolor sit amet</li></ul></p><h4>Estimated timeline</h4><p>Approximately 2 days.</p></div>",
+        "readyHouseHTMLContent": "<div><h3>Ready house loan</h3><p>Below information will showcase you how the different journeys work along with key features, process and estimated timeline.</p><h4>What is this service?</h4><p>lorem ipsum lorem ipsum lorem ipsum</p><h4>Eligibility</h4><p>Your eligibility depends on your age, what is the time period that the person submitted form, your Emirate and your income limit.</p><h4>Process</h4><p>lorem ipsum lorem ipsum lorem ipsum<ul><li>lorem ipsum dolor sit amet</li><li>lorem ipsum dolor sit amet</li><li>lorem ipsum dolor sit amet</li></ul></p><h4>Estimated timeline</h4><p>Approximately 2 days.</p></div>",
+        "houseConstructionHTMLContent": "<div><h3>House construction loan</h3><p>Below information will showcase you how the different journeys work along with key features, process and estimated timeline.</p><h4>What is this service?</h4><p>lorem ipsum lorem ipsum lorem ipsum</p><h4>Eligibility</h4><p>Your eligibility depends on your age, what is the time period that the person submitted form, your Emirate and your income limit.</p><h4>Process</h4><p>lorem ipsum lorem ipsum lorem ipsum<ul><li>lorem ipsum dolor sit amet</li><li>lorem ipsum dolor sit amet</li><li>lorem ipsum dolor sit amet</li></ul></p><h4>Estimated timeline</h4><p>Approximately 2 days.</p></div>",
+        "landGrantAlertBoxText": "The service you are registered for is the Land Grant. You can discover all our OSS services in the app via the navigation menu.",
+        "readyHouseAlertBoxText": "The service you are registered for is the Ready House Loan. You can discover all our OSS services in the app via the navigation menu.",
+        "houseConstructionAlertBoxText": "The service you are registered for is the House Construction Loan. You can discover all our OSS services in the app via the navigation menu.",
+        "landGrantVideoLink": "https://www.youtube.com/watch?v=cIv8Q9Sh-Lc",
+        "readyHouseVideoLink": "https://www.youtube.com/watch?v=cIv8Q9Sh-Lc",
+        "houseConstructionVideoLink": "https://www.youtube.com/watch?v=cIv8Q9Sh-Lc",
+        "getStartedBtnLabel": "Get Started"
+      },
+      "adhaChooseBetweenPhysicalAndDigitalScreen": {
+        "readyHouseJourney": {
+          "title": "Select a Home",
+          "description": "OSS provides below options to choose your house. Please select any to experience your journey with OSS.",
+          "card1": {
+            "title": "Choose my house",
+            "description": "Select your house and receive your title deeds, all within the app.",
+            "btnLabel": "Choose By Myself"
+          },
+          "card2": {
+            "title": "Book an appointment",
+            "description": "Want to meet on face-to-face? Let's schedule an appointment together.",
+            "btnLabel": "Meet An Advisor"
+          }
+        },
+        "landGrantJourney": {
+          "title": "Select a Plot",
+          "description": "OSS provides below options to choose your plot. Please select any to experience your journey with OSS.",
+          "card1": {
+            "title": "Choose my plot",
+            "description": "Select your plot and receive your title deeds, all within the app.",
+            "btnLabel": "Choose By Myself"
+          },
+          "card2": {
+            "title": "Book an appointment",
+            "description": "Want to meet on face-to-face? Let's schedule an appointment together.",
+            "btnLabel": "Meet An Advisor"
+          }
+        }
+      },
+      "adhaUserInfoChangeApplicationDetailsHeader": "Please select the application details you would like to change",
+      "adhaAppointmentConfirmationScreen": {
+        "appBarTitle": "Appointment Confirmed",
+        "headerCardDescription": "Please visit our ISKAN Centre 15 minutes before your scheduled time.",
+        "detailsSectionTitle": "Your appointment details",
+        "detailTitleList": [
+          {
+            "title": "Token Number"
+          },
+          {
+            "title": "Date"
+          },
+          {
+            "title": "Time"
+          },
+          {
+            "title": "OSS Office"
+          }
+        ],
+        "officeAddress": "Al Bustan Tower, 11 floor.\nThe intersection of Sheikh Saeed bin Rashid Street"
+      },
+      "adhaBookAppointmentScreen": {
+        "appBarTitle": "Book an appointment",
+        "serviceHrsLbl": "Service hours",
+        "weekdayLbl": "Monday to Thusday",
+        "weekdayTxt": "Open - 7:30 AM to 3:30 PM",
+        "fridayLbl": "Friday",
+        "fridayTxt": "Open - 7:30 AM to 12:30 PM",
+        "weekendLbl": "Saturday, Sunday, Public holidays",
+        "weekendTxt": "Closed",
+        "legend1": "Available",
+        "legend2": "Selected",
+        "legend3": "Few Available",
+        "legend4": "Closed",
+        "legend5": "Current date",
+        "legend6": "No slots available",
+        "availableSlots": [
+          {
+            "id": "1",
+            "text": "8:00 AM to 9:00 AM"
+          },
+          {
+            "id": "2",
+            "text": "9:00 AM to 10:00 AM"
+          },
+          {
+            "id": "3",
+            "text": "10:00 AM to 11:00 AM"
+          },
+          {
+            "id": "4",
+            "text": "11:00 AM to 12:00 PM"
+          },
+          {
+            "id": "5",
+            "text": "12:00 AM to 1:00 PM"
+          },
+          {
+            "id": "6",
+            "text": "1:00 PM to 2:00 PM"
+          }
+        ],
+        "notAvailable": "Not available",
+        "selectDateLbl": "Select date",
+        "selectTimeLbl": "Select time",
+        "confirmCtaLbl": "Confirm date & time",
+        "popupHeaderLbl": "You have selected the following date and time",
+        "popupConfirmLbl": "Confirm Appoinment",
+        "successPopupHeader": "You have successfully booked an appointment."
+      },
+      "adhaManageAppointmentScreen": {
+        "appBarTitle": "Manage My Appointment",
+        "activeAppointmentLbl": "You already have an active appointment with us. You can only schedule one appointment at a time. You may wish to reschedule you appointment.",
+        "cancelCtaLbl": "Cancel OSS Visit & Continue Digitally",
+        "rescheduleCtaLbl": "Reschedule OSS Visit",
+        "cancelPopupHeader": "Are you sure you want to cancel the appointment?",
+        "cancelSuccessPopupHeader": "Your appointment is cancelled successfully"
+      },
+      "adhaDisplayConsultantScreen": {
+        "appBarTitle": "Consultant selection",
+        "headerTitle": "Choose your consultant from the following options.",
+        "fabCardTitle": "Select a Consultant Myself",
+        "fabCardSubTitle": "Choose a consultant from our FAB-approved list.",
+        "fabCardCtaLbl": "Select Consultant",
+        "teyaseerCardTitle": "Help Me Choose a Consultant",
+        "teyaseerCardSubTitle": "Teyaseer, a government-approved initiative, can help you select a consultant and contractors.",
+        "teyaseerCardCtaLbl": "Get Help"
+      },
+      "adhaFabAppInitiationScreen": {
+        "appBarTitle": "Open Fab Account",
+        "fabCardTitle": "Before proceeding with the Loan process, you must download the FAB Application to your mobile device",
+        "fabCardSubTitle": "Please adhere to the instructions for a seamless transition and to avoid further inconvenience.",
+        "fabInstructionNoteLbl": "once the application has been downloaded, please return to the OSS to continue.",
+        "fabNhlDonwloadCtaLbl": "Download FAB NHL App"
+      },
+      "adhaFabConsultantSelectionScreen": {
+        "appBarTitle": "FAB consultants",
+        "searchLbl": "Search",
+        "headerTitle": "<> consultants available",
+        "consultantKeyList": [
+          "Consultant Name",
+          "Mobile",
+          "Email",
+          "Location",
+          "Authorised person",
+          "Telephone"
+        ],
+        "successPopupHeader": "Your have selected Al Wathba Engineering Consulting",
+        "successPopupDesc": "Please visit the nearest FAB branch to proceed further."
+      }
+    },
+    "dictionary": {
+      "adhaContinueBtnLabel": "Continue",
+      "adhaConfirmBtnLabel": "Confirm",
+      "adhaCancelBtnLabel": "Cancel",
+      "adhaChangeApplicationPopupBtnLabel": "Yes, Change My Details",
+      "adhaFooterDashboardBtnLabel": "Dashboard",
+      "adhaFooterVisitOSSBtnLabel": "ISKAN Visit",
+      "adhaFooterProfileBtnLabel": "Profile",
+      "adhaFooterHelpBtnLabel": "Help",
+      "adhaHelpAndSupportTitle": "Help and Support",
+      "adhaContactUsBtnLabel": "Contact us",
+      "adhaEnquiryFormBtnLabel": "Enquiry Form",
+      "adhaFAQBtnLabel": "FAQ",
+      "adhaLiveChatBtnLabel": "Live Chat",
+      "adhaSubmitBtnLabel": "Submit",
+      "adhaRetryBtnLabel": "Retry",
+      "adhaYesBtnLabel": "Yes",
+      "adhaNoBtnLabel": "No",
+      "adhaBackBtnText": "Press Back button again to Exit",
+      "adhaGoToDashboardBtnLabel": "Go to Dashboard",
+      "adhaSqMText": "Sq m.",
+      "adhaLatitudeNText": "<>° N latitude",
+      "adhaLatitudeSText": "<>° S latitude",
+      "adhaLongitudeWText": "<>° W longitude",
+      "adhaLongitudeEText": "<>° E longitude",
+      "adhaSnackBarText": "Press again to exit app",
+      "adhaBackToDashboardLabel": "Back To Dashboard"
+    },
+    "landGrant": {
+      "howItWorks": {
+        "screenTitle": "How It Works",
+        "getStartedBtnLabel": "Get Started",
+        "title": "Residential Land Grant",
+        "description": "",
+        "info": "The service you are registered for is Residential Land Grant. Discover all our ISKAN services in-app via the navigation menu.",
+        "images": [
+          {
+            "image": "https://loremflickr.com/420/240?lock=1",
+            "title": "Start the construction process",
+            "subTitle": "Things can be explained in few words"
+          }
+        ],
+        "sections": [
+          {
+            "title": "What is this service?",
+            "description": "<html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>ol{counter-reset:item}li{display:block}li.dashed:before{content:'-'}.p-1{padding-left:1em}li:before{content:counters(item, '.') '.';counter-increment:item;font-weight:700;padding-right:.5em}</style></head><body><p>Allow citizens to acquire residential land for the purpose of building a house.</p></body></html>"
+          },
+          {
+            "title": "Eligibility Criteria",
+            "description": "<html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>ol{counter-reset:item}li{display:block}li.dashed:before{content:'-'}.p-1{padding-left:1em}li:before{content:counters(item, '.') '.';counter-increment:item;font-weight:700;padding-right:.5em}</style></head><body> <p>An applicant who wishes to obtain a residential land grant:</p><ol><li>Must be a UAE citizen.</li><li>Must be permanently residing in the UAE.</li><li>Must meet the service period conditions, namely:<div class='p-1'><div>- The service period mustn't be less than a year for an applicant with a doctoral degree.</div><div>- The service period mustn't be less than two years for an applicant with a bachelor or master degree.</div><div>- The service period mustn't be less than 4 years for an applicant with the General Certificate of Secondary Education (GCSE) / High School Diploma or below.</div><div>- Applicants who have children are cleared from the service period condition according to the controls set by ADHA.</div></div></li><li>The applicant or his wife mustn't have received any benefits of housing grants from any government body whether it is federal or local, with the exception of those earned by way of a grant granted to the wife before their marriage date, on condition that the heir's share of the residential land or the house is not included among the grants stated in this paragraph.</li><li>That the applicant is with low income, where in the event that the applicant is with low income, he has the right to apply for a residential land grant, on condition that he provides the proof of being capable of fulfilling his obligations resulting from construction of the residential land.</li><li>That the applicant is applying individual. If he obtains a joint house or residential land, he is to undertake upon submission of the application that he transfers his joint share once his application is approved.<br><b>Special Conditions:</b><br><b>Males Category:</b><br><div>- must have completed 22 years of age; however, ADHA may exemption people with humanitarian cases and people with determination from the age condition.</div><b>Widow:</b><br><div>- The widow be with custody of one or more children: ged widows or incapable of giving birth to children according to a medical report issued by a competent entity are cleared from this condition.</div><div>- That she has no residential land or house obtained by way of grant or inheritance from her deceased husband: in case she owns a condominium share the residence must be inappropriate as per the social report issued by ADHA or any entity which ADHA entrusts to determine it.</div><div>- ADHA is to examine and consider on social and humanitarian cases according to the social report issued by ADHA or any entity which ADHA entrusts to determine it.</div><b>Single Emirati Woman:</b><br><div>- Must have reached 30 calendar years of age or more: women with humanitarian cases and women with determination among this category determined according to the social report issued by ADHA or any entity which ADHA entrusts to determine it are cleared from the age condition.</div><div>- Has no caretaker who is legally bind to provide care for her.</div><div>- Has no appropriate residence or providing care in the form of a residence to her relatives until the second degree according to the statement issued by the competent authority.</div><b>Divorced:</b><br><div>- Must have reached 30 calendar years of age or more: women with humanitarian cases and women with determination among this category determined according to the social report issued by ADHA or any entity which ADHA entrusts to determine it are cleared from the age condition.</div><div>- That divorce is irrevocable and final or that 3 years have lapsed since the date of divorce if it is not determined to be 'irrevocable and final'</div><div>- That she is with the custody of one or more children: aged divorced women or incapable of giving birth to children according to a medical report issued by a competent entity are cleared from this condition.</div><div>- That the father of such children is incapable of providing a residence for them: the father is considered to be incapable of providing a residence if one of the following cases are met:<div class='p-1'><div>1. He is a person with low income.</div><div>2. He is incapable of earning money under a medical report issued by the competent authority.</div><div>3. He is insolvent under a final court ruling.</div><div>4. The Authority may examine and consider on social and humanitarian cases according to the social report issued by the Authority or any entity which the Authority entrusts to determine it.</div></div></li><b>Emirati Woman Married to a Foreigner:</b><br><div>- Must have reached 30 calendar years of age or more: women with humanitarian cases and women with determination among this category determined according to the social report issued by ADHA or any entity which ADHA entrusts to determine it are cleared from the age condition.</div><div>- Must have two or more children living with her: aged women or incapable of giving birth to children according to a medical report issued by a competent entity are cleared from this condition.</div><div>- She must prove to be continuously residing in the UAE with her husband and children.</div><div>- The father of such children is incapable of providing a residence for them: the father is considered to be incapable of providing a residence if one of the following cases are met:<div class='p-1'><div>1. He is a person with low income.</div><div>2. He is incapable of earning money under a medical report issued by the competent authority.</div><div>3. He is insolvent under a final court ruling.</div><div>4. The Authority may examine and consider on social and humanitarian cases according to the social report issued by the Authority or any entity which the Authority entrusts to determine it.</div></div><div>- A non-Emirati husband married to an Emirati woman must provide an affidavit and undertakes not to seek or apply for any other residential grant in case he gets the UAE nationality later on.</div></ol> </body></html>"
+          },
+          {
+            "title": "Process",
+            "description": "<html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>ol{counter-reset:item}li{display:block}li.dashed:before{content:'-'}.p-1{padding-left:1em}li:before{content:counters(item, '.') '.';counter-increment:item;font-weight:700;padding-right:.5em}</style></head><body> <p><ol><li>Log into 'ISKAN' app</li><li>Application Approval</li><li>Plot Reservation</li><li>Plot Confirmation</li><li>Final Approval</li><li>Download your Title Deed</li></ol></body></html>"
+          }
+        ]
+      },
+      "SERVICE": "Service Type",
+      "REGION": "Your Selected Region",
+      "APPLICATION_NUMBER": "Application Number",
+      "serviceType": {
+        "LAND_GRANT": "Land Grant"
+      },
+      "municipality": {
+        "ABU": "Abu Dhabhi"
+      },
+      "adhaUndertaking": "<html><head><meta name='viewport' content='width=device-width, initial-scale=1.0'><style> ol { counter-reset: item}li { display: block}li:before { content: counters(item, '.') ' '; counter-increment: item; font-weight: bold; padding-right: 1em;}</style></head><body><h3>Additional Acknowledgment & Undertaking when selecting land / house</h3><ol> <li> <b>Acknowledgements, undertakings, and declarations concerning a housing reservation for allocating a housing developed by the government in exchange for a loan:</b> <ol> <li> I hereby acknowledge that I am aware of the following reservation conditions: <ol> <li> <b>Reservation of the ready-made housing within the limits of the loan without an increase from the beneficiary: </b> I acknowledge that I am entitled to two chances to book and that I have 3 days to confirm the reservation at the first opportunity. In the event that I do not confirm the reservation within the specified period or cancel the reservation, I shall be allowed to book a second time with a period of two days to confirm the reservation. In the event that I do not confirm the reservation within the specified period or cancel the reservation, my request shall be canceled and I must submit a new request. </li> <li> <b>Reservation of ready-made housing within the limits of the loan with an increase from the beneficiary:</b> I acknowledge that I have two booking opportunities and that I have 30 days to confirm the first booking and provide additional funding. If I do not provide the additional funding, confirm the reservation within the specified time frame, or cancel the reservation, I shall be allowed to book a second time with a 10-day deadline to confirm the reservation and provide the additional funding. However, if I do not provide funding, confirm the reservation within the specified time frame, or cancel the reservation, my request shall be canceled, and I have to submit a new request. </li> <li> <b>Reservation of unfinished off-plan housing and within the loan limits without an increase from the beneficiary:</b> I acknowledge that I have two chances to book and that I have 30 days to confirm the reservation at the first opportunity. If I do not confirm the reservation within the specified period or cancel the reservation, I shall be allowed to book a second time with a deadline of 10 days to confirm the reservation. In the event that I do not confirm the reservation within the specified period or cancel the reservation, my request shall be canceled and I must submit a new request. </li> <li> <b>Reservation of the unfinished off-plan housing with an increase from the beneficiary:</b> I acknowledge that I have two chances to book and that I have 30 days to confirm the reservation at the first opportunity. If I do not confirm the reservation within the specified period or cancel the reservation, I shall be allowed to book a second time with a deadline of 10 days to confirm the reservation. In the event that I do not confirm the reservation within the specified period or cancel the reservation, my request shall be canceled and I must submit a new request. I acknowledge the need to provide additional funding a month before the completion of the housing. In the event that I do not provide the additional funding on time, my application shall be canceled. </li> <li> I acknowledge that I am aware of my right to cancel the reservation at any time before the mortgage is entered into the real estate registry, and I am not entitled to cancel the application after the mortgage. </li> </ol> </li> <li> I agree to assign the previously granted residential land or housing to the Authority or entity specified by the Authority as soon as I confirm the housing reservation, even if the housing is in a future project (off-plan) and without waiting for the housing to be completed. I also acknowledge that the land or the house is free from the rights of others and from legal impediments to the transfer of ownership, and I accept and agree to cancel the approval of a house building loan and/or replace it with the approval of a house purchase loan, and I am aware that the Authority has the authority to carry out a relinquishment and withdraw the land or house immediately after confirming my reservation of the house if the housing is in a future project and in conjunction with the mortgage, if the booked house is ready. This waiver is final and I have no right to rescind it in any way. </li> <li> I acknowledge that I am aware that the loan's value is determined by the amount of my monthly income on the date of my confirmation of the housing reservation. If my income changes between the date of reservation confirmation and the date of mortgage, I have the right to cancel the application and the housing reservation if I want a higher loan value and submit a new application. </li> </ol> </li> <li> <b>Acknowledgements, pledges and declarations regarding the reservation of residential land for a residential land grant:</b> <ol> <li> I hereby acknowledge that I am aware of the following booking conditions: <ol> <li> <b>Reservation of a ready land:</b> I acknowledge that I have two chances to book and that I have three days to confirm the reservation at the first opportunity. If I do not confirm the reservation within the specified time frame or cancel the reservation, I shall be allowed to book a second time with a two-day confirmation period. In the event that I do not confirm the reservation within the specified period or cancel the reservation, my request shall be canceled and I must submit a new request. </li> <li> <b>Reservation of a non-ready off-plan land:</b> acknowledge that I have two chances to book and that I have 30 days to confirm the reservation at the first opportunity. If I do not confirm the reservation within the specified time frame or cancel it, I shall be allowed to book a second time with a deadline of 10 days to confirm the reservation </li> </ol> </li> </ol> </li></ol><div> Applicant Name: {APPLICANT_NAME} <br> Applicant  EID: {EMIRATE_ID} <br>Date of acceptance : {CURRENT_DATE} <br>Application Number : {APPLICATION_NUMBER} <br><br></div></body></html>",
+      "adhaUndertakingTitle": "Undertaking",
+      "adhaUndertakingCheckboxText": "Accept undertaking clauses",
+      "adhaPlotConfirmationSuccessPopup": "Your plot reservation completed successfully",
+      "adhaChoosePlotTitle": "Choose plot",
+      "adhaPlotConfirmationTitle": "Plot confirmation",
+      "adhaPlotReservedTitle": "Plot reserved",
+      "adhaPlotConfirmationDescription": "This plot is now for you. Please take up to 24 hours to review this choice with your loved ones.",
+      "adhaPlotConfirmationRemainingTimeWarningText1": "Remaining time to confirm your decision",
+      "adhaPlotConfirmationRemainingTimeWarningText2": "If you dont confirm within the above time period, the plot will be released and available again for other applicants to reserve.",
+      "adhaViewResevationText": "View your reservation",
+      "adhaPlotConfirmationComeBackLaterBtnLabel": "Come back later with a decision",
+      "adhaCancelPlotReservationBtnLabel": "Cancel plot reservation",
+      "adhaConfirmPlotBtnLabel": "Confirm your plot",
+      "adhaCancellationWarningPopupTitle": "Are you sure you want to cancel this reservation?",
+      "adhaCancellationWarningPopupAttempt1Description": "You are using first cancellation attempt out of two",
+      "adhaAttemptText": "Attempt ",
+      "adhaCancellationWarningPopupKeepReservationBtnLabel": "Keep the reservation",
+      "adhaCancellationWarningPopupCancelReservationBtnLabel": "Yes, cancel plot reservation",
+      "adhaCancellationConfirmationPopupAttempt1Title": "Your plot reservation is cancelled successfully",
+      "adhaCancellationWarningPopupAttempt2Description": "If you cancel your application it will move to Under Review status. You will be contacted by ADHA team once the review is complete.",
+      "adhaCancellationWarningPopupAttempt2WarningText": "You are about to exhaust your maximum number of attempts.",
+      "adhaCancellationConfirmationPopupAttempt2Title": "You've exhausted your maximum number of attempts.",
+      "adhaCancellationConfirmationPopupAttempt2Description": "Your application will now move to Under Review status. You will be contacted by ADHA team once the review is complete.",
+      "adhaSelectPlotTitle": "Select plot",
+      "adhaPlotSelectionDescription1": "Your plot will be reserved for <> hours until final confirmation.",
+      "adhaPlotSelectionDescription2": "Are you certain that you wish to reserve this plot?",
+      "adhaPlotSelectionBackToMapBtnLabel": "Back to map",
+      "adhaPlotSelectionConfirmPlotBtnLabel": "Yes, reserve my plot for <> hours",
+      "adhaPlotConfirmationAlertText": "Our team is reviewing your plot details and we will notify you once your plot is confirmed.",
+      "adhaPlotConfirmationText": "Your plot confirmation details.",
+      "adhaPlotConfirmationAlertFailureText": "Unfortunately, there has been an issue with your plot confirmation. Kindly visit the nearest OSS center to proceed.",
+      "adhaPlotConfirmationLabels": [
+        "Application Number",
+        "Plot Confirmation Status",
+        "Plot Number",
+        "Plot Size",
+        "GIS Coordinates"
+      ],
+      "adhaTitleDeedTitle": "Title Deed",
+      "adhaPlotDetailsLabels": [
+        "Plot number",
+        "Plot size",
+        "GIS coordinates",
+        "Base infrastructure",
+        "Infrastructure ready date",
+        "Liveability Index",
+        "Action",
+        "Reserve this plot",
+        "Available",
+        "Reserved",
+        "Occupied"
+      ],
+      "liveabilityDescription": [
+        "Good",
+        "Bad",
+        "Average"
+      ],
+      "adhaTitleDeedDescription1": "Your plot details",
+      "adhaTitleDeedLabels": [
+        "Application Number",
+        "Plot Confirmation Status",
+        "Plot Number",
+        "Plot Size",
+        "GIS Coordinates",
+        "Completion Date"
+      ],
+      "adhaTitleDeedDescription2": "You now have the option to apply for a house construction loan. To proceed, ",
+      "adhaTitleDeedClickableText": "click here.",
+      "adhaTitleDeedAlertBoxText1": "Congratulations",
+      "adhaTitleDeedAlertBoxText2": "Your land plot is confirmed.",
+      "adhaTitleDeedDownloadBtnLabel": "Download your Title deed",
+      "adhaLandGrantTimelineTrackerCompletedStatus": "Completed",
+      "adhaLandGrantTimelineTrackerInProgressStatus": "In Progress",
+      "adhaLandGrantTimelineTrackerUnderReviewStatus": "Under Review",
+      "adhaLandGrantTimelineTrackerNotStartedStatus": "Not started",
+      "adhaLandGrantTimelineTrackerPlotReservationExpired": "Reservation Expired",
+      "adhaLandGrantTimelineTrackerPlotReservationExpiredMaxAttemptSpent": "Reservation Expired. Maximum number of attempts spent.",
+      "adhaLandGrantTimelineTrackerPlotReservationCancelledMaxAttemptSpent": "Reservation Cancelled. Maximum number of attempts spent.",
+      "adhaLandGrantTimelineTrackerTryAgainButtonLbl": "Try again",
+      "adhaLandGrantTimelineTrackerReservePlotButtonLbl": "Reserve plot",
+      "adhaLandGrantTimelineTrackerPlotRejectedByElms": "Your plot reservation is rejected by ELMS.",
+      "adhaLandGrantTimelineTrackerViewPlotDetailsButtonLbl": "View plot details",
+      "adhaLandGrantTimelineTrackerPlotConfirmationButtonLbl": "Go to plot confirmation",
+      "adhaLandGrantTimelineTrackerElmsPendingMessage": "You will be informed when plot confirmation is accepted",
+      "adhaLandGrantTimelineTrackerPlotConfirmedMessage": "Your plot is confirmed.",
+      "adhaLandGrantTimelineTrackerTimeRemainingText": "remaining",
+      "adhaLandGrantTimelineTrackerPlotReservationRemainingAttemtps": "Attempt remaining",
+      "adhaLandGrantTimelineTrackerDownloadTitleDeedButtonLbl": "Go to Download",
+      "adhaLandGrantTimelineTrackerTimeAttemptsText": "Attempt ",
+      "adhaLandGrantTimelineTrackerApplicationCancelled": "Cancelled as you exceeded maximum number of reservation attempts. You may apply again.",
+      "adhaLandGrantSuccessAnimationDescription": "Your plot details are successfully submitted. You are only one step away to download your Title Deed."
+    },
+    "gis": {
+      "poiList": [
+        {
+          "key": "publicParks",
+          "text": "Public Parks"
+        },
+        {
+          "key": "themeParks",
+          "text": "Theme Parks"
+        },
+        {
+          "key": "shoppingMalls",
+          "text": "Shopping Malls"
+        },
+        {
+          "key": "higherEducationInstitutes",
+          "text": "Higher Education Institutes"
+        },
+        {
+          "key": "privateSchools",
+          "text": "Private Schools"
+        },
+        {
+          "key": "publicSchools",
+          "text": "Public Schools"
+        },
+        {
+          "key": "nurseries",
+          "text": "Nurseries"
+        },
+        {
+          "key": "hospitals",
+          "text": "Hospitals"
+        },
+        {
+          "key": "healthCenters",
+          "text": "Health Centers"
+        },
+        {
+          "key": "clinics",
+          "text": "Clinics"
+        },
+        {
+          "key": "pharmacy",
+          "text": "Pharmacy"
+        },
+        {
+          "key": "mosques",
+          "text": "Mosques"
+        }
+      ],
+      "municipality": {
+        "ABU": "Abu Dhabi City"
+      },
+      "serviceType": {
+        "LAND_GRANT": "Land"
+      }
+    },
+    "readyHouse": {
+      "SERVICE": "Service type",
+      "serviceType": {
+        "READY_HOUSE": "Ready House Loan"
+      },
+      "PERSONAL_DETAILS": "Personal details",
+      "FAMILY_DETAILS": "Family details",
+      "INCOME_DETAILS": "Income details",
+      "APPLICATION_DETAILS": "Application details",
+      "MARITAL_STATUS": "Marital status",
+      "FAMILY_BOOK_NUMBER": "Family book number",
+      "TOWN_NUMBER": "Town number",
+      "NO_OF_WIFE": "Number of wife(s)",
+      "NO_OF_KID": "Number of kid(s)",
+      "GROSS_INCOME": "Gross income",
+      "APPLICATION_NUMBER": "Application number",
+      "REGION": "Selected region",
+      "APPROVED_LOAN_AMOUNT": "Approved loan amount",
+      "adhaMortgageRegistrationScreen": {
+        "serviceTypeLabel": "Service Type",
+        "plotLocationLabel": "Plot location",
+        "plotNumberLabel": "Plot number",
+        "loanApprovedDateLabel": "Loan approved date",
+        "title": "Mortgage Registration",
+        "description": "You can register for the mortgage and generate the Mortgage Registration Number. Following House details and application number will be shared for registration process.",
+        "applyForMortgageRegistrationBtnLabel": "Apply For Mortgage Registration",
+        "mortgageRegNoInfoLabel": "This is just an Mortgage Registration number and you need to visit DMT to pay and get the mortgage approved.",
+        "yourRegistrationLabel": "Your Registration",
+        "mortgageRegistrationNumberLabel": "Mortgage registration number",
+        "mortgageRegistrationStatusLabel": "Mortgage registration status",
+        "goToDashBoardBtnLabel": "Go to Dashboard",
+        "inProgressLabel": "In progress",
+        "registrationSuccessFul": "Your mortgage registration number generated successfully.",
+        "LandGrant": " Residential Land Grant",
+        "HouseConstructionLoan": "House Construction Loan",
+        "HouseConstructionDeferredLoan": "House Construction Deferred Loan",
+        "HousePurchaseLoan": "House Purchase Loan",
+        "HousePurchaseDeferredLoan": "House Purchase Deferred Loan"
+      },
+      "adhaUserInfoReadyHouseLoanCardContent": [
+        {
+          "title": "Application approval",
+          "description": "Your initial application and details"
+        },
+        {
+          "title": "House reservation",
+          "description": "Reserve your house for a time limit and think through your decision."
+        },
+        {
+          "title": "House confirmation",
+          "description": "Confirm or cancel your decision on the house selection."
+        },
+        {
+          "title": "Mortgage registration",
+          "description": "Register your mortgage for further loan requirements."
+        },
+        {
+          "title": "Financial literacy course",
+          "description": "Complete this mandatory course with ADSG to proceed further."
+        },
+        {
+          "title": "FAB account opening and loan approval",
+          "description": "Complete this mandatory course with ADSG to proceed further."
+        },
+        {
+          "title": "Title deed",
+          "description": "You can download the title deed on the basis of the house confirmation."
+        }
+      ],
+      "adhaHouseDetailsContent": {
+        "title1": "House Confirmation",
+        "title2": "House Reservation",
+        "alertBoxText1": "Our team is reviewing your details. This can take up to 24hrs and you will be notified when you can return and proceed with your mortgage registration.",
+        "alertBoxText2": "Your house is reserved. You will be notified once the house is ready and you can proceed with Mortgage Registration by revisiting ISKAN.",
+        "houseDetailsLabels": [
+          "Project name",
+          "Price",
+          "Application Number",
+          "House status",
+          "Reservation date",
+          "House size",
+          "Plot number",
+          "Address",
+          "Construction status",
+          "Loan amount",
+          "Required top-up",
+          "GIS coordinates"
+        ],
+        "houseDetailsTitle": "Your house details."
+      }
+    },
+    "houseLoan": {
+      "SERVICE": "Service type",
+      "serviceType": {
+        "HOUSE_LOAN": "House Constructions Loan"
+      },
+      "HOUSE_LOAN": "House Constructions Loan",
+      "PERSONAL_DETAILS": "Personal details",
+      "FAMILY_DETAILS": "Family details",
+      "INCOME_DETAILS": "Income details",
+      "APPLICATION_DETAILS": "Application details",
+      "CO_APPLICATION_DETAILS": "Co-Application details",
+      "CO_APPLICANT_NAME": "Co-Applicant name",
+      "CO_APPLICANT_EID": "Emirates ID",
+      "CO_APPLICANT_CONTACT": "Contact number",
+      "MARITAL_STATUS": "Marital status",
+      "FAMILY_BOOK_NUMBER": "Family book number",
+      "TOWN_NUMBER": "Town number",
+      "NO_OF_WIFE": "Number of wife(s)",
+      "NO_OF_KID": "Number of kid(s)",
+      "GROSS_INCOME": "Monthly gross income",
+      "APPLICANT_NAME": "Name",
+      "MOBILE_NUMBER": "Contact number",
+      "EMIRATE_ID": "Emirates ID number",
+      "APPLICATION_NUMBER": "Application number",
+      "CONFIRMED_SERVICE": "Service type",
+      "CONF_PLOT_NUMBER": "Plot number",
+      "APPROVED_LOAN_AMOUNT": "Approved loan amount",
+      "LOCATION": "Plot location",
+      "WIFE": "X wife",
+      "WIFES": "X wifes",
+      "KID": "X child",
+      "KIDS": "X children",
+      "adhaUserInfoHouseConstructionLoanCardContent": [
+        {
+          "title": "Application approval",
+          "description": "Your initial application and details"
+        },
+        {
+          "title": "Mortgage registration",
+          "description": "Register your mortgage and get the mortgage registration number."
+        },
+        {
+          "title": "Financial literacy course",
+          "description": "Complete this mandatory course with ADSG to proceed further."
+        },
+        {
+          "title": "FAB account opening & loan activation",
+          "description": "Open your FAB account and get started with loan process"
+        },
+        {
+          "title": "Consultant selection",
+          "description": "Choose the contractor that suits best to your needs"
+        },
+        {
+          "title": "Contractor award",
+          "description": "Contractor to be finalised based on the selection you made"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,4732 @@
+{
+  "colors": {
+    "primary": "0xFFC7BDBA",
+    "secondary": "0xFF0F1A38",
+    "tertiary": "0xFFF4F2F1",
+    "quaternary": "0xFFF7D7D0",
+    "quinary": "0xFFF9D100",
+    "senary": "0xFFF4F4FA",
+    "septenary": "0xFFF90069",
+    "octonary": "0xFF34CE97",
+    "nonary": "0xFF188006",
+    "denary": "0xFFFDD485",
+    "infoIcon": "0xFF5F667A",
+    "panelColorPrimary": "0xFFF5F6F7",
+    "panelColorSecondary": "0xFFF4F4F0",
+    "panelColorTertiary": "0xFFFCF2EF"
+  },
+  "screens": [
+    {
+      "screenName": "default",
+      "primaryColor": "0xFF0F1A38",
+      "primaryColorDark": "0xFFC7BDBA",
+      "primaryColorLight": "0xFFF7D7D0",
+      "splashColor": "0xFFFCFCFA",
+      "scaffoldBackgroundColor": "0xFFFCFCFA",
+      "backgroundColor": "0xFFFFFFFF",
+      "errorColor": "0xFFF90069",
+      "bottomAppBarColor": "0xFFFFFFFF",
+      "toggleableActiveColor": "0xFF5500F9",
+      "dividerColor": "0xFFE7E8EB",
+      "highlightTextColor": "0xFF5500F9",
+      "textFieldBackgroundColor": "0xFFF5F6F7",
+      "actionButtonIconColor": "0xFFFFFFFF",
+      "midNightTintColor": "0xFF374059",
+      "segmentedThemeData": {
+        "color": "0xFFF5F6F7",
+        "textColor": "0xFF0F1A38"
+      },
+      "iconTheme": {
+        "color": "0xFF0F1A38"
+      },
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFFFFFFF",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 17
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0x00FFFFFF",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "cardTheme": {
+        "color": "0x00000000",
+        "shadowColor": "0x00000000",
+        "elevation": 0.0
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 44
+        },
+        "headline2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "headline3": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "headline4": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "headline5": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 16
+        },
+        "headline6": {
+          "color": "0xFF5500F9",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "subtitle1": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "subtitle2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "bodyText1": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14
+        },
+        "bodyText2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 17
+        },
+        "caption": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      },
+      "sliderTheme": {
+        "activeTrackColor": "0xFFEFEEE8",
+        "inactiveTrackColor": "0xFFFAF9F7"
+      },
+      "elevatedButtonTheme": {
+        "color": "0xFF0F1A38",
+        "fontFamily": "NotoSans",
+        "fontSize": 14,
+        "textColor": "0xFFFFFFFF",
+        "minimumSize": 56,
+        "borderRadius": 10
+      },
+      "textButtonTheme": {
+        "color": "0xFF5500F9",
+        "fontFamily": "NotoSans",
+        "fontSize": 14,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textSelectionTheme": {
+        "color": "0xFF5500F9"
+      },
+      "inputDecorationTheme": {
+        "hintStyle": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF0F1A38",
+          "opacity": 0.64
+        },
+        "errorStyle": {
+          "fontFamily": "NotoSans",
+          "fontSize": 11,
+          "color": "0xFFF90069"
+        },
+        "labelStyle": {
+          "fontFamily": "NotoSans",
+          "fontSize": 28,
+          "color": "0xFF0F1A38",
+          "opacity": 0.64
+        }
+      }
+    },
+    {
+      "screenName": "info-bottom-sheet-theme",
+      "primaryColor": "0xFFEFE4DE",
+      "primaryColorDark": "0xFF666869",
+      "primaryColorLight": "0xFFC7BDBA",
+      "backgroundColor": "0xFFF4F2F1",
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0XFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "display_application_details",
+      "scaffoldBackgroundColor": "0xFFC7BDBA",
+      "primaryColor": "0xFF333333",
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "application_details",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "iconTheme": {
+          "color": "0xFF000000"
+        }
+      },
+      "textTheme": {
+        "subtitle1": {
+          "color": "0xFF505152",
+          "fontSize": 14,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFFACADAD",
+          "fontSize": 14,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF7A7C7C",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontSize": 16,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "caption": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "logout_confirmation",
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "co_applicant_bottomsheet",
+      "scaffoldBackgroundColor": "0xFFC7BDBA",
+      "textTheme": {
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "warning_bottom_sheet_theme",
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "ineligible_applicant",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 5
+        },
+        "bodyText1": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "relinquish_property",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF000000"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "bodyText1": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 5
+        }
+      }
+    },
+    {
+      "screenName": "relinquish_property_details",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF000000"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF6d6d72",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF9C5E39",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 6
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "bodyText1": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "exhausted_bottom_sheet_theme",
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "success_bottom_sheet_theme",
+      "backgroundColor": "0xFFD4EDCF",
+      "primaryColor": "0xFFFBEAEA",
+      "primaryColorLight": "0xFFD4EDCF",
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "consultant_selection",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF000000"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "enquiry_form_details_bottomsheet",
+      "highlightTextColor": "0xFF262727",
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "change_application",
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0XFFD32F2F",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "fab_app_initiation",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF000000"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "application_status",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "backgroundColor": "0xFFFFFFFF",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "textTheme": {
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 32,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontSize": 16,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12
+        }
+      }
+    },
+    {
+      "screenName": "contact_support_theme",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "iconTheme": {
+          "color": "0xFF000000"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF383C3E",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 16
+        },
+        "headline6": {
+          "color": "0xFF5500F9",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "subtitle1": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "bodyText1": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "bodyText2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 17
+        },
+        "caption": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      }
+    },
+    {
+      "screenName": "splash",
+      "backGroundColor": "0xFFC7BDBA",
+      "primaryColorLight": "0xFFF4F2F1",
+      "primaryColorDark": "0xFF0F1A38",
+      "splashColor": "0xFFFCFCFA",
+      "scaffoldBackgroundColor": "0xFFFCFCFA",
+      "backgroundColor": "0xFFC7BDBA",
+      "errorColor": "0xFFF90069",
+      "bottomAppBarColor": "0xFFFFFFFF",
+      "toggleableActiveColor": "0xFF5500F9",
+      "dividerColor": "0xFFE7E8EB",
+      "highlightTextColor": "0xFF5500F9",
+      "textFieldBackgroundColor": "0xFFF5F6F7",
+      "actionButtonIconColor": "0xFFFFFFFF",
+      "midNightTintColor": "0xFF374059",
+      "segmentedThemeData": {
+        "color": "0xFFF5F6F7",
+        "textColor": "0xFF0F1A38"
+      }
+    },
+    {
+      "screenName": "maintenance_screen",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 5
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 6
+        },
+        "headline2": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 10,
+          "fontWeight": 5
+        },
+        "headline5": {
+          "color": "0xFFB07A5C",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 6
+        }
+      }
+    },
+    {
+      "screenName": "help_and_support_landing_page",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 15,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 5
+        }
+      }
+    },
+    {
+      "screenName": "my_profile_landing_page",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFEDEAE9",
+        "backgroundColor": "0xFFEDEAE9",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "non_emirati_dashboard",
+      "scaffoldBackgroundColor": "0xFFEDEAE9",
+      "appBarTheme": {
+        "foregroundColor": "0x00000000",
+        "backgroundColor": "0x00000000",
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF161616",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 6
+        },
+        "headline2": {
+          "color": "0xFF161616",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 6
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 13,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "drawer",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "primaryColor": "0xFFDDD7D6",
+      "primaryColorDark": "0xFFC7BDBA",
+      "primaryColorLight": "0xFFB07A5C",
+      "appBarTheme": {
+        "foregroundColor": "0xFFC7BDBA",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "language_selector",
+      "scaffoldBackgroundColor": "0xFFC7BDBA",
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 25
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 26
+        },
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16
+        }
+      }
+    },
+    {
+      "screenName": "force_upgrade",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 24
+        },
+        "bodyText1": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans",
+          "fontSize": 18
+        }
+      }
+    },
+    {
+      "screenName": "dashboard_theme",
+      "backgroundColor": "0xFFF4F2F1",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF9C5E39",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "headline3": {
+          "color": "0xFF606457",
+          "fontFamily": "NotoSans",
+          "fontSize": 16
+        },
+        "headline4": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "headline6": {
+          "color": "0xFF9C5E39",
+          "fontFamily": "NotoSans",
+          "fontSize": 10
+        },
+        "headline5": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12
+        },
+        "subtitle2": {
+          "color": "0xFFAFB3BD",
+          "fontFamily": "NotoSans",
+          "fontSize": 12
+        },
+        "actionButtonIconColor": "0xFF0F1A38"
+      }
+    },
+    {
+      "screenName": "application_card_message_theme",
+      "backgroundColor": "0xFFF4F2F1",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFFE57C00",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "headline2": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      }
+    },
+    {
+      "screenName": "account",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF9C5E39",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "headline3": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "headline4": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "subtitle1": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 12
+        },
+        "subtitle2": {
+          "color": "0xFFAFB3BD",
+          "fontFamily": "NotoSans",
+          "fontSize": 12
+        },
+        "actionButtonIconColor": "0xFF0F1A38"
+      }
+    },
+    {
+      "screenName": "house_details_expanded_view",
+      "scaffoldBackgroundColor": "0xffC7BDBA",
+      "backgroundColor": "0xFFC7BDBA",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "login",
+      "scaffoldBackgroundColor": "0xffC7BDBA",
+      "backgroundColor": "0xFF000000",
+      "textTheme": {
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 32,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 6
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12
+        },
+        "headline2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 11,
+          "fontWeight": 4
+        },
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 7
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 5
+        }
+      },
+      "elevatedButtonTheme": {
+        "foregroundColor": "0xFF000000",
+        "borderRadius": 10
+      }
+    },
+    {
+      "screenName": "plot_confirmation_success",
+      "textTheme": {
+        "headline2": {
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4,
+          "color": "0xFF000000"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 6
+        },
+        "subtitle1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 6,
+          "color": "0xFF000000"
+        },
+        "subtitle2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "bodyText2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3,
+          "color": "0xFF3D3938"
+        },
+        "bodyText1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "color": "0xFF000000",
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "trade_license",
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF3D3938",
+          "fontWeight": 5
+        },
+        "headline3":{
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869",
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "new_applications",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xFF505152",
+          "fontWeight": 5
+        },
+        "caption": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "consent_details",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xF3D3938",
+          "fontWeight": 6
+        },
+        "headline4": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF7A7C7C",
+          "fontWeight": 4
+        },
+        "headline5": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF262727",
+          "fontWeight": 4
+        },
+        "headline6": {
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "color": "0xFF161616",
+          "fontWeight": 6
+        },
+        "subtitle1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF000000",
+          "fontWeight": 6
+        },
+        "subtitle2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "color": "0xFF262727",
+          "fontWeight": 5
+        },
+        "caption": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans",
+          "fontSize": 10,
+          "fontWeight": 5
+        },
+        "bodyText1": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xFF666869",
+          "fontWeight": 5
+        }
+      }
+    },
+    {
+      "screenName": "new_applications_review",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xF3D3938",
+          "fontWeight": 5
+        },
+        "headline4": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xF3D3938",
+          "fontWeight": 4
+        },
+        "caption": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "new_applications_non_pca",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xF3D3938",
+          "fontWeight": 5
+        },
+        "headline4": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xF7A7C7C",
+          "fontWeight": 5
+        },
+        "caption": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "cancellation_details",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xF3D3938",
+          "fontWeight": 5
+        },
+        "headline4": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xF3D3938",
+          "fontWeight": 4
+        },
+        "caption": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "cancellation_reason",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xF3D3938",
+          "fontWeight": 5
+        },
+        "headline4": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xF3D3938",
+          "fontWeight": 4
+        },
+        "bodyText1": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "bodyText2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 17
+        },
+        "caption": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },{
+      "screenName": "cancellation_success",
+      "textTheme": {
+        "headline2": {
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 6,
+          "color": "0xFF000000"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "subtitle1": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4,
+          "color": "0xFF000000"
+        },
+        "subtitle2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "bodyText2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3,
+          "color": "0xFF7A7C7C"
+        }
+      }
+    },
+    {
+      "screenName": "title_deeds",
+      "primaryColor": "0xFFE9E5E3",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "splashColor": "0xffC7BDBA",
+      "dividerColor": "0x93634B00",
+      "backgroundColor": "0xffC7BDBA",
+      "cardTheme": {
+        "color": "0xFFFFFFFF",
+        "surfaceTintColor": "0xffE9E5E3"
+      },
+      "inputDecorationTheme": {
+        "hintStyle": {
+          "color": "0xFF457197",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      },
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "caption": {
+          "color": "0xFF000000",
+          "fontSize": 15,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0xFF262727",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline1": {
+          "color": "0xFFFFFFFF",
+          "fontSize": 10,
+          "fontFamily": "NotoSans"
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontSize": 14,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFFFFFFFF",
+          "fontSize": 16,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontSize": 16,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontSize": 16,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontSize": 16,
+          "fontFamily": "NotoSans",
+          "fontWeight": 7
+        },
+        "bodyText1": {
+          "color": "0xFF505152",
+          "fontSize": 12,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "faq",
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "fontSize": 18,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        }
+      },
+      "dividerColor": "0xFFE9E5E3",
+      "backgroundColor": "0x80F4F2F1",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "textTheme": {
+        "headline2": {
+          "color": "0xFF000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "fontSize": 16,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontSize": 18,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4,
+          "color": "0xFF191D23"
+        },
+        "headline4": {
+          "fontSize": 14,
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium",
+          "color": "0xFF191D23"
+        },
+        "headline5": {
+          "fontSize": 14,
+          "fontWeight": 3,
+          "fontFamily": "NotoSans",
+          "color": "0xFF191D23"
+        }
+      }
+    },
+    {
+      "screenName": "question_answer_theme",
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "fontSize": 16,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        }
+      },
+      "dividerColor": "0xFFE9E5E3",
+      "backgroundColor": "0x80F4F2F1",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "textTheme": {
+        "headline2": {
+          "color": "0xFF000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "fontSize": 16,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontSize": 18,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4,
+          "color": "0xFF191D23"
+        },
+        "headline4": {
+          "fontSize": 14,
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium",
+          "color": "0xFF383C3E"
+        }
+      }
+    },
+    {
+      "screenName": "plot_map_view",
+      "dividerColor": "0xFFFFFFFF",
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "fontSize": 18,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        }
+      },
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "backgroundColor": "0x80F4F2F1",
+      "textTheme": {
+        "caption": {
+          "color": "0xFF000000",
+          "fontSize": 15,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "bodyText1": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        },
+        "headline1": {
+          "color": "0xFFFFFFFF",
+          "fontSize": 10,
+          "fontFamily": "NotoSans"
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontSize": 14,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontSize": 14,
+          "fontWeight": 3,
+          "fontFamily": "NotoSans"
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontSize": 12,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      }
+    },
+    {
+      "screenName": "enquiry_form",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "backgroundColor": "0xFFFFFFFF",
+      "focusColor": "0xFF000000",
+      "cardColor": "0xFFE9E5E3",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "textTheme": {
+        "caption": {
+          "color": "0xFF333333",
+          "fontFamily": "NotoSans",
+          "fontSize": 16
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12
+        },
+        "headline3": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF383636",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "subtitle1": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16
+        },
+        "subtitle2": {
+          "color": "0xFF383636",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      },
+      "elevatedButtonTheme": {
+        "textColor": "0xFFFFFFFF",
+        "borderRadius": 10,
+        "color": "0xFF000000"
+      }
+    },
+    {
+      "screenName": "plot_reservation_warning",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "primaryColorDark": "0xFFF8C487",
+      "primaryColorLight": "0xFFFFFDFB",
+      "textTheme": {
+        "headline2": {
+          "fontSize": 16,
+          "fontWeight": 3,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans"
+        },
+        "headline1": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium"
+        },
+        "bodyText2": {
+          "fontSize": 14,
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        }
+      },
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0x00000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "plot_confirmation",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "primaryColor": "0xFF000000",
+      "primaryColorDark": "0xFFF8C487",
+      "primaryColorLight": "0xFFFFFDFB",
+      "inputDecorationTheme": {
+        "hintStyle": {
+          "color": "0xFF457197",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      },
+      "textTheme": {
+        "bodyText1": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "fontSize": 16,
+          "fontWeight": 3,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans"
+        },
+        "headline1": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 3,
+          "fontFamily": "NotoSans"
+        },
+        "headline5": {
+          "fontSize": 24,
+          "color": "0x00000000",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium"
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "caption": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      },
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0x00000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "land_exchange_plot_confirmation",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "primaryColor": "0xFF000000",
+      "primaryColorDark": "0xFFF8C487",
+      "primaryColorLight": "0xFFFFFDFB",
+      "inputDecorationTheme": {
+        "hintStyle": {
+          "color": "0xFF457197",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      },
+      "textTheme": {
+        "bodyText1": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "fontSize": 16,
+          "fontWeight": 3,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans"
+        },
+        "headline1": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 3,
+          "fontFamily": "NotoSans"
+        },
+        "headline5": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 7,
+          "fontFamily": "NotoSans"
+        },
+        "subtitle1": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        },
+        "subtitle2": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 28
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "caption": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      },
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0x00000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "digital_vs_Physical",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "cardTheme": {
+        "color": "0x00000000",
+        "shadowColor": "0x00000000",
+        "elevation": 0.0,
+        "borderColor": "0xFFC7BDBA",
+        "shape": {}
+      },
+      "textTheme": {
+        "headline1": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        },
+        "headline2": {
+          "fontSize": 14,
+          "color": "0xFF666869",
+          "fontWeight": 3,
+          "fontFamily": "NotoSans"
+        },
+        "subtitle1": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0x00FFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0x00000000",
+          "fontSize": 16,
+          "fontWeight": 3,
+          "fontFamily": "NotoSans"
+        },
+        "bodyText1": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "bodyText2": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 17
+        },
+        "caption": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      },
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0x00000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "undertaking",
+      "backgroundColor": "0xFFD9DDDF",
+      "primaryColor": "0xFF000000",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0x00000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "bodyText2": {
+          "color": "0XFF7A7C7C",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "caption": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline6": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "not_in_pilot",
+      "backgroundColor": "0xFFE9E5E3",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0x00000000",
+          "fontSize": 20,
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium"
+        },
+        "headline3": {
+          "color": "0x00000000",
+          "fontSize": 16,
+          "fontWeight": 3,
+          "fontFamily": "NotoSans"
+        },
+        "bodyText2": {
+          "color": "0x00000000",
+          "fontSize": 16,
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium"
+        }
+      }
+    },
+    {
+      "screenName": "mortgage_registration",
+      "primaryColor": "0xFFF4F2F1",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "backgroundColor": "0xFFE9E5E3",
+      "primaryColorDark": "0xFFDDD7D6",
+      "toggleableActiveColor": "0xFFFDD485",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 17
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 2
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "mortgage_registration_result",
+      "primaryColor": "0xFFF4F2F1",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "backgroundColor": "0xFFE9E5E3",
+      "primaryColorDark": "0xFFDDD7D6",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF0F1A38",
+          "fontFamily": "NotoSans",
+          "fontSize": 17
+        },
+        "textTheme": {
+          "bodyText1": {
+            "color": "0xFF5500F9",
+            "fontFamily": "NotoSans",
+            "fontSize": 14
+          }
+        }
+      },
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 2
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 5
+        },
+        "headline5": {
+          "color": "0xFF262727",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0xFF262727",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "how_it_works",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "backgroundColor": "0xFFE9E5E3",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "bodyText1": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 20
+        },
+        "bodyText2": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "headline1": {
+          "color": "0xFF191D23",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF262727",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline6": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "application_confirmation",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        },
+        "subtitle2": {
+          "color": "0xFFFFFFFF",
+          "fontSize": 16,
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "appointment_scheduling",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        },
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontWeight": 3,
+          "fontSize": 20
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "subtitle2": {
+          "color": "0xFF666869",
+          "fontSize": 14,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "headline6": {
+          "color": "0xFFACADAD",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "compare_selected_plot",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 5
+        },
+        "headline5": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 5
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 5
+        }
+      }
+    },
+    {
+      "screenName": "exchange_land_plot_reservation",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "fontSize": 16,
+          "fontWeight": 3,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium"
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 5
+        },
+        "headline5": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 5
+        },
+        "bodyText2": {
+          "fontSize": 14,
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 5
+        }
+      }
+    },
+    {
+      "screenName": "multiple_applications",
+      "scaffoldBackgroundColor": "0x00000000",
+      "appBarTheme": {
+        "foregroundColor": "0x00000000",
+        "backgroundColor": "0x00000000",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF161616",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 6
+        },
+        "headline2": {
+          "fontSize": 12,
+          "fontWeight": 5,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans"
+        },
+        "headline3": {
+          "color": "0xFF606457",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 5
+        },
+        "headline6": {
+          "color": "0xFFE57C00",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "bodyText1": {
+          "fontSize": 14,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "bodyText2": {
+          "fontSize": 12,
+          "color": "0xFF188006",
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        },
+        "sectionHeader": {
+          "fontSize": 16,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        },
+        "subtitle1": {
+          "fontSize": 16,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "subtitle2": {
+          "fontSize": 14,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "rowSubtitle": {
+          "fontSize": 12,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4
+        },
+        "iconTitle": {
+          "fontSize": 10,
+          "color": "0xFF9C5E39",
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        },
+        "caption": {
+          "fontSize": 14,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "view_all_applications",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF313131",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "fontSize": 12,
+          "fontWeight": 5,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans"
+        },
+        "headline3": {
+          "color": "0xFF606457",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF606457",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFFE57C00",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "bodyText1": {
+          "fontSize": 14,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "bodyText2": {
+          "fontSize": 12,
+          "color": "0xFF188006",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "sectionHeader": {
+          "fontSize": 16,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "rowTitle": {
+          "fontSize": 16,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "rowSubtitle": {
+          "fontSize": 12,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "iconTitle": {
+          "fontSize": 14,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "subtitle1": {
+          "fontSize": 14,
+          "color": "0xFFC30606",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "fontSize": 14,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "house_details",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "dividerColor": "0xFFFFFFFF",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontSize": 12,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "early_settlement_benefit",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "dividerColor": "0xFFFFFFFF",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline3": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "feedback_screen",
+      "scaffoldBackgroundColor": "0xFF505152",
+      "appBarTheme": {
+        "foregroundColor": "0xFF000000",
+        "backgroundColor": "0xFF000000",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontSize": 16,
+          "fontFamily": "NotoSans",
+          "fontWeight": 4
+        },
+        "iconTheme": {
+          "color": "0xFF000000"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontSize": 12,
+          "color": "0xFF7A7371",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        },
+        "headline2": {
+          "fontSize": 24,
+          "color": "0xFF000000",
+          "fontWeight": 6,
+          "fontFamily": "NotoSans"
+        },
+        "headline3": {
+          "fontSize": 14,
+          "color": "0xFF3D3938",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        },
+        "headline4": {
+          "fontSize": 14,
+          "color": "0xFF3D3938",
+          "fontWeight": 6,
+          "fontFamily": "NotoSans"
+        },
+        "headline5": {
+          "fontSize": 14,
+          "color": "0xFF7A7371",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        },
+        "headline6": {
+          "fontSize": 14,
+          "color": "0xFF3D3938",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        }
+      }
+    },
+    {
+      "screenName": "project_details_bottom_sheet",
+      "primaryColor": "0xFFEFE4DE",
+      "primaryColorDark": "0xFF666869",
+      "primaryColorLight": "0xFFC7BDBA",
+      "backgroundColor": "0xFFF4F2F1",
+      "dividerColor": "0xFFFFFFFF",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 13,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 13,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 13,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFFffffff",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 13,
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        },
+        "bodyText1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "filter",
+      "scaffoldBackgroundColor": "0x00000000",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4,
+          "fontSize": 20
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4,
+          "fontSize": 12
+        },
+        "headline4": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans",
+          "fontWeight": 3,
+          "fontSize": 12
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4,
+          "fontSize": 14
+        },
+        "headline6": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 4,
+          "fontSize": 14
+        },
+        "subtitle2": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 15,
+          "fontWeight": 4
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 10,
+          "fontWeight": 4
+        },
+        "caption": {
+          "color": "0xFF9C5E39",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "filter-bottom-sheet-theme",
+      "backgroundColor": "0x00000000"
+    },
+    {
+      "screenName": "property_handover",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 4
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "oss_awareness",
+      "scaffoldBackgroundColor": "0xFFC7BDBA",
+      "textTheme": {
+        "headline1": {
+          "fontSize": 32,
+          "fontFamily": "NotoSans-medium",
+          "color": "0x00000000",
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "send_report_api_error",
+      "primaryColor": "0xFFD4EDCF",
+      "errorColor": "0xFFFBEAEA",
+      "textTheme": {
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 5
+        }
+      }
+    },
+    {
+      "screenName": "fab_notified_alert",
+      "primaryColor": "0xFFE9E5E3",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 6
+        },
+        "headline3": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "loan_details",
+      "textTheme": {
+        "headline1": {
+          "fontSize": 18,
+          "color": "0XFF9C5E39",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium"
+        }
+      }
+    },
+    {
+      "screenName": "land_exchange_plot_confirmation_alert",
+      "textTheme": {
+        "headline1": {
+          "fontSize": 19,
+          "color": "0x00000000",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium"
+        },
+        "subtitle1": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        }
+      }
+    },
+    {
+      "screenName": "new_applicant",
+      "scaffoldBackgroundColor": "0x00000000",
+      "appBarTheme": {
+        "foregroundColor": "0x00000000",
+        "backgroundColor": "0x00000000",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline3": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 5
+        },
+        "subtitle1": {
+          "fontSize": 16,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4,
+          "fontSize": 14
+        },
+        "headline5": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 5
+        },
+        "headline6": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline1": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 20,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "bodyText2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontWeight": 3,
+          "fontSize": 12
+        },
+        "bodyText1": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4,
+          "fontSize": 14
+        }
+      }
+    },
+    {
+      "screenName": "personal_details",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "iconTheme": {
+          "color": "0xFF000000"
+        }
+      },
+      "textTheme": {
+        "headline3": {
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 4,
+          "color": "0x00000000"
+        },
+        "subtitle1": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4,
+          "fontSize": 18
+        }
+      }
+    },
+    {
+      "screenName": "new_applicant_carousal",
+      "backGroundColor": "0xFFDDD7D6",
+      "primaryColorLight": "0xFFF4F2F1",
+      "primaryColorDark": "0xFF0F1A38",
+      "splashColor": "0xFFFCFCFA",
+      "scaffoldBackgroundColor": "0xFFDDD7D6",
+      "backgroundColor": "0xFFDDD7D6",
+      "errorColor": "0xFFF90069",
+      "bottomAppBarColor": "0xFFFFFFFF",
+      "toggleableActiveColor": "0xFF5500F9",
+      "dividerColor": "0xFFE7E8EB",
+      "highlightTextColor": "0xFF5500F9",
+      "textFieldBackgroundColor": "0xFFF5F6F7",
+      "actionButtonIconColor": "0xFFFFFFFF",
+      "midNightTintColor": "0xFF374059",
+      "segmentedThemeData": {
+        "color": "0xFFF5F6F7",
+        "textColor": "0xFF0F1A38"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline3": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "profilepage",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "backgroundColor": "0xFFE9E5E3",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontSize": 18,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "iconTheme": {
+          "color": "0xFF000000"
+        }
+      },
+      "textTheme": {
+        "headline3": {
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 4,
+          "color": "0x00000000"
+        },
+        "subtitle1": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4,
+          "fontSize": 18
+        }
+      }
+    },
+    {
+      "screenName": "confirmation_sla_warning_card_theme",
+      "textTheme": {
+        "headline1": {
+          "fontSize": 20,
+          "color": "0x00D32F2F",
+          "fontWeight": 500,
+          "fontFamily": "NotoSans"
+        },
+        "headline2": {
+          "fontSize": 14,
+          "color": "0x00D32F2F",
+          "fontWeight": 500,
+          "fontFamily": "NotoSans"
+        },
+        "headline3": {
+          "fontSize": 18,
+          "color": "0x00000000",
+          "fontWeight": 500,
+          "fontFamily": "NotoSans"
+        },
+        "headline4": {
+          "fontSize": 14,
+          "color": "0x00000000",
+          "fontWeight": 400,
+          "fontFamily": "NotoSans"
+        }
+      }
+    },
+    {
+      "screenName": "dmt_on_hold_success_screen",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "dividerColor": "0xFFFFFFFF",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "notification_list_screen",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontSize": 16,
+          "fontFamily": "NotoSans",
+          "fontWeight": 4
+        },
+        "iconTheme": {
+          "color": "0xFF000000"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontSize": 14,
+          "color": "0x00000000",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans-medium"
+        },
+        "headline2": {
+          "fontSize": 14,
+          "color": "0x00262727",
+          "fontWeight": 4,
+          "fontFamily": "NotoSans"
+        },
+        "headline3": {
+          "fontSize": 12,
+          "color": "0x007A7C7C",
+          "fontWeight": 3,
+          "fontFamily": "NotoSans"
+        }
+      }
+    },
+    {
+      "screenName": "pca_document_upload_container",
+      "textTheme":{
+        "bodyText1": {
+          "color": "0xFFA9A9A9",
+          "fontSize":14,
+          "fontFamily":"NotoSans",
+          "fontWeight": 4
+        },
+        "bodyText2": {
+          "color": "0xFFC30606",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline1": {
+          "color": "0XFF7A7C7C",
+          "fontSize":12,
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "headline2": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0x00000000",
+          "fontFamily":"NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline4":{
+          "color": "0x00666869",
+          "fontFamily":"NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "subtitle1": {
+          "fontFamily": "NotoSans",
+          "color": "0xFFE57C00",
+          "fontSize": 10,
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "pca_screen",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily":"NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFFA9A9A9",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "non_pca_screen",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily":"NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline4": {
+          "color": "0xFFA9A9A9",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF7A7C7C",
+          "fontFamily":"NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "edit_review_application_bottom_sheet",
+      "primaryColor": "0xFFEFE4DE",
+      "primaryColorDark": "0xFF666869",
+      "primaryColorLight": "0xFFC7BDBA",
+      "backgroundColor": "0xFFF4F2F1",
+      "inputDecorationTheme": {
+        "hintStyle": {
+          "color": "0xFFE0E0E0",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "labelStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 5
+        },
+        "subtitle1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "pending_action_tracker_theme",
+      "textTheme": {
+        "bodyText1": {
+          "color": "0xFFD32F2F",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      }
+    },
+    {
+      "screenName": "new_applicant_dropdown",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFFA0A1A1",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "exemption_services_header",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF505152",
+          "fontFamily":"NotoSans",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "exemption_services",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+         "headline2": {
+          "color": "0xFFA9A9A9",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "subtitle1": {
+          "color": "0xFF262626",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "exemption_services_select_application",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+         "headline2": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFFA9A9A9",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF262626",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "exemption_services_enter_detail",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "inputDecorationTheme": {
+        "hintStyle": {
+          "color": "0xFFA0A1A1",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "labelStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "exemption_services_upload_documents",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "inputDecorationTheme": {
+        "hintStyle": {
+          "color": "0xFFA0A1A1",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "labelStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "errorStyle": {
+          "color": "0xFFDA1E28",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF7A7C7C",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+         "headline3": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+         "headline4": {
+          "color": "0xFFA9A9A9",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 5
+        },
+        "headline6": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 6
+        },
+        "subtitle1": {
+          "color": "0xFFA0A1A1",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF7A7371",
+          "fontFamily": "NotoSans",
+          "fontSize": 11,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "exemptions_services_submited_success",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+         "headline3": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 10,
+          "fontWeight": 3
+        },
+        "subtitle1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "exemptions_services_request_history",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+         "headline3": {
+          "color": "0xFF262727",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+         "headline4": {
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+         "headline5": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "subtitle1": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+        "subtitle2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "common_bottom_sheet",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "backgroundColor": "0XFFDDD7D6",
+        "titleTextStyle": {
+          "color":"0x00000000",
+          "fontSize": 20,
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        }
+      },
+      "textTheme":{
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 3
+        },
+         "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+         "headline4": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "exemption_loan_details",
+      "textTheme": {
+        "headline1": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 5
+        },
+        "headline2": {
+          "color": "0x00000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline3": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF7A7371",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        },
+        "headline5": {
+          "color": "0xFF3D3938",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 3
+        }
+      }
+    },
+    {
+      "screenName": "undertaking_consent",
+      "elevatedButtonTheme": {
+        "color": "0xFF000000",
+        "fontFamily": "NotoSans",
+        "fontSize": 16,
+        "textColor": "0xFFFFFFFF"
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF262727",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 6
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 4
+        },
+        "subtitle2": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 14
+        }
+      }
+    },
+    {
+      "screenName": "before_you_start",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "fontWeight": 6
+        },
+        "headline2": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 6
+        },
+        "headline3": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "quick_link",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF6F6F6F",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "headline2": {
+          "color": "0xFF161616",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 6
+        },
+        "headline3": {
+          "color": "0xFF6F6F6F",
+          "fontFamily": "NotoSans",
+          "fontSize": 10,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF161616",
+          "fontFamily": "NotoSans",
+          "fontSize": 15,
+          "fontWeight": 6
+        }
+      }
+    },
+    {
+      "screenName": "ecosystem",
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF262626",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 6
+        },
+        "headline2": {
+          "color": "0xFF6F6F6F",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline3": {
+          "color": "0xFF262626",
+          "fontFamily": "NotoSans",
+          "fontSize": 18,
+          "fontWeight": 6
+        },
+        "headline4": {
+          "color": "0xFF262626",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 5
+        },
+        "headline6": {
+          "color": "0xFFA0A1A1",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "save_preference_municipality",
+      "scaffoldBackgroundColor": "0xFFF4F2F1",
+      "appBarTheme": {
+        "foregroundColor": "0xFFDDD7D6",
+        "backgroundColor": "0xFFDDD7D6",
+        "titleTextStyle": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 4
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "color": "0xFF161616",
+          "fontFamily": "NotoSans",
+          "fontSize": 20,
+          "fontWeight": 6
+        },
+        "headline2": {
+          "fontSize": 12,
+          "fontWeight": 5,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans"
+        },
+        "headline3": {
+          "color": "0xFF606457",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 16,
+          "fontWeight": 5
+        },
+        "headline4": {
+          "color": "0xFF505152",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 12,
+          "fontWeight": 5
+        },
+        "headline6": {
+          "color": "0xFFE57C00",
+          "fontFamily": "NotoSans",
+          "fontSize": 12,
+          "fontWeight": 4
+        },
+        "bodyText1": {
+          "fontSize": 14,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "bodyText2": {
+          "fontSize": 12,
+          "color": "0xFF188006",
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        },
+        "sectionHeader": {
+          "fontSize": 16,
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        },
+        "subtitle1": {
+          "fontSize": 16,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans-medium",
+          "fontWeight": 5
+        },
+        "subtitle2": {
+          "fontSize": 14,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontWeight": 3
+        },
+        "rowSubtitle": {
+          "fontSize": 12,
+          "color": "0xFFFFFFFF",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4
+        },
+        "iconTitle": {
+          "fontSize": 10,
+          "color": "0xFF9C5E39",
+          "fontFamily": "NotoSans",
+          "fontWeight": 5
+        },
+        "caption": {
+          "fontSize": 14,
+          "color": "0xFF666869",
+          "fontFamily": "NotoSans",
+          "fontWeight": 4
+        }
+      }
+    },
+    {
+      "screenName": "housing_certificate",
+      "scaffoldBackgroundColor": "0xFFF9F8F7",
+      "appBarTheme": {
+        "foregroundColor": "0xFF0F1A38",
+        "backgroundColor": "0xFFDDD7D6",
+        "iconTheme": {
+          "color": "0xFF0C142B"
+        }
+      },
+      "textTheme": {
+        "headline1": {
+          "fontFamily": "NotoSans-medium",
+          "fontSize": 18,
+          "fontWeight": 5,
+          "color": "0xFF000000"
+        },
+        "headline2": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869"
+        },
+        "headline3": {
+          "fontFamily": "NotoSans",
+          "fontSize": 16,
+          "color": "0xFF3D3938",
+          "fontWeight": 5
+        },
+        "headline4": {
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "color": "0xFF666869",
+          "fontWeight": 4
+        },
+        "headline5": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 14,
+          "fontWeight": 4
+        },
+        "headline6": {
+          "color": "0xFF000000",
+          "fontFamily": "NotoSans",
+          "fontSize": 24,
+          "fontWeight": 6
+        }
+      }
+    }
+  ]
+}

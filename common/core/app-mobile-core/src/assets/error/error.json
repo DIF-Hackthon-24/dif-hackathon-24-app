@@ -1,0 +1,17 @@
+{
+    "packageName": "mobile_core",
+    "errorList": [
+        {
+            "service": "core",
+            "items": [
+                {
+                    "code": "default",
+                    "type": "overlay_screen",
+                    "title": "login:oops",
+                    "message": "login:login_something_went_wrong",
+                    "buttons": []
+                }
+            ]
+        }
+    ]
+}

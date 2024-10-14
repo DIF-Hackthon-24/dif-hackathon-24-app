@@ -1,0 +1,63 @@
+{
+  "restEnvironments": [
+    {
+      "name": "default",
+      "host": "",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "x-adq-correlation-id": "c-1234"
+      }
+    },
+    {
+      "name": "mockUserLogin",
+      "host": "user/mock/login",
+      "headers":{
+        "Content-Type": "application/json",
+        "User-Agent": "Mobile"
+      }
+    },
+    {
+      "name": "fetchWalletCredentialsList",
+      "host": "/wallet-api/wallet/84d29fb1-b66e-41bf-b2fb-452ffffbbb83/credentials",
+      "headers":{
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "postWalletCredentialsIssuance",
+      "host": "/wallet-api/wallet/84d29fb1-b66e-41bf-b2fb-452ffffbbb83/exchange/useOfferRequest",
+      "headers":{
+        "Content-Type": "text/plain"
+      }
+    },
+    {
+      "name": "deleteWalletCredentialsById",
+      "host": "/wallet-api/wallet/84d29fb1-b66e-41bf-b2fb-452ffffbbb83/credentials/credential_id",
+      "headers":{
+        "Content-Type": "application/json"
+      }
+    }
+  ],
+  "gqlEnvironments": [
+    {
+      "name": "default",
+      "host": "",
+      "headers": {}
+    },
+    {
+      "name": "default_no_caching",
+      "host": "",
+      "headers": {},
+      "disableCaching":true
+    }
+  ],
+  "gqlMappingOverrides": {    
+    "fetchPlots": "default_no_caching",
+    "fetchAssets": "default_no_caching",
+    "fetchWalletCredentialsList": "default_no_caching"
+  },
+  "headers": {
+    
+  },
+  "useMockNetworkClient": false
+}

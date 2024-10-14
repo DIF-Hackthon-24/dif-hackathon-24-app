@@ -1,0 +1,68 @@
+name: widget_library
+description: widget library
+version: 0.0.1
+publish_to: none
+homepage: "https://www.publicissapient.com/"
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+dependencies:
+  json_annotation: ^4.8.1
+  flutter:
+    sdk: flutter
+  fluttertoast: ^8.2.4
+  sliver_tools: ^0.2.12
+  auto_size_text: ^3.0.0
+  flutter_svg: ^2.0.9
+  # intl: any
+  adaptive_dialog: ^2.0.0
+  webview_flutter:
+  pdf_render: ^1.4.5
+  country_pickers: ^2.0.0
+  flutter_slidable: ^3.0.1
+  sms_autofill: ^2.3.0
+  flutter_swipe_button: ^2.1.1+1
+  table_calendar: ^3.0.9
+  camera: ^0.10.5+8
+  photo_view: ^0.15.0
+  flutter_html:
+  # package_info_plus:
+  package_info_plus: ^8.0.0
+  youtube_player_iframe: ^5.1.2
+  open_filex:
+  core:
+    path: ../../../core/app-mobile-core/src/
+
+  task_manager:
+    path: ../../../task_manager/app-mobile-taskmanager/src/
+
+  cached_network_image: ^3.3.1
+  flutter_pdfview: ^1.3.2
+
+  theme_font:
+    path: ../../../theme_font/
+  
+dev_dependencies:
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
+  freezed:
+  golden_toolkit: ^0.15.0
+  import_sorter: ^4.6.0
+  flutter_lints: ^3.0.1
+  pedantic: ^1.11.1
+  mockito: ^5.4.4
+
+dependency_overrides:
+  intl: ^0.19.0

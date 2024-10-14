@@ -1,0 +1,170 @@
+{
+  "example": {
+    "comment": "Example showing all supported TextStyle options (excluding this comment ;-)",
+    "fontFamily": "roboto",
+    "fontSize": 12.0,
+    "fontWeight": "100..900",
+    "fontStyle": "italic|normal",
+    "height": 20.0,
+    "letterSpacing": 1.0,
+    "wordSpacing": 1.0
+  },
+  "styles": {
+    "buttons": {
+      "large": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 14.0
+      },
+      "normal": {
+        "fontFamily": "AktivGrotesqueBd",
+        "fontSize": 12.0
+      }
+    },
+    "textInputs": {
+      "hint": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 17.0
+      },
+      "header": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 11.0
+      },
+      "otp": {
+        "fontFamily": "AktivGrotesqueMd",
+        "fontSize": 28.0
+      },
+      "phoneNumber": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 17.0
+      },
+      "primary": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 28.0
+      },
+      "secondary": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 17.0
+      },
+      "amount": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 17.0
+      }
+    },
+    "staticText": {
+      "amount": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 17.0
+      },
+      "largeAmount": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 44.0
+      },
+      "value": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 28.0
+      },
+      "hints": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 14.0
+      }
+    },
+    "headers": {
+      "primary": {
+        "fontFamily": "AktivGrotesqueMd",
+        "fontSize": 17.0
+      },
+      "large": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 44.0
+      },
+      "subHeader": {
+        "fontFamily": "AktivGrotesqueRg",
+        "fontSize": 1.0
+      }
+    }
+  },
+  "inputLabel1": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 11.0
+  },
+  "inputHelper1": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 11.0
+  },
+  "inputValue2": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 28.0
+  },
+  "inputLabel2": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 14.0
+  },
+  "inputHelper2": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 14.0
+  },
+  "inputValue3": {
+    "fontFamily": "AktivGrotesqueBd",
+    "fontSize": 28.0
+  },
+  "inputLabel3": {
+    "fontFamily": "AktivGrotesqueBd",
+    "fontSize": 14.0
+  },
+  "inputHelper3": {
+    "fontFamily": "AktivGrotesqueBd",
+    "fontSize": 14.0
+  },
+  "tile1": {
+    "fontFamily": "AktivGrotesqueBd",
+    "fontSize": 17.0
+  },
+  "tile2": {
+    "fontFamily": "AktivGrotesqueMd",
+    "fontSize": 17.0
+  },
+  "tile3": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 44.0
+  },
+  "tile4": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 14.0
+  },
+  "tile5": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 17.0
+  },
+  "tile6": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 11.0
+  },
+  "tile7": {
+    "fontFamily": "AktivGrotesqueBd",
+    "fontSize": 12.0
+  },
+  "tile8": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 28.0
+  },
+  "label1": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 14.0
+  },
+  "controls1": {
+    "fontFamily": "AktivGrotesqueMd",
+    "fontSize": 14.0
+  },
+  "controls2": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 44.0
+  },
+  "controls3": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 17.0
+  },
+  "button2": {
+    "fontFamily": "AktivGrotesqueRg",
+    "fontSize": 14.0
+  }
+}

@@ -1,0 +1,19 @@
+include: package:pedantic/analysis_options.1.11.0.yaml
+
+analyzer:
+  exclude: [build/**, lib/theme/fonts/**.g.dart, lib/theme/colors/**.g.dart,]
+  strong-mode:
+    implicit-casts: false
+
+linter:
+
+  rules:
+    unnecessary_string_escapes: false
+    depend_on_referenced_packages: false
+    constant_identifier_names: false
+    unnecessary_overrides: false
+    omit_local_variable_types: false
+    non_constant_identifier_names: false
+    always_declare_return_types: true    
+
+

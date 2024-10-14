@@ -1,0 +1,37 @@
+{
+  "deepLinkBaseUrl": "adha://deeplink/",
+  "deepLinkConfigs": [
+    {
+      "screen": "global-splash",
+      "prerequisite": ""
+    },
+    {
+      "screen": "global-login",
+      "prerequisite": "",
+      "arguments": [
+        "userId"
+      ]
+    },
+    {
+      "screen": "global-language_selector",
+      "prerequisite": "",
+      "arguments": [
+        "userId"
+      ]
+    },
+    {
+      "screen": "global-homeView",
+      "prerequisite": "",
+      "arguments": [
+        "userId"
+      ]
+    },
+    {
+      "screen": "global-uae_pass_auth",
+      "prerequisite": "",
+      "arguments": [
+        "userId"
+      ]
+    }
+  ]
+}

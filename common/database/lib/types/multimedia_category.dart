@@ -1,0 +1,16 @@
+enum MultimediaCategory {
+  bannerImage,
+  planImage,
+  image,
+  homeScreenIntroVideo,
+  plotLayoutVideo,
+  timelineEnglish,
+  timelineArabic,
+  assetsAnimation,
+  menuMediaEnglish,
+  menuMediaArabic,
+  menuTimelineEnglish,
+  menuTimelineArabic,
+  menuMasterPlanEnglish,
+  menuMasterPlanArabic,
+}

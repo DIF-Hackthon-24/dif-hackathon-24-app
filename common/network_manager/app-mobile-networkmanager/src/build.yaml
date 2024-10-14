@@ -1,0 +1,16 @@
+targets:
+  $default:
+    sources:
+        - $package$
+        - "lib/**"
+        - "test/**"
+    builders:
+      json_serializable|json_serializable:
+        generate_for:
+            - "lib/configuration/**config.dart"
+      mockito|mockBuilder:
+        generate_for:
+          - "test/**.dart"
+
+          
+            

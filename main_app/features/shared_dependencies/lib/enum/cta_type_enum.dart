@@ -1,0 +1,4 @@
+enum CTAType {
+  main,
+  secondary,
+}

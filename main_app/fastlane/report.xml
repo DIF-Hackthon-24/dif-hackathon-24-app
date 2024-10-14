@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="fastlane.lanes">
+
+
+
+
+        <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000437">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="01: Switch to android build_apk lane" time="0.000409">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="02: Switch to android install_dependencies lane" time="0.000218">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="03: sh pub_get_all.sh" time="395.915822">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="04: flutter pub run build_runner build --delete-conflicting-outputs" time="21.734504">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="05: flutter pub run build_runner build --delete-conflicting-outputs" time="23.88438">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="06: flutter pub run build_runner build --delete-conflicting-outputs" time="22.736135">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="07: flutter pub run build_runner build --delete-conflicting-outputs" time="14.374309">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="08: flutter pub run build_runner build --delete-conflicting-outputs" time="14.064771">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="09: flutter pub run build_runner build --delete-conflicting-outputs" time="16.20778">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="10: number_of_commits" time="0.166405">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="11: flutter build apk --obfuscate --split-debug-info=1.0.1496 --build-number=1496 --build-name=1.0.1496 --release -t lib/main.dart --flavor Dev --dart-define=sha=03:3B:23:85:AC:E3:52:A3:C5:5B:BB:9F:5C:BB:50:07:74:50:83:F5 --dart-define=salt=137fb092225733b1" time="674.467766">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="12: Switch to android publish_to_app_center lane" time="0.006168">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="13: pwd" time="0.348258">
+
+        </testcase>
+
+
+        <testcase classname="fastlane.lanes" name="14: appcenter_upload" time="92.885771">
+
+        </testcase>
+
+    </testsuite>
+</testsuites>

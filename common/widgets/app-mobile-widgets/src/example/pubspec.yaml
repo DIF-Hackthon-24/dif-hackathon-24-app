@@ -1,0 +1,43 @@
+name: widget_library_example
+description: widget library examples
+version: 0.0.1
+publish_to: none
+homepage: "https://www.publicissapient.com/"
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  core:
+    path: ../../../../core/app-mobile-core/src/
+
+  widget_library:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pedantic: ^1.11.1
+  mockito: ^5.4.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/files/
+    - assets/styles/
+
+  fonts:
+    - family: AktivGrotesqueRg
+      fonts:
+        - asset: fonts/AktivGrotesk_Trial_Rg.ttf
+    - family: AktivGrotesqueMd
+      fonts:
+        - asset: fonts/AktivGrotesk_Trial_Md.ttf
+    - family: AktivGrotesqueBd
+      fonts:
+        - asset: fonts/AktivGrotesk_Trial_Bd.ttf

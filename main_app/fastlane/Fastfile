@@ -1,0 +1,752 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+fastlane_require 'dotenv'
+Dotenv.overload ".env.secret"
+
+ENV["FASTLANE_OUTPUT_DIRECTORY"] = "fastlane/output"
+@output_directory = ENV["FASTLANE_OUTPUT_DIRECTORY"]
+# git url of match
+@match_git_url = ENV["certificates_git_hub_url"]
+
+apk_file_name="app-release.apk"
+provisioning_profile_name=ENV['provisioning_profile_name']
+team_id=ENV['team_id']
+bundle_identifier=ENV['bundle_identifier']
+export_options_plist=ENV['export_options_plist']
+ipa_name=ENV['ipa_name']
+
+launch_path=ENV['app_launch_path']
+launch_path_prod=ENV['app_launch_path_prod']
+
+project_path=ENV['project_path']
+root_folder_name=ENV['root_folder_name']
+flavor=ENV['product_flavor']
+owner_name=ENV['owner_name']
+
+packagesList=ENV['packagesList']
+projects=ENV['projectsList']
+pubspec_paths=ENV['pubspec_paths']
+
+android_master_branch_app_store_api_key=ENV['android_master_branch_app_store_api_key']
+android_master_branch_app_store_app_name=ENV['android_master_branch_app_store_app_name']
+android_develop_branch_app_store_api_key=ENV['android_develop_branch_app_store_api_key']
+android_develop_branch_app_store_app_name=ENV['android_develop_branch_app_store_app_name']
+android_support_branch_app_store_api_key=ENV['android_support_branch_app_store_api_key']
+android_support_branch_app_store_app_name=ENV['android_support_branch_app_store_app_name']
+android_release_branch_app_store_api_key=ENV['android_release_branch_app_store_api_key']
+android_release_branch_app_store_app_name=ENV['android_release_branch_app_store_app_name']
+
+iOS_master_branch_app_store_api_key=ENV['iOS_master_branch_app_store_api_key']
+iOS_master_branch_app_store_app_name=ENV['iOS_master_branch_app_store_app_name']
+iOS_develop_branch_app_store_api_key=ENV['iOS_develop_branch_app_store_api_key']
+iOS_develop_branch_app_store_app_name=ENV['iOS_develop_branch_app_store_app_name']
+iOS_support_branch_app_store_api_key=ENV['iOS_support_branch_app_store_api_key']
+iOS_support_branch_app_store_app_name=ENV['iOS_support_branch_app_store_app_name']
+iOS_release_branch_app_store_api_key=ENV['iOS_release_branch_app_store_api_key']
+iOS_release_branch_app_store_app_name=ENV['iOS_release_branch_app_store_app_name']
+
+android_sha=ENV['android_sha']
+salt=ENV['salt']
+android_sha_prod=ENV['android_sha_prod']
+salt_prod=ENV['salt_prod']
+
+def get_main_app_path(project_path, root_folder_name)
+    path="/"
+    if project_path.length() > 0
+        path.concat("#{project_path}/");
+    end
+
+    if root_folder_name.length() > 0
+        path.concat("#{root_folder_name}/");
+    end
+
+    path
+end
+
+# def get_feature_folder_name(project_path, root_folder_name, features_folder_name)
+#     path = get_main_app_path(project_path, root_folder_name)
+
+#     if features_folder_name.length() > 0
+#         path.concat("#{features_folder_name}/");
+#     end
+
+#     path
+# end
+
+def findChangedFilesPackages(files, packages)
+    UI.message("files: #{files}")
+    filesList = []
+
+    packagesList = []
+    if packages.length() > 0
+        packagesList=packages.split(",")
+    end
+
+    UI.message("packagesList: #{packagesList}")
+
+    if filesList.length() > 0
+        filesList=files.split(" ")
+    end
+
+    UI.message("filesList: #{filesList}")
+
+    filteredPackagesList = []
+
+    packagesList.each do |package|
+        filteredFilesList = filesList.select{ |item|
+            item.include? package
+        }
+
+        if filteredFilesList.length() > 0
+            filteredPackagesList.push(package)
+        end
+    end
+
+    UI.message("filteredPackagesList: #{filteredPackagesList}")
+
+    filteredPackagesList
+    packagesList # vamsi remove this
+end
+
+def run_flutter_build_runner(filteredPackagesList, main_app_path)
+    UI.message("======Start run_flutter_build_runner======")
+
+    filteredPackagesList.each do |package|
+        UI.message("package: #{package}")
+
+        package = package.gsub("\n","").strip
+
+        Dir.chdir("..#{package}") do
+            sh("flutter pub run build_runner build --delete-conflicting-outputs")
+        end
+    end
+
+    Dir.chdir("../#{main_app_path}") do
+        sh("flutter pub run build_runner build --delete-conflicting-outputs")
+    end
+
+    UI.message("======End run_flutter_build_runner======")
+end
+
+def build_breaker(minimum_percentage, project)
+
+    minimum_percentage = minimum_percentage.to_f
+    minimum_percentage = minimum_percentage.round(2)
+
+    result = sh("grep -F 'headerCovTableEntryLo' coverage/index.html || true")
+    if result.nil?
+        result = sh("grep -F 'headerCovTableEntryMed' coverage/index.html || true")
+    elsif result.empty?
+        result = sh("grep -F 'headerCovTableEntryMed' coverage/index.html || true")
+    end
+
+    if result.nil?
+        result = sh("grep -F 'headerCovTableEntryHi' coverage/index.html || true")
+    elsif result.empty?
+        result = sh("grep -F 'headerCovTableEntryHi' coverage/index.html || true")
+    end
+
+    search_string="class="
+    replace_string=""
+    result=sh("echo \"#{result}\" | sed \"s/\"#{search_string}\"/\"#{replace_string}\"/\"")
+
+    search_string="headerCovTableEntryLo"
+    result=sh("echo \"#{result}\" | sed \"s/\"#{search_string}\"/\"#{replace_string}\"/\"")
+
+    search_string="headerCovTableEntryMed"
+    result=sh("echo \"#{result}\" | sed \"s/\"#{search_string}\"/\"#{replace_string}\"/\"")
+
+    search_string="headerCovTableEntryHi"
+    result=sh("echo \"#{result}\" | sed \"s/\"#{search_string}\"/\"#{replace_string}\"/\"")
+
+    search_string="td"
+    result=sh("echo \"#{result}\" | sed \"s/\"#{search_string}\"/\"#{replace_string}\"/g\"")
+
+    result = sh("echo $\"#{result}\" | sed 's/[<>%/ ]//g'")
+
+    result = result.to_f
+    result = result.round(2)
+    puts result
+
+    if result < minimum_percentage
+        UI.user_error!("Unit test coverage #{project} is less than the minimum coverage")
+    end
+end
+
+lane :analyze do |options|
+    install_dependencies
+
+    files = options[:files]
+
+    filteredPackagesList = findChangedFilesPackages(files, packagesList)
+
+    filteredPackagesList.each do |package|
+        UI.message("package: #{package}")
+
+        package = package.gsub("\n","").strip
+
+        Dir.chdir("..#{package}") do
+            sh("flutter analyze")
+        end
+    end
+
+    sh("flutter analyze")
+end
+
+def is_lcov_file_valid(file_name)
+    text = File.read(file_name)
+    UI.message("LCOV Fifle length #{text.length()}")
+
+    if text.length() > 0
+        true
+    else
+        false
+    end
+end
+
+def unit_tests(main_app_path, projectsList)
+    UI.message("======Start Method Unit Tests======")
+
+    #'*view' '*screen*' '*screen.dart' '*service.dart' '*view.dart' '*coordinator.dart'
+    list=("'.g.dart$' '*.g.dart' '*datamodel.dart' '*data_model.dart' '*state.dart' '*query.dart' '*response.dart' '*attributes.dart' '*navigation_handler.dart' '*data_provider.dart' '*data_model.dart' '*statement_model.dart' '*company_details.dart' '*task_resolver.dart' '*module_resolver.dart' '*route_manager.dart' '*subscription_details.dart' '*_module.dart' '*creation_date_model.dart' '*graphql*' ")
+
+    projectsList.each do |projectElement|
+        stripped_project = projectElement.split(":")
+
+        UI.message("stripped_project #{stripped_project}")
+
+        project = stripped_project[0]
+        coverage = stripped_project[1].strip
+
+        UI.message("project #{project}")
+        UI.message("coverage #{coverage}")
+
+        Dir.chdir("..") do
+            test_helper_file_path="#{project}"
+            test_helper_file_path = test_helper_file_path.delete_prefix("/")
+
+            UI.message("test_helper_file_path #{test_helper_file_path}")
+
+            sh("cp test_coverage_helper.sh #{test_helper_file_path}")
+        end
+
+        packageName = project.split("/")
+
+        Dir.chdir("..#{project}") do
+            sh("sh test_coverage_helper.sh")
+            sh("rm -rf coverage/")
+            sh("flutter test --coverage")
+
+            is_valid = is_lcov_file_valid("coverage/lcov.info")
+            if is_valid == false
+                sh("cp coverage/lcov.info coverage/lcov_trimmed.info")
+                next
+            end
+
+            sh("lcov --remove coverage/lcov.info #{list} -o coverage/lcov_trimmed.info")
+
+            is_valid = is_lcov_file_valid("coverage/lcov_trimmed.info")
+            if is_valid == false
+                next
+            end
+
+            sh("genhtml -o coverage coverage/lcov_trimmed.info")
+
+            build_breaker(coverage, project)
+
+            file_name = "coverage/lcov_trimmed.info"
+            text = File.read(file_name)
+            replace_string = "SF:#{project}/"
+            new_contents = text.gsub("SF:", replace_string)
+            new_contents = new_contents.gsub("SF:/", "SF:")
+
+            # To write changes to the file, use:
+            File.open(file_name, "w") {|file| file.puts new_contents }
+        end
+    end
+
+    Dir.chdir("..#{main_app_path}") do
+        sh("sh test_coverage_helper.sh")
+        sh("rm -rf coverage/")
+        sh("flutter test --coverage")
+        is_valid = is_lcov_file_valid("coverage/lcov.info")
+        if is_valid
+            sh("lcov --remove coverage/lcov.info #{list} -o coverage/lcov_trimmed.info")
+        else
+            sh("cp coverage/lcov.info coverage/lcov_trimmed.info")
+        end
+    end
+
+    UI.message("======End Method Unit Tests======")
+end
+
+lane :unit_tests_with_coverage_report do |options|
+#     install_dependencies
+
+    files = options[:files]
+
+    sh("rm -rf ../merged.info || true")
+    sh("rm -rf ../coverage || true")
+
+    filteredPackageList = packagesList
+    #findChangedFilesPackages(files, packagesList)
+    UI.message("filteredPackageList: #{filteredPackageList}")
+    projectsList = projects.split(",")
+    UI.message("projectsList: #{projectsList}")
+    finalList = projectsList.select { |project, _|
+        stripped_project = project.split(":")
+        result = filteredPackageList.include?("#{stripped_project[0]}")
+    }
+    UI.message("finalList: #{finalList}")
+
+    main_app_path = get_main_app_path(project_path, root_folder_name)
+    UI.message("main_app_path: #{main_app_path}")
+    unit_tests(main_app_path, finalList)
+
+    length = finalList.length()
+    puts "projectsList length : #{length}"
+
+    combinedTraceFile = ""
+    root_lcov_path = ""
+    is_valid = true
+
+    #Dir.chdir("..#{main_app_path}") do
+    #    is_valid = is_lcov_file_valid("coverage/lcov_trimmed.info")
+
+    #    if is_valid
+    #        root_lcov_path = "..#{main_app_path}coverage/lcov_trimmed.info"
+    #    end
+    #end
+
+    finalList.each do |project, coverage|
+        stripped_project = project.split(":")
+        puts "nextProject : #{stripped_project[0]}"
+
+        Dir.chdir("..#{stripped_project[0]}/") do
+            is_valid = is_lcov_file_valid("coverage/lcov_trimmed.info")
+        end
+
+        if is_valid
+            if root_lcov_path.length == 0
+                root_lcov_path = "..#{stripped_project[0]}/coverage/lcov_trimmed.info"
+                next
+            end
+        else
+            next
+        end
+
+        combinedTraceFile = "#{combinedTraceFile} -a ..#{stripped_project[0]}/coverage/lcov_trimmed.info"
+        puts "combinedTraceFile: #{combinedTraceFile}"
+    end
+
+    sh("lcov --add-tracefile #{root_lcov_path} #{combinedTraceFile} -o ../coverage/lcov_trimmed_merged.info")
+    Dir.chdir("..#{main_app_path}") do
+        sh("genhtml -o coverage coverage/lcov_trimmed_merged.info")
+    end
+end
+
+lane :install_dependencies do |options|
+    files = options[:files]
+    
+    main_app_path = get_main_app_path(project_path, root_folder_name)
+
+    Dir.chdir("..#{main_app_path}") do
+        sh("sh pub_get_all.sh")
+    end
+
+    filteredPackageList = findChangedFilesPackages(files, packagesList)
+
+    if filteredPackageList.length() > 0
+        #run_flutter_build_runner(filteredPackageList, main_app_path)
+    end
+end
+
+private_lane :publish_to_app_center do |options|
+    source_branch = options[:source_branch]
+    if source_branch.nil? || source_branch.empty?
+        source_branch = 'develop'
+    end
+
+    if source_branch.include? "refs/heads/"
+        source_branch["refs/heads/"] = ""
+    end
+    version_message = options[:source_version_message]
+    path=options[:path]
+    mapping_filename=options[:mapping_filename]
+
+    apiKey=""
+    app_name=""
+    upload_to_app_center = true
+
+    UI.message("source branch: #{source_branch}")
+    UI.message("version_message: #{version_message}")
+    UI.message("path: #{path}")
+    UI.message("mapping_filename: #{mapping_filename}")
+
+    platform = ENV["FASTLANE_PLATFORM_NAME"]
+
+    if platform.nil? || platform.length() == 0
+        platform = "ios"
+    end
+
+    if source_branch.nil? || source_branch.empty?
+        UI.message("Source branch is empty")
+    else
+        if source_branch.include? "develop"
+            UI.message("This is develop branch")
+            if platform.include? "android"
+                apiKey=android_develop_branch_app_store_api_key
+                app_name="#{android_develop_branch_app_store_app_name}"
+            else
+                apiKey="#{iOS_develop_branch_app_store_api_key}"
+                app_name="#{iOS_develop_branch_app_store_app_name}"
+            end
+        elsif source_branch.include? "master"
+            UI.message("This is master branch")
+            if platform.include? "android"
+                apiKey="#{android_master_branch_app_store_api_key}"
+                app_name="#{android_master_branch_app_store_app_name}"
+            else
+                apiKey="#{iOS_master_branch_app_store_api_key}"
+                app_name="#{iOS_master_branch_app_store_app_name}"
+            end
+        elsif source_branch.include? "support"
+            UI.message("This is support beta branch")
+
+            if platform.include? "android"
+                    apiKey="#{android_support_branch_app_store_api_key}"
+                    app_name="#{android_support_branch_app_store_app_name}"
+            else
+                    apiKey="#{iOS_support_branch_app_store_api_key}"
+                    app_name="#{iOS_support_branch_app_store_app_name}"
+            end
+        elsif source_branch.include? "feature"
+            UI.message("This is feature branch")
+
+            if version_message.nil? || version_message.empty?
+                UI.message("There is no version message")
+                upload_to_app_center = false
+            elsif version_message.downcase.include? "[deploy]"
+                if platform.include? "android"
+                    apiKey="#{android_feature_branch_app_store_api_key}"
+                    app_name="#{android_feature_branch_app_store_app_name}"
+                else
+                    apiKey="#{iOS_feature_branch_app_store_api_key}"
+                    app_name="#{iOS_feature_branch_app_store_app_name}"
+                end
+            else
+                UI.message("version message #{version_message}")
+                upload_to_app_center = false
+            end
+        else
+            UI.message("version message #{version_message}")
+            upload_to_app_center = false
+        end
+    end
+
+    if upload_to_app_center
+        upload_binary(apiKey, app_name, mapping_filename, path, owner_name)
+    else
+        UI.message("Do not upload to app center")
+    end
+end
+
+def upload_binary(api_key, app_name, mapping_filename, path, owner_name)
+    root_path = sh('pwd')
+    root_path = root_path.strip
+    UI.message("root_path: #{root_path}")
+    UI.message("APIKey: #{api_key}")
+    UI.message("App name: #{app_name}")
+    UI.message("path: #{path}")
+
+    platform=ENV["FASTLANE_PLATFORM_NAME"]
+    UI.message("FASTLANE_PLATFORM_NAME: #{platform}")
+    UI.message("owner_name: #{owner_name}")
+
+    if platform.nil? || platform.length() == 0
+        platform = "ios"
+    end
+
+    if platform.include? "android"
+    UI.message("Android - api_key: #{api_key}")
+    UI.message("Android - app_name: #{app_name}")
+        appcenter_upload(
+            api_token: api_key,
+            owner_name: owner_name,
+            app_name: app_name,
+            file: "#{root_path}/#{path}",
+            mapping: "#{root_path}/#{mapping_filename}/mapping.txt",
+        )
+    else
+        appcenter_upload(
+            api_token: api_key,
+            owner_name: owner_name,
+            app_name: app_name,
+            file: "#{path}.ipa",
+        )
+    end
+end
+
+default_platform(:ios)
+
+platform :ios do
+
+    private_lane :install_certificate_provisioning_profile do
+
+     create_keychain({
+        name: ENV["MATCH_KEYCHAIN_NAME"],
+        password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+        unlock: true
+     })
+     unlock_keychain({
+        path: "~/Library/Keychains/#{ENV["MATCH_KEYCHAIN_NAME"]}",
+        password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+        set_default: false
+     })
+
+     match(
+        git_url: @match_git_url,
+        app_identifier: "#{bundle_identifier}",
+        readonly: true
+    )
+
+    end
+
+    lane :generate_java_code_from_flutter do |options|
+        package_name = options[:package_name]
+        UI.message("package_name: #{package_name}")
+
+        file_pattern = options[:file_pattern]
+        UI.message("file_pattern: #{file_pattern}")
+
+        folder_name = options[:folder_name]
+        UI.message("folder_name: #{folder_name}")
+
+        package_pattern = options[:package_pattern]
+        UI.message("package_pattern: #{package_pattern}")
+
+        flutter_to_java(file_pattern: "#{file_pattern}", package_pattern: "#{package_pattern}", folder_name: "#{folder_name}", package_name: "#{package_name}")
+    end
+
+    lane :upgrade_pub_spec_versions do
+        main_app_path = get_main_app_path(project_path, root_folder_name)
+
+        projectsList = pubspec_paths.split(",")
+
+        projectsList.each do |projectElement|
+            stripped_project = projectElement
+
+            project = stripped_project
+
+            UI.message("project #{project}")
+
+            Dir.chdir("..") do
+                common_pubspec_file_path="#{project}"
+                common_pubspec_file_path = common_pubspec_file_path.delete_prefix("/")
+
+                sh("cp common_pubspec.yaml #{common_pubspec_file_path}")
+            end
+
+            Dir.chdir("..#{project}") do
+                packageName = project.split("/")
+                modify_pubspec(folder_name: "#{packageName.last}/")
+            end
+        end
+
+        modify_pubspec
+    end
+
+    lane :build_ios_app_store do
+        Dir.chdir("../#{project_path}/ios") do
+            # Get build number
+            build_number = get_build_number(xcodeproj: "ios/Runner.xcodeproj")
+            build_number = build_number.to_i
+            build_number = build_number + 1
+            puts "build_number: #{build_number}"
+
+            # Increment build number
+            increment_build_number(build_number:"#{build_number}", xcodeproj: "ios/Runner.xcodeproj")
+
+            # Change bundle identifier
+            update_app_identifier(app_identifier: "#{bundle_identifier}", xcodeproj: "ios/Runner.xcodeproj", plist_path: "Runner/Info.plist")
+
+            # Change provisioning profile
+            update_project_provisioning(codeproj: "ios/Runner.xcodeproj", profile: "provisioning_profile/#{provisioning_profile_name}", code_signing_identity: "iPhone Distribution")
+        end
+
+        Dir.chdir("../#{project_path}") do
+            sh("flutter build ipa -t lib/#{launch_path}")
+        end
+
+        Dir.chdir("../#{project_path}/ios/#{archive_folder_path}/app.xcarchive") do
+            sh("zip -r app.dSYM.zip dSYMs")
+            sh("cp app.dSYM.zip ../")
+        end
+
+        Dir.chdir("../#{project_path}/build/ios") do
+            sh("xcodebuild -exportArchive -archivePath archive/Runner.xcarchive   archive  -exportOptionsPlist ExportOptionsProd.plist -exportPath archive/")
+        end
+    end
+
+    lane :build_ios do |options|
+        install_dependencies
+
+        install_certificate_provisioning_profile
+
+        build_number = number_of_commits()
+        if  options[:build_number]
+          build_number = options[:build_number]
+          puts "build number  = #{build_number}"
+        end
+
+        new_project_path = "ios"
+        if project_path.length() > 0
+            new_project_path = "#{project_path}/ios"
+        end
+        increment_version_number(
+            version_number: "1.0.#{build_number}",
+            #bump_type: "patch", # Automatically increment minor version number
+            xcodeproj: "#{new_project_path}/Runner.xcodeproj"
+        )
+
+        #  update code signing settings
+        update_code_signing_settings(
+            use_automatic_signing: false,
+            path: "ios/Runner.xcodeproj",
+            team_id:"#{team_id}",
+            bundle_identifier: "#{bundle_identifier}",
+            profile_name: "#{provisioning_profile_name}",
+            code_sign_identity: "iPhone Distribution"
+        )
+#         update_code_signing_settings(path: "ios/Runner.xcodeproj", use_automatic_signing: false)
+
+#
+#         # Change bundle identifier
+         update_app_identifier(app_identifier: "#{bundle_identifier}", xcodeproj: "ios/Runner.xcodeproj", plist_path: "Runner/Info.plist")
+#
+         update_project_team(path: "ios/Runner.xcodeproj", teamid: "#{team_id}")
+#
+#         # Change provisioning profile
+         update_project_provisioning(profile: "fastlane/provisioning_profile/#{provisioning_profile_name}", code_signing_identity: "iPhone Distribution", xcodeproj: "ios/Runner.xcodeproj")
+#
+         install_provisioning_profile(path: "fastlane/provisioning_profile/#{provisioning_profile_name}")
+
+        puts "launch_path = #{launch_path}"
+        build_command = "flutter build ipa --obfuscate --split-debug-info=1.0.#{build_number} --export-options-plist=ios/#{export_options_plist} --release --flavor=Dev"
+        if launch_path.length() > 0
+            build_command.concat(" -t #{launch_path}")
+        end
+
+        Dir.chdir("../#{project_path}/ios") do
+            sh("pod deintegrate")
+            sh("pod install --repo-update")
+        end
+        puts "build_command = #{build_command}"
+
+        Dir.chdir("../#{project_path}") do
+            sh("#{build_command}")
+        end
+
+        Dir.chdir("../#{project_path}/build/ios/archive/Runner.xcarchive") do
+            sh("zip -r app.dSYM.zip dSYMs")
+            sh("cp app.dSYM.zip ../../ipa/")
+        end
+
+        publish_to_app_center(source_branch: options[:source_branch], version_message: options[:version_message], path: "build/ios/ipa/#{ipa_name}")
+    end
+end
+
+platform :android do
+    lane :build_apk  do |options|
+#          install_dependencies            
+        main_app_path = get_main_app_path(project_path, root_folder_name)
+
+        Dir.chdir("..#{main_app_path}") do
+        end
+        Dir.chdir("../#{project_path}android") do
+
+            # Return the number of commits in current git branch
+            build_number = number_of_commits()
+            if  options[:build_number]
+                 build_number = options[:build_number]
+                 puts "build apk - number  = #{build_number}"
+            end
+            puts "build number = #{build_number}"
+            puts "launch_path = #{launch_path}"
+            puts "flavor = #{flavor}"
+            puts "project_path = #{project_path}"
+
+            build_command = "flutter build apk --obfuscate --split-debug-info=1.0.#{build_number} --build-number=#{build_number} --build-name=1.0.#{build_number} --release"
+            if launch_path.length() > 0
+                build_command.concat(" -t #{launch_path}")
+            end
+
+            if flavor.length() > 0
+                apk_file_name="app-#{flavor}.apk"
+                build_command.concat(" --flavor #{flavor}")
+            end
+
+            if android_sha.length() > 0
+                build_command.concat(" --dart-define=sha=#{android_sha}")
+            end
+
+            if salt.length() > 0
+                build_command.concat(" --dart-define=salt=#{salt}")
+            end
+
+            if flavor.length() > 0 && flavor == 'Prod'
+                apk_file_name="app-prod-release.aab"
+                build_command = "flutter build appbundle --obfuscate --split-debug-info=1.0.0 --build-number=#{build_number} --build-name=1.0.0 --release"
+                build_command.concat(" --flavor #{flavor}")
+                build_command.concat(" -t #{launch_path_prod}")
+                build_command.concat(" --dart-define=sha=#{android_sha_prod}")
+                build_command.concat(" --dart-define=salt=#{salt_prod}")
+                puts "build_command = #{build_command}"
+            end
+
+            sh("#{build_command}")
+        end
+    end
+
+    lane :build_android_for_google_play_store do |options|
+        build_apk
+    end
+
+    lane :build_android do |options|
+
+        if  options[:build_number]
+              build_number = options[:build_number]
+              puts "build number - build_android = #{build_number}"
+              build_apk(build_number: build_number)
+         else
+            build_apk
+         end
+
+        Dir.chdir("../#{project_path}") do
+            mapping_flavor_folder_name = 'release'
+            if flavor.length() > 0 && flavor == 'Prod'
+                mapping_flavor_folder_name = flavor.downcase.concat('Release')
+                publish_to_app_center(source_branch: options[:source_branch], version_message: options[:version_message], mapping_filename: "build/app/outputs/mapping/#{mapping_flavor_folder_name}", path: "build/app/outputs/bundle/#{mapping_flavor_folder_name}/#{apk_file_name}" )
+            elsif flavor.length() > 0 && flavor == 'Dev'
+                mapping_flavor_folder_name = flavor.downcase.concat('Release')
+                apk_file_name="app-dev-release.apk"
+                publish_to_app_center(source_branch: options[:source_branch], version_message: options[:version_message], mapping_filename: "build/app/outputs/mapping/#{mapping_flavor_folder_name}", path: "build/app/outputs/flutter-apk/#{apk_file_name}" )
+            else
+                publish_to_app_center(source_branch: options[:source_branch], version_message: options[:version_message], mapping_filename: "build/app/outputs/mapping/#{mapping_flavor_folder_name}", path: "build/app/outputs/flutter-apk/#{apk_file_name}" )
+            end
+        end
+    end
+end

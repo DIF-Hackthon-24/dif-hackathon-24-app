@@ -1,0 +1,240 @@
+{
+  "onboarding": {
+    "buttonColors": {
+      "link": {
+        "normal": {
+          "argb": "0xFFCFD1D7"
+        },
+        "text": {
+          "argb": "0xFFCFD1D7"
+        },
+        "pressed": {
+          "argb": "0xFFCFD1D7"
+        },
+        "disabled": {
+          "argb": "0xFFCFD1D7"
+        }
+      },
+      "primary": {
+        "normal": {
+          "argb": "0xFFCFD1D7"
+        },
+        "text": {
+          "argb": "0xFFCFD1D7"
+        },
+        "pressed": {
+          "argb": "0xFFCFD1D7"
+        },
+        "disabled": {
+          "argb": "0xFFCFD1D7"
+        }
+      },
+      "secondary": {
+        "normal": {
+          "argb": "0xFFCFD1D7"
+        },
+        "text": {
+          "argb": "0xFFCFD1D7"
+        },
+        "pressed": {
+          "argb": "0xFFCFD1D7"
+        },
+        "disabled": {
+          "argb": "0xFFCFD1D7"
+        }
+      },
+      "tertiary": {
+        "normal": {
+          "argb": "0xFFCFD1D7"
+        },
+        "text": {
+          "argb": "0xFFCFD1D7"
+        },
+        "pressed": {
+          "argb": "0xFFCFD1D7"
+        },
+        "disabled": {
+          "argb": "0xFFCFD1D7"
+        }
+      }
+    },
+    "backgroundColors": {
+      "primary": {
+        "argb": "0xFFCFD1D7"
+      },
+      "secondary": {
+        "argb": "0xFFCFD1D7"
+      },
+      "tertiary": {
+        "argb": "0xFFCFD1D7"
+      }
+    },
+    "textInputColors": {
+      "amount": {
+        "argb": "0xFFCFD1D7"
+      },
+      "background": {
+        "argb": "0xFFF7F7F4"
+      },
+      "header": {
+        "argb": "0xFFCFD1D7"
+      },
+      "hint": {
+        "argb": "0xFFCFD1D7"
+      },
+      "otp": {
+        "argb": "0xFFCFD1D7"
+      },
+      "phoneNumber": {
+        "argb": "0xFFCFD1D7"
+      },
+      "text": {
+        "argb": "0xFFCFD1D7"
+      }
+    },
+    "staticTextColors": {
+      "info": {
+        "argb": "0xFFCFD1D7"
+      },
+      "primary": {
+        "argb": "0xFFCFD1D7"
+      },
+      "secondary": {
+        "argb": "0xFFCFD1D7"
+      },
+      "tertiary": {
+        "argb": "0xFFCFD1D7"
+      }
+    },
+    "headerColors": {
+      "primary": {
+        "argb": "0xFFCFD1D7"
+      },
+      "secondary": {
+        "argb": "0xFFCFD1D7"
+      },
+      "tertiary": {
+        "argb": "0xFFCFD1D7"
+      }
+    }
+  },
+  "transfer": {
+    "buttonColors": {
+      "link": {
+        "normal": {
+          "argb": "0xFF5500F9"
+        },
+        "text": {
+          "argb": "0xFF5500F9"
+        },
+        "pressed": {
+          "argb": "0xFF5F667A"
+        },
+        "disabled": {
+          "argb": "0xFF0F1A38"
+        }
+      },
+      "primary": {
+        "normal": {
+          "argb": "0xFF5500F9"
+        },
+        "text": {
+          "argb": "0xFFFFFFFF"
+        },
+        "pressed": {
+          "argb": "0xFF5F667A"
+        },
+        "disabled": {
+          "argb": "0xFF5500F9"
+        }
+      },
+      "secondary": {
+        "normal": {
+          "argb": "0xFFCFD1D7"
+        },
+        "text": {
+          "argb": "0xFF0F1A38"
+        },
+        "pressed": {
+          "argb": "0xFFAFB3BD"
+        },
+        "disabled": {
+          "argb": "0xFFCFD1D7"
+        }
+      },
+      "tertiary": {
+        "normal": {
+          "argb": "0xFFFFFFFF"
+        },
+        "text": {
+          "argb": "0xFF0F1A38"
+        },
+        "pressed": {
+          "argb": "0xFFEFEEE8"
+        },
+        "disabled": {
+          "argb": "0xFFFFFFFF"
+        }
+      }
+    },
+    "backgroundColors": {
+      "primary": {
+        "argb": "0xFF0F1A38"
+      },
+      "secondary": {
+        "argb": "0xFFF7D7D0"
+      },
+      "tertiary": {
+        "argb": "0xFFFFFFFF"
+      }
+    },
+    "textInputColors": {
+      "amount": {
+        "argb": "0xFF0F1A38"
+      },
+      "background": {
+        "argb": "0xFFF7F7F4"
+      },
+      "header": {
+        "argb": "0xFF5F667A"
+      },
+      "hint": {
+        "argb": "0xFF5F667A"
+      },
+      "otp": {
+        "argb": "0xFFF7D7D0"
+      },
+      "phoneNumber": {
+        "argb": "0xFF0F1A38"
+      },
+      "text": {
+        "argb": "0xFF0F1A38"
+      }
+    },
+    "staticTextColors": {
+      "info": {
+        "argb": "0xFF5F667A"
+      },
+      "primary": {
+        "argb": "0xFF0F1A38"
+      },
+      "secondary": {
+        "argb": "0xFF5500F9"
+      },
+      "tertiary": {
+        "argb": "0xFFFFFFFF"
+      }
+    },
+    "headerColors": {
+      "primary": {
+        "argb": "0xFF0F1A38"
+      },
+      "secondary": {
+        "argb": "0xFFF7D7D0"
+      },
+      "tertiary": {
+        "argb": "0xFFFFFFFF"
+      }
+    }
+  }
+}
