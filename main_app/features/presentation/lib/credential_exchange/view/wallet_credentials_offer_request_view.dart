@@ -17,23 +17,23 @@ class WalletCredentialsOfferRequestView extends StatelessWidget {
         await coordinator.initialize(context);
       },
       builder: (
-        context,
-        state,
-        viewModel,
-      ) =>
+          context,
+          state,
+          viewModel,
+          ) =>
           buildWithState(
-        context,
-        state,
-        viewModel,
-      ),
+            context,
+            state,
+            viewModel,
+          ),
     );
   }
 
   Widget buildWithState(
-    BuildContext context,
-    WalletCredentialsOfferRequestState state,
-    WalletCredentialsOfferRequestCoordinator coordinator,
-  ) {
+      BuildContext context,
+      WalletCredentialsOfferRequestState state,
+      WalletCredentialsOfferRequestCoordinator coordinator,
+      ) {
     return PSScaffold(
       appBarAttributes: PSAppBarAttributes(title: "Offer Request Acceptance",left: [
         PSAppBarButtonAttributes(
@@ -43,8 +43,9 @@ class WalletCredentialsOfferRequestView extends StatelessWidget {
       ],),
       body: CredentialOfferInputFormWidget(
         attributes: CredentialOfferInputFormAttributes(
+            offerRequestData: state.getCredentialsOfferRequestData,
             issueOfferRequestInputForm:
-                coordinator.postWalletCredentialsOfferRequest,
+            coordinator.postWalletCredentialsOfferRequest,
             submitButtonPressed: coordinator.submitCredentialsOfferRequest),
       ),
     );
