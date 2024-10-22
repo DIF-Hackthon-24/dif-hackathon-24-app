@@ -35,7 +35,7 @@ class WalletCredentialsOfferRequestView extends StatelessWidget {
       WalletCredentialsOfferRequestCoordinator coordinator,
       ) {
     return PSScaffold(
-      appBarAttributes: PSAppBarAttributes(title: "Offer Request Acceptance",left: [
+      appBarAttributes: PSAppBarAttributes(title: "Wallet QR Code Scanner",left: [
         PSAppBarButtonAttributes(
           type: PSAppBarButtons.back,
           onPressed: () => coordinator.navigateToSplash(),

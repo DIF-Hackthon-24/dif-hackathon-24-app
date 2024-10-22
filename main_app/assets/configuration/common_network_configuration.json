@@ -11,29 +11,43 @@
     {
       "name": "mockUserLogin",
       "host": "user/mock/login",
-      "headers":{
+      "headers": {
         "Content-Type": "application/json",
         "User-Agent": "Mobile"
       }
     },
     {
       "name": "fetchWalletCredentialsList",
-      "host": "/wallet-api/wallet/84d29fb1-b66e-41bf-b2fb-452ffffbbb83/credentials",
-      "headers":{
+      "host": "/wallet-api/wallet/e52aec54-da33-43fc-a231-bbafb54aefd0/credentials",
+      "headers": {
         "Content-Type": "application/json"
       }
     },
     {
       "name": "postWalletCredentialsIssuance",
-      "host": "/wallet-api/wallet/84d29fb1-b66e-41bf-b2fb-452ffffbbb83/exchange/useOfferRequest",
-      "headers":{
+      "host": "/wallet-api/wallet/e52aec54-da33-43fc-a231-bbafb54aefd0/exchange/useOfferRequest",
+      "headers": {
         "Content-Type": "text/plain"
       }
     },
     {
       "name": "deleteWalletCredentialsById",
-      "host": "/wallet-api/wallet/84d29fb1-b66e-41bf-b2fb-452ffffbbb83/credentials/credential_id",
-      "headers":{
+      "host": "/wallet-api/wallet/e52aec54-da33-43fc-a231-bbafb54aefd0/credentials/credential_id",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "postMatchCredentialsForPresentationDefinition",
+      "host": "/wallet-api/wallet/e52aec54-da33-43fc-a231-bbafb54aefd0/exchange/matchCredentialsForPresentationDefinition",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "postProcessPresentationRequest",
+      "host": "/wallet-api/wallet/e52aec54-da33-43fc-a231-bbafb54aefd0/exchange/usePresentationRequest",
+      "headers": {
         "Content-Type": "application/json"
       }
     }
@@ -48,16 +62,15 @@
       "name": "default_no_caching",
       "host": "",
       "headers": {},
-      "disableCaching":true
+      "disableCaching": true
     }
   ],
-  "gqlMappingOverrides": {    
+  "gqlMappingOverrides": {
     "fetchPlots": "default_no_caching",
     "fetchAssets": "default_no_caching",
     "fetchWalletCredentialsList": "default_no_caching"
   },
   "headers": {
-    
   },
   "useMockNetworkClient": false
 }

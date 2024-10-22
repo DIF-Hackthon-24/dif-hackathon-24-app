@@ -5,4 +5,7 @@ class ServiceIdentifiers {
   static const fetchWalletCredentialsList = 'fetchWalletCredentialsList';
   static const deleteWalletCredentialsById = 'deleteWalletCredentialsById';
   static const postWalletCredentialsIssuance = 'postWalletCredentialsIssuance';
+  static const postMatchCredentialsForPresentationDefinition = 'postMatchCredentialsForPresentationDefinition';
+  static const postProcessPresentationRequest = 'postProcessPresentationRequest';
+
 }

@@ -41,7 +41,7 @@ class SplashView extends StatelessWidget {
     SplashCoordinator coordinator,
   ) {
     return PSScaffold(
-      appBarAttributes: PSAppBarAttributes(title: "Visitor Pass SDK",
+      appBarAttributes: PSAppBarAttributes(title: "Hackathon",
       ),
       body: Container(
         padding: const EdgeInsets.all(30),
@@ -54,7 +54,7 @@ class SplashView extends StatelessWidget {
                 onPressed: (){
                   coordinator.navigateToWalletCredentialExchange();
                 },
-                child: const Text('Credential Exchange'),
+                child: const Text('Wallet QR Code Scanner'),
               ),
               const SizedBox(height: 10.0),
               ElevatedButton(

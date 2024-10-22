@@ -14,4 +14,14 @@ class WalletCredentialsOfferRequestUseCase implements IWalletCredentialsOfferReq
     return await walletCredentialsIssuanceOfferRequestRepository.postWalletCredentialOfferRequest(offerRequest);
   }
 
+  @override
+  Future<List<WalletCredentialListEntity>?> postWalletMatchCredentialsRequest(String credentialRequest) async{
+    return await walletCredentialsIssuanceOfferRequestRepository.postWalletMatchCredentialsRequest(credentialRequest);
+  }
+
+  @override
+  Future<List<WalletCredentialListEntity>?> postWalletProcessCredentialRequest(String credentialRequest) async {
+    return await walletCredentialsIssuanceOfferRequestRepository.postWalletProcessCredentialRequest(credentialRequest);
+  }
+
 }

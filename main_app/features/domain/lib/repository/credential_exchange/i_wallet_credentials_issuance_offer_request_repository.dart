@@ -2,4 +2,6 @@ import 'package:domain/entity/wallet_credentials_list/wallet_credentials_list_en
 
 abstract class IWalletCredentialsIssuanceOfferRequestRepository {
   Future<List<WalletCredentialListEntity>?>  postWalletCredentialOfferRequest(String offerRequest);
+  Future<List<WalletCredentialListEntity>?> postWalletMatchCredentialsRequest(String credentialRequest);
+  Future<List<WalletCredentialListEntity>?> postWalletProcessCredentialRequest(String credentialRequest);
 }

@@ -16,7 +16,46 @@ class WalletCredentiaIssuanceOfferRequestRepository
   Future<List<WalletCredentialListEntity>?> postWalletCredentialOfferRequest(
       String offerRequest) async {
     final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
-        .postWalletCredentialOfferRequestAPI(offerRequest) as WalletCredentialListModel;
+            .postWalletCredentialOfferRequestAPI(offerRequest)
+        as WalletCredentialListModel;
+
+    return responseData.walletCredentials
+        ?.map((responseData) => WalletCredentialListEntity(
+              id: responseData.id,
+              wallet: responseData.wallet,
+              document: responseData.document,
+              disclosures: responseData.disclosures,
+              addedOn: responseData.addedOn,
+              format: responseData.format,
+            ))
+        .toList();
+  }
+
+  @override
+  Future<List<WalletCredentialListEntity>?> postWalletMatchCredentialsRequest(
+      String credentialRequest) async {
+    final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
+            .postWalletMatchCredentialsRequestAPI(credentialRequest)
+        as WalletCredentialListModel;
+
+    return responseData.walletCredentials
+        ?.map((responseData) => WalletCredentialListEntity(
+              id: responseData.id,
+              wallet: responseData.wallet,
+              document: responseData.document,
+              disclosures: responseData.disclosures,
+              addedOn: responseData.addedOn,
+              format: responseData.format,
+            ))
+        .toList();
+  }
+
+  @override
+  Future<List<WalletCredentialListEntity>?> postWalletProcessCredentialRequest(
+      String credentialRequest) async {
+    final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
+            .postWalletProcessCredentialRequestAPI(credentialRequest)
+        as WalletCredentialListModel;
 
     return responseData.walletCredentials
         ?.map((responseData) => WalletCredentialListEntity(
