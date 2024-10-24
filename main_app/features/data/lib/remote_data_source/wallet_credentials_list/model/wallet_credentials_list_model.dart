@@ -52,3 +52,23 @@ class WalletCredentialModel {
     return data;
   }
 }
+
+class ProcessResponseModel {
+  final String? redirectUri;
+
+  ProcessResponseModel({this.redirectUri});
+
+  // Factory constructor to create an instance from a JSON map
+  factory ProcessResponseModel.fromJson(Map<String, dynamic> json) {
+    return ProcessResponseModel(
+      redirectUri: json['redirectUri'] as String?,
+    );
+  }
+
+  // Method to convert an instance to a JSON map
+  Map<String, dynamic> toJson() {
+    return {
+      'redirectUri': redirectUri,
+    };
+  }
+}

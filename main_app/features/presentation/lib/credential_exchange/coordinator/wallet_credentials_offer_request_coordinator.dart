@@ -6,18 +6,18 @@ import 'package:presentation/credential_exchange/navigation_handler/wallet_crede
 import 'package:presentation/credential_exchange/state/wallet_credentials_offer_request_state.dart';
 
 class _Constants {
-  static const  offerRequestAcceptance = 'offer_request_acceptance';
+  static const offerRequestAcceptance = 'offer_request_acceptance';
   static const verifyCredentialId = 'verify_credential_id';
   static const processPresentation = 'process_presentation';
 }
 
 class WalletCredentialsOfferRequestCoordinator
     extends BaseCoordinator<WalletCredentialsOfferRequestState> {
-  final IWalletCredentialsOfferRequestUseCase credentialsOfferRequestUseCase;
+  final IWalletCredentialsOfferRequestUseCase credentialsExchangeRequestUseCase;
   final CredentialExchangeNavigationHandler navigationHandler;
 
   WalletCredentialsOfferRequestCoordinator({
-    required this.credentialsOfferRequestUseCase,
+    required this.credentialsExchangeRequestUseCase,
     required this.navigationHandler,
   }) : super(WalletCredentialsOfferRequestState(
             getCredentialsOfferRequestData: ''));
@@ -30,30 +30,36 @@ class WalletCredentialsOfferRequestCoordinator
         state.copyWith(getCredentialsOfferRequestDataCopy: issueCredentials);
   }
 
-  Future<void> submitCredentialsOfferRequest(String? scanCode) async {
+  Future<void> submitCredentialsExchangeRequest() async {
     var offerRequest = state.getCredentialsOfferRequestData;
 
-    List<WalletCredentialListEntity>? postCredentialsOfferRequest = [];
+    List<WalletCredentialListEntity>? postCredentialsExchangeRequest = [];
 
-    if (_Constants.offerRequestAcceptance == scanCode) {
-      postCredentialsOfferRequest = await credentialsOfferRequestUseCase
-          .postWalletCredentialOfferRequest(offerRequest);
-    }
-    else if (_Constants.processPresentation == scanCode) {
-      postCredentialsOfferRequest = await credentialsOfferRequestUseCase
-          .postWalletProcessCredentialRequest(offerRequest);
-    }
-    else if (_Constants.verifyCredentialId == scanCode) {
-      postCredentialsOfferRequest = await credentialsOfferRequestUseCase
-          .postWalletMatchCredentialsRequest(offerRequest);
-    }
+    var resolvePresentationRequest = await credentialsExchangeRequestUseCase
+        .postWalletCredentialResolvePresentationRequest(offerRequest);
+    postCredentialsExchangeRequest = await credentialsExchangeRequestUseCase
+        .postWalletMatchCredentialsRequest(
+            getPresentationDefinitionDecodedURL(resolvePresentationRequest!));
 
-    if (postCredentialsOfferRequest!.isNotEmpty) {
+    if (postCredentialsExchangeRequest!.isNotEmpty) {
       navigationHandler.navigateToWalletList();
     }
   }
 
   void navigateToSplash() {
     navigationHandler.navigateToSplash();
+  }
+
+  String getPresentationDefinitionDecodedURL(String encodedURL) {
+    // Parse the URL
+    Uri uri = Uri.parse(encodedURL);
+
+    // Extract and decode the 'presentation_definition' parameter
+    String encodedPresentationDefinition =
+        uri.queryParameters['presentation_definition'] ?? '';
+    String decodedPresentationDefinition =
+        Uri.decodeComponent(encodedPresentationDefinition);
+
+    return decodedPresentationDefinition;
   }
 }

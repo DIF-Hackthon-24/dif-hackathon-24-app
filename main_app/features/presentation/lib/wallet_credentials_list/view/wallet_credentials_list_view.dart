@@ -46,6 +46,7 @@ class WalletCredentialsListView extends StatelessWidget {
         credentialListItems:  state.credentialListState,
         onRefresh: coordinator.getWalletCredentialsList,
         onDelete: coordinator.deleteWalletCredentialsById,
+        onShared: coordinator.readyToShareCredentialId,
       ) ,
     );
   }

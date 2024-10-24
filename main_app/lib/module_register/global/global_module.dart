@@ -7,7 +7,7 @@ import 'package:core/task/i_task.dart';
 import 'package:data/remote_data_source/credential_exchange/wallet_credentials_lissuance_remote_data_source.dart';
 import 'package:data/remote_data_source/manage_wallet_credentials/manage_wallet_credentials_remote_data_source.dart';
 import 'package:data/remote_data_source/wallet_credentials_list/wallet_credentials_list_remote_data_source.dart';
-import 'package:data/repository/credential_exchange/wallet_credentialst_issuance_offer_request_repository.dart';
+import 'package:data/repository/credential_exchange/wallet_credential_exchange_request_repository.dart';
 import 'package:data/repository/manage_wallet_credentials/delete_wallet_credentials_by_id_repository.dart';
 import 'package:data/repository/wallet_credentials_list/wallet_credentials_list_repository.dart';
 import 'package:database/dao/asset/asset_dao.dart';
@@ -136,6 +136,12 @@ class GlobalModule implements Module {
 
     DIContainer.container.registerFactory(
       (container) => WalletCredentialsListCoordinator(
+        walletCredentialsOfferRequestUseCase: WalletCredentialsOfferRequestUseCase(
+            walletCredentialsIssuanceOfferRequestRepository: WalletCredentialExchangeRequestRepository(walletCredentialsExchangeIssuanceRemoteDataSource:
+            GetWalletCredentialIssuanceRemoteDataSource(
+              container.resolve<TaskManager>(),
+            )
+            )),
           getWalletCredentialsListUseCase: WalletCredentialsListUseCase(
               walletCredentialsListRepository: WalletCredentialsListRepository(
                   getWalletCredentialListRemoteDataSource:
@@ -162,8 +168,8 @@ class GlobalModule implements Module {
 
     DIContainer.container.registerFactory(
           (container) => WalletCredentialsOfferRequestCoordinator(
-            credentialsOfferRequestUseCase: WalletCredentialsOfferRequestUseCase(
-              walletCredentialsIssuanceOfferRequestRepository: WalletCredentiaIssuanceOfferRequestRepository(walletCredentialsExchangeIssuanceRemoteDataSource:
+            credentialsExchangeRequestUseCase: WalletCredentialsOfferRequestUseCase(
+              walletCredentialsIssuanceOfferRequestRepository: WalletCredentialExchangeRequestRepository(walletCredentialsExchangeIssuanceRemoteDataSource:
               GetWalletCredentialIssuanceRemoteDataSource(
                 container.resolve<TaskManager>(),
               )

@@ -10,11 +10,13 @@ import 'package:shared_dependencies/service_identifiers.dart';
 
 class PostWalletProcessCredentialsServiceParams extends TaskParams {
   String? token;
-  String? credentialsRequest;
+  String? resolvedPresentationResponse;
+  String? credentialId;
 
   PostWalletProcessCredentialsServiceParams({
     required this.token,
-    required this.credentialsRequest,
+    required this.resolvedPresentationResponse,
+    required this.credentialId
   });
 }
 
@@ -36,12 +38,13 @@ class PostWalletProcessCredentialsRequestService extends BaseGraphQLService {
   RestRequest getRestRequest(TaskParams? params,
       {Map<String, dynamic>? paramsInMap}) {
     final parameters = params as PostWalletProcessCredentialsServiceParams;
-    final response = WalletCredentialsListResponseModel();
+    final response = WalletCredentialsProcessPresentationResponseModel();
     return RestRequest(
       type: RequestType.post,
       name: ServiceIdentifiers.postProcessPresentationRequest,
       data: response,
-      body: parameters.credentialsRequest,
+      body: { 'presentationRequest': parameters.resolvedPresentationResponse,
+        'selectedCredentials': [parameters.credentialId]},
       showBusy: BusyType.none,
       cachePolicy: CachePolicy.none,
       additionalHeaders: {

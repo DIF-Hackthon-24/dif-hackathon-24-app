@@ -3,32 +3,22 @@ import 'package:data/remote_data_source/wallet_credentials_list/model/wallet_cre
 import 'package:domain/entity/wallet_credentials_list/wallet_credentials_list_entity.dart';
 import 'package:domain/repository/credential_exchange/i_wallet_credentials_issuance_offer_request_repository.dart';
 
-class WalletCredentiaIssuanceOfferRequestRepository
+class WalletCredentialExchangeRequestRepository
     implements IWalletCredentialsIssuanceOfferRequestRepository {
   final IWalletCredentialsExchangeIssuanceRemoteDataSource
       walletCredentialsExchangeIssuanceRemoteDataSource;
 
-  WalletCredentiaIssuanceOfferRequestRepository({
+  WalletCredentialExchangeRequestRepository({
     required this.walletCredentialsExchangeIssuanceRemoteDataSource,
   });
 
   @override
-  Future<List<WalletCredentialListEntity>?> postWalletCredentialOfferRequest(
+  Future<String?> postWalletCredentialResolvePresentationRequest(
       String offerRequest) async {
     final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
-            .postWalletCredentialOfferRequestAPI(offerRequest)
-        as WalletCredentialListModel;
+            .postWalletCredentialResolvePresentationRequestAPI(offerRequest);
 
-    return responseData.walletCredentials
-        ?.map((responseData) => WalletCredentialListEntity(
-              id: responseData.id,
-              wallet: responseData.wallet,
-              document: responseData.document,
-              disclosures: responseData.disclosures,
-              addedOn: responseData.addedOn,
-              format: responseData.format,
-            ))
-        .toList();
+    return responseData;
   }
 
   @override
@@ -51,21 +41,10 @@ class WalletCredentiaIssuanceOfferRequestRepository
   }
 
   @override
-  Future<List<WalletCredentialListEntity>?> postWalletProcessCredentialRequest(
-      String credentialRequest) async {
+  Future<bool?> postWalletProcessCredentialRequest(
+      String credentialRequest, String presentationResponse) async {
     final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
-            .postWalletProcessCredentialRequestAPI(credentialRequest)
-        as WalletCredentialListModel;
-
-    return responseData.walletCredentials
-        ?.map((responseData) => WalletCredentialListEntity(
-              id: responseData.id,
-              wallet: responseData.wallet,
-              document: responseData.document,
-              disclosures: responseData.disclosures,
-              addedOn: responseData.addedOn,
-              format: responseData.format,
-            ))
-        .toList();
+            .postWalletProcessCredentialRequestAPI(credentialRequest,presentationResponse);
+    return responseData;
   }
 }

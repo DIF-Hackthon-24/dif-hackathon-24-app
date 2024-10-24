@@ -7,9 +7,10 @@ class WalletCredListWidget extends StatefulWidget {
   final List<WalletCredentialListEntity?> credentialListItems;
   final Function onRefresh;
   final Function(String, bool) onDelete;
+  final Function(String) onShared;
 
   WalletCredListWidget(
-      {Key? key, required this.credentialListItems, required this.onRefresh, required this.onDelete})
+      {Key? key, required this.credentialListItems, required this.onRefresh, required this.onDelete, required this.onShared})
       : super(key: key);
 
   @override
@@ -31,6 +32,9 @@ class _WalletCredListWidgetState extends State<WalletCredListWidget> {
 
   Future<void> onDelete(String credentialId, bool isPermanent) async {
     await widget.onDelete.call(credentialId,isPermanent);
+  }
+  void _readyToShare(String? credentialId)  {
+    widget.onShared.call(credentialId ?? '');
   }
 
   @override
@@ -79,6 +83,7 @@ class _WalletCredListWidgetState extends State<WalletCredListWidget> {
                     children: [
                       CredentialCard(
                         credentialCard: widget.credentialListItems[index]!,
+                        onShared: _readyToShare,
                       ),
                       const SizedBox(height: 10),
                     ],

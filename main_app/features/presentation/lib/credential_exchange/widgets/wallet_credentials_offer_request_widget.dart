@@ -61,7 +61,6 @@ class CredentialOfferInputFormWidget extends StatelessWidget {
             )
                 : Text(attributes.offerRequestData),
           ),
-
           // Container(
           //   height: DimensionConstants.size180,
           //   decoration: BoxDecoration(
@@ -96,33 +95,11 @@ class CredentialOfferInputFormWidget extends StatelessWidget {
             onPressed: () {
               attributes.offerRequestData == ''
                   ? null
-                  : attributes.submitButtonPressed.call("offer_request_acceptance");
+                  : attributes.submitButtonPressed.call();
             },
-            child: const Text('Offer Request Acceptance'),
+            child: const Text('Resolve Presentation Request'),
           ),
 
-          const SizedBox(
-            height: DimensionConstants.size10,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              attributes.offerRequestData == ''
-                  ? null
-                  : attributes.submitButtonPressed.call("verify_credential_id");
-            },
-            child: const Text('Verify Credential IDs'),
-          ),
-          const SizedBox(
-            height: DimensionConstants.size10,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              attributes.offerRequestData == ''
-                  ? null
-                  : attributes.submitButtonPressed.call("process_presentation");
-            },
-            child: const Text('Process Presentation'),
-          )
         ],
       ),
     );

@@ -7,4 +7,5 @@ abstract class IWalletCredentialsListUseCase {
 
   Future<List<WalletCredentialListEntity>?> fetchWalletCredentialsList();
   Future<List<WalletCredentialListEntity>?> getWalletCredKey();
+  Future<String?> getWalletResolvePresentationKey();
 }

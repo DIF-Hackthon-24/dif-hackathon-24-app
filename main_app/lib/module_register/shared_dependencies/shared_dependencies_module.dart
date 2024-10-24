@@ -1,6 +1,6 @@
 import 'package:core/ioc/di_container.dart';
 import 'package:core/module/module.dart';
-import 'package:data/remote_data_source/credential_exchange/service/wallet_credentials_issuance_offer_request_service.dart';
+import 'package:data/remote_data_source/credential_exchange/service/wallet_credentials_resolve_presentation_request_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_match_credentials_request_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_process_credentials_presentation_request_service.dart';
 import 'package:data/remote_data_source/manage_wallet_credentials/service/wallet_delete_credential_by_id_service.dart';
@@ -89,7 +89,7 @@ extension SharedDependenciesModuleRegisterServiceExtension
 
     DIContainer.container.registerFactory<IService>(
           (container) => PostWalletCredentialsIssuanceOfferRequestListService(),
-      name: ServiceIdentifiers.postWalletCredentialsIssuance,
+      name: ServiceIdentifiers.postWalletCredentialsResolvePresentationRequest,
     );
 
     DIContainer.container.registerFactory<IService>(

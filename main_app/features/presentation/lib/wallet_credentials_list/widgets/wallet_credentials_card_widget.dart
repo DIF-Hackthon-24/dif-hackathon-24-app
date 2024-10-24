@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 
 class CredentialCard extends StatelessWidget {
   final WalletCredentialListEntity credentialCard;
+  final Function(String?)? onShared;
 
   CredentialCard({
     Key? key,
        required this.credentialCard,
+    required this.onShared,
+
   }) : super(key: key);
 
   @override
@@ -54,6 +57,21 @@ class CredentialCard extends StatelessWidget {
               ),
             ],
             const SizedBox(height: 20),
+            Center(
+              child: ElevatedButton(
+                onPressed: () => onShared!(credentialCard.id),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black, // Background color
+                  minimumSize: const Size(150, 40), // Width and height
+                ),
+                child: const Text(
+                  'Share Id',
+                  style: TextStyle(
+                    color: Colors.white, // Text color
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

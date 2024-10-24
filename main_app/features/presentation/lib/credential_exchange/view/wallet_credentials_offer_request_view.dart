@@ -46,7 +46,7 @@ class WalletCredentialsOfferRequestView extends StatelessWidget {
             offerRequestData: state.getCredentialsOfferRequestData,
             issueOfferRequestInputForm:
             coordinator.postWalletCredentialsOfferRequest,
-            submitButtonPressed: coordinator.submitCredentialsOfferRequest),
+            submitButtonPressed: coordinator.submitCredentialsExchangeRequest),
       ),
     );
   }

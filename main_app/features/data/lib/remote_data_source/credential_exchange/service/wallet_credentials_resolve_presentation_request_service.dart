@@ -8,13 +8,13 @@ import 'package:network_manager/model/requests/rest/rest_request.dart';
 import 'package:shared_dependencies/base_service/base_service_request.dart';
 import 'package:shared_dependencies/service_identifiers.dart';
 
-class PostWalletCredentialsIssuanceServiceParams extends TaskParams {
+class PostWalletCredentialsResolvePresentationServiceParams extends TaskParams {
   String? token;
-  String? credentialsIssuanceOfferRequest;
+  String? credentialsRequest;
 
-  PostWalletCredentialsIssuanceServiceParams({
+  PostWalletCredentialsResolvePresentationServiceParams({
     required this.token,
-    required this.credentialsIssuanceOfferRequest,
+    required this.credentialsRequest,
   });
 }
 
@@ -35,13 +35,13 @@ class PostWalletCredentialsIssuanceOfferRequestListService extends BaseGraphQLSe
   @override
   RestRequest getRestRequest(TaskParams? params,
       {Map<String, dynamic>? paramsInMap}) {
-    final parameters = params as PostWalletCredentialsIssuanceServiceParams;
-    final response = WalletCredentialsListResponseModel();
+    final parameters = params as PostWalletCredentialsResolvePresentationServiceParams;
+    final response = WalletCredentialsResolvePresentationResponseModel();
     return RestRequest(
       type: RequestType.post,
-      name: ServiceIdentifiers.postWalletCredentialsIssuance,
+      name: ServiceIdentifiers.postWalletCredentialsResolvePresentationRequest,
       data: response,
-      body: parameters.credentialsIssuanceOfferRequest,
+      body: parameters.credentialsRequest,
       showBusy: BusyType.none,
       cachePolicy: CachePolicy.none,
       additionalHeaders: {

@@ -32,9 +32,9 @@ class GetWalletCredentialListRemoteDataSource extends BaseRemoteDataSource imple
     ) as WalletCredentialsListResponseModel?;
 
     if (result != null) {
-      final encryption = DIContainer.container.resolve<IEncryption>();
-      final encryptedData = encryption.encrypt(jsonEncode(result.restResponse)) ;
-      await storeWalletCredKey(encryptedData);
+      // final encryption = DIContainer.container.resolve<IEncryption>();
+      // final encryptedData = encryption.encrypt(jsonEncode(result.restResponse)) ;
+      // await storeWalletCredKey(encryptedData);
       return WalletCredentialListModel.fromJson(result.restResponse!);
     }
     return null;
@@ -60,14 +60,32 @@ class GetWalletCredentialListRemoteDataSource extends BaseRemoteDataSource imple
         taskType: TaskType.CACHE_OPERATION,
         parameters: CacheTaskParams(
           type: TaskManagerCacheType.GET,
-          readValues: ['wallet_cred'],
+          readValues: ['wallet_match_presentation_cred'],
         ),
       ),
     );
-    if (keyData != null && keyData['wallet_cred'] !=null) {
+    if (keyData != null && keyData['wallet_match_presentation_cred'] !=null) {
       final encryption = DIContainer.container.resolve<IEncryption>();
-      final decryptedData = jsonDecode(encryption.decrypt((keyData['wallet_cred'] as String? ?? "")));
+      final decryptedData = jsonDecode(encryption.decrypt((keyData['wallet_match_presentation_cred'] as String? ?? "")));
       return WalletCredentialListModel.fromJson(decryptedData);
+    }
+    return null;
+  }
+
+  @override
+  Future<String?> getWalletResolvePresentationKey() async {
+    final keyData = await executeApiAndHandleErrors(
+      task:
+      Task(
+        taskType: TaskType.CACHE_OPERATION,
+        parameters: CacheTaskParams(
+          type: TaskManagerCacheType.GET,
+          readValues: ['wallet_resolve_presentation_response_key'],
+        ),
+      ),
+    );
+    if (keyData != null && keyData['wallet_resolve_presentation_response_key'] !=null) {
+      return keyData['wallet_resolve_presentation_response_key'];
     }
     return null;
   }

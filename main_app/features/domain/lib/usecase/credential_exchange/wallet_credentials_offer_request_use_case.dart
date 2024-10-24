@@ -10,8 +10,8 @@ class WalletCredentialsOfferRequestUseCase implements IWalletCredentialsOfferReq
   });
 
   @override
-  Future<List<WalletCredentialListEntity>?> postWalletCredentialOfferRequest(String offerRequest) async {
-    return await walletCredentialsIssuanceOfferRequestRepository.postWalletCredentialOfferRequest(offerRequest);
+  Future<String?> postWalletCredentialResolvePresentationRequest(String offerRequest) async {
+    return await walletCredentialsIssuanceOfferRequestRepository.postWalletCredentialResolvePresentationRequest(offerRequest);
   }
 
   @override
@@ -20,8 +20,8 @@ class WalletCredentialsOfferRequestUseCase implements IWalletCredentialsOfferReq
   }
 
   @override
-  Future<List<WalletCredentialListEntity>?> postWalletProcessCredentialRequest(String credentialRequest) async {
-    return await walletCredentialsIssuanceOfferRequestRepository.postWalletProcessCredentialRequest(credentialRequest);
+  Future<bool?> postWalletProcessCredentialRequest(String credentialRequest, String presentationResponse) async {
+    return await walletCredentialsIssuanceOfferRequestRepository.postWalletProcessCredentialRequest(credentialRequest,presentationResponse);
   }
 
 }

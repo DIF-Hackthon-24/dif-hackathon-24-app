@@ -28,4 +28,9 @@ class WalletCredentialsListUseCase implements IWalletCredentialsListUseCase {
 
     return await walletCredentialsListRepository.getWalletCredKey();
   }
+
+  @override
+  Future<String?> getWalletResolvePresentationKey() async{
+    return await walletCredentialsListRepository.getWalletResolvePresentationKey();
+  }
 }

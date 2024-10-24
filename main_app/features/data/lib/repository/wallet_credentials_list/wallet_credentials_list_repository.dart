@@ -50,5 +50,14 @@ class WalletCredentialsListRepository
     )).toList();
   }
 
+  @override
+  Future<String?> getWalletResolvePresentationKey() async{
+
+    final responseData = await getWalletCredentialListRemoteDataSource
+        .getWalletResolvePresentationKey() ;
+
+    return responseData;
+  }
+
 
 }

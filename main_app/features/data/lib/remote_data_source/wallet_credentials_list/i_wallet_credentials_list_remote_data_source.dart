@@ -3,4 +3,5 @@ import 'package:data/remote_data_source/wallet_credentials_list/model/wallet_cre
 abstract class IGetWalletCredentialListRemoteDataSource {
   Future<WalletCredentialListModel?> getWalletCredentialListAPI();
   Future<WalletCredentialListModel?> getWalletCredKey();
+  Future<String?> getWalletResolvePresentationKey();
 }
