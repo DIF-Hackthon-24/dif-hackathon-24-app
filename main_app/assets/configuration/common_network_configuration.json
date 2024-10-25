@@ -24,6 +24,13 @@
       }
     },
     {
+      "name": "postWalletCredentialsIssuance",
+      "host": "/wallet-api/wallet/e52aec54-da33-43fc-a231-bbafb54aefd0/exchange/useOfferRequest",
+      "headers":{
+        "Content-Type": "text/plain"
+      }
+    },
+    {
       "name": "postWalletCredentialsResolvePresentationRequest",
       "host": "/wallet-api/wallet/e52aec54-da33-43fc-a231-bbafb54aefd0/exchange/resolvePresentationRequest",
       "headers": {

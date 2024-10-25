@@ -1,3 +1,5 @@
+import 'dart:core';
+
 import 'package:domain/entity/wallet_credentials_list/wallet_credentials_list_entity.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -35,11 +37,10 @@ class CredentialCard extends StatelessWidget {
             const SizedBox(height: 10),
             const Text('VC Type', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             Text('${getData!['vc']['type'].join(', ')}', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.normal)),
-            Text('VC Id- ${getData['vc']['id']}', style: const TextStyle(fontSize: 16)),
             const SizedBox(height: 10),
             const Text('Issuer', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 5),
-            _buildIssuerList(getData['vc']['issuer']),
+            // const SizedBox(height: 5),
+            _buildIssuerList(getData['iss']),
             const SizedBox(height: 10),
             const Text('Credential Subjects', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 5),
@@ -78,28 +79,32 @@ class CredentialCard extends StatelessWidget {
     );
   }
 
-  Widget _buildIssuerList(Map<String, dynamic> items) {
+  Widget _buildIssuerList(String did) {
+
+    List<String> components = did.split(':');
      return Column(
        mainAxisAlignment: MainAxisAlignment.start,
        crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Issuer Type- ${items['type']?.isEmpty ?? true ? 'N/A' : items['type'][0]}', style: const TextStyle(fontSize: 16)),
-        Text('Issuer Id- ${items['id'] ?? 'N/A'}', style: const TextStyle(fontSize: 16)),
+        Text('Issuer:  ${components.sublist(2).join(':')}', style: const TextStyle(fontSize: 16)),
       ],
     );
   }
 
   Widget _buildCredentialList(Map<String, dynamic> items) {
 
+    // Create a list of Text widgets for each key-value pair
+    List<Widget> itemWidgets = items.entries.map((entry) {
+      return Text(
+        '${entry.key}: ${entry.value}',
+        style: const TextStyle(fontSize: 16),
+      );
+    }).toList();
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Type- ${items['achievement']?['type']?[0] ?? 'N/A'}', style: const TextStyle(fontSize: 16)),
-        Text('Id- ${items['id'] ?? 'N/A'}', style: const TextStyle(fontSize: 16)),
-        Text('Description- ${items['achievement']?['description'] ?? 'N/A'}', style: const TextStyle(fontSize: 16)),
-
-      ],
+      children: itemWidgets,
     );
   }
 

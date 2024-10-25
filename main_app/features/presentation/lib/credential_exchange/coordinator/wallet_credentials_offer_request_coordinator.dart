@@ -1,14 +1,15 @@
 import 'package:core/base_classes/base_coordinator.dart';
 import 'package:domain/entity/wallet_credentials_list/wallet_credentials_list_entity.dart';
 import 'package:domain/usecase/credential_exchange/i_wallet_credentials_issuance_offer_request_use_case.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:presentation/credential_exchange/navigation_handler/wallet_credentials_list_navigation_handler.dart';
 import 'package:presentation/credential_exchange/state/wallet_credentials_offer_request_state.dart';
 
 class _Constants {
-  static const offerRequestAcceptance = 'offer_request_acceptance';
-  static const verifyCredentialId = 'verify_credential_id';
-  static const processPresentation = 'process_presentation';
+  static const issuanceRequests = 'issuancerequests';
+  static const presentationRequests = 'presentationrequests';
 }
 
 class WalletCredentialsOfferRequestCoordinator
@@ -35,14 +36,28 @@ class WalletCredentialsOfferRequestCoordinator
 
     List<WalletCredentialListEntity>? postCredentialsExchangeRequest = [];
 
-    var resolvePresentationRequest = await credentialsExchangeRequestUseCase
-        .postWalletCredentialResolvePresentationRequest(offerRequest);
-    postCredentialsExchangeRequest = await credentialsExchangeRequestUseCase
-        .postWalletMatchCredentialsRequest(
-            getPresentationDefinitionDecodedURL(resolvePresentationRequest!));
+    if (offerRequest.toLowerCase().contains(_Constants.issuanceRequests)) {
+      var postCredentialsExchangeRequest =
+          await credentialsExchangeRequestUseCase
+              .postWalletCredentialOfferRequest(offerRequest, false);
 
-    if (postCredentialsExchangeRequest!.isNotEmpty) {
-      navigationHandler.navigateToWalletList();
+      if (postCredentialsExchangeRequest!.isNotEmpty) {
+        showSessionExpiredToast(
+            "The requested Credentials has been issued successfully");
+        navigationHandler.navigateToSplash();
+      }
+    }
+
+    if (offerRequest.toLowerCase().contains(_Constants.presentationRequests)) {
+      var resolvePresentationRequest = await credentialsExchangeRequestUseCase
+          .postWalletCredentialResolvePresentationRequest(offerRequest);
+      postCredentialsExchangeRequest = await credentialsExchangeRequestUseCase
+          .postWalletMatchCredentialsRequest(
+              getPresentationDefinitionDecodedURL(resolvePresentationRequest!));
+
+      if (postCredentialsExchangeRequest!.isNotEmpty) {
+        navigationHandler.navigateToWalletList();
+      }
     }
   }
 
@@ -61,5 +76,17 @@ class WalletCredentialsOfferRequestCoordinator
         Uri.decodeComponent(encodedPresentationDefinition);
 
     return decodedPresentationDefinition;
+  }
+
+  void showSessionExpiredToast(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.black54,
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
   }
 }
