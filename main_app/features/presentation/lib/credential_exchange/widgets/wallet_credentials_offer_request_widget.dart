@@ -97,7 +97,7 @@ class CredentialOfferInputFormWidget extends StatelessWidget {
                   ? null
                   : attributes.submitButtonPressed.call();
             },
-            child: const Text('Resolve Presentation Request'),
+            child: const Text('Submit'),
           ),
 
         ],

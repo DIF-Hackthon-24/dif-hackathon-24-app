@@ -16,7 +16,7 @@ class WalletCredentialExchangeRequestRepository
   Future<String?> postWalletCredentialResolvePresentationRequest(
       String offerRequest) async {
     final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
-            .postWalletCredentialResolvePresentationRequestAPI(offerRequest);
+        .postWalletCredentialResolvePresentationRequestAPI(offerRequest);
 
     return responseData;
   }
@@ -44,7 +44,27 @@ class WalletCredentialExchangeRequestRepository
   Future<bool?> postWalletProcessCredentialRequest(
       String credentialRequest, String presentationResponse) async {
     final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
-            .postWalletProcessCredentialRequestAPI(credentialRequest,presentationResponse);
+        .postWalletProcessCredentialRequestAPI(
+            credentialRequest, presentationResponse);
     return responseData;
+  }
+
+  @override
+  Future<List<WalletCredentialListEntity>?> postWalletCredentialOfferRequest(
+      String offerRequest, bool isUserInputRequired) async {
+    final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
+        .postWalletCredentialOfferRequestAPI(
+            offerRequest, isUserInputRequired) as WalletCredentialListModel;
+
+    return responseData.walletCredentials
+        ?.map((responseData) => WalletCredentialListEntity(
+              id: responseData.id,
+              wallet: responseData.wallet,
+              document: responseData.document,
+              disclosures: responseData.disclosures,
+              addedOn: responseData.addedOn,
+              format: responseData.format,
+            ))
+        .toList();
   }
 }

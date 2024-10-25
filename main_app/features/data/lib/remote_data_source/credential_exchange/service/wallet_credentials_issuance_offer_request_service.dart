@@ -1,4 +1,3 @@
-import 'package:core/ioc/di_container.dart';
 import 'package:core/task/busy_type.dart';
 import 'package:core/task/task_params.dart';
 import 'package:data/remote_data_source/wallet_credentials_list/model/wallet_credentials_list_response_model.dart';
@@ -8,13 +7,15 @@ import 'package:network_manager/model/requests/rest/rest_request.dart';
 import 'package:shared_dependencies/base_service/base_service_request.dart';
 import 'package:shared_dependencies/service_identifiers.dart';
 
-class PostWalletCredentialsResolvePresentationServiceParams extends TaskParams {
+class PostWalletCredentialsIssuanceServiceParams extends TaskParams {
   String? token;
-  String? credentialsRequest;
+  String? credentialsIssuanceOfferRequest;
+  bool isUserInputRequired;
 
-  PostWalletCredentialsResolvePresentationServiceParams({
+  PostWalletCredentialsIssuanceServiceParams({
     required this.token,
-    required this.credentialsRequest,
+    required this.credentialsIssuanceOfferRequest,
+    required this.isUserInputRequired,
   });
 }
 
@@ -23,7 +24,7 @@ class _Constants {
   static const bearer = 'Bearer';
 }
 
-class PostWalletCredentialsResolvePresentationRequestListService extends BaseGraphQLService {
+class PostWalletCredentialsIssuanceOfferRequestListService extends BaseGraphQLService {
   @override
   GraphQLRequest getGraphQLRequest(
     TaskParams? params, {
@@ -35,13 +36,16 @@ class PostWalletCredentialsResolvePresentationRequestListService extends BaseGra
   @override
   RestRequest getRestRequest(TaskParams? params,
       {Map<String, dynamic>? paramsInMap}) {
-    final parameters = params as PostWalletCredentialsResolvePresentationServiceParams;
-    final response = WalletCredentialsResolvePresentationResponseModel();
+    final parameters = params as PostWalletCredentialsIssuanceServiceParams;
+    final response = WalletCredentialsListResponseModel();
     return RestRequest(
       type: RequestType.post,
-      name: ServiceIdentifiers.postWalletCredentialsResolvePresentationRequest,
+      name: ServiceIdentifiers.postWalletCredentialsIssuance,
       data: response,
-      body: parameters.credentialsRequest,
+      body: parameters.credentialsIssuanceOfferRequest,
+        queryParameters: {
+          "requireUserInput" : parameters.isUserInputRequired
+        },
       showBusy: BusyType.none,
       cachePolicy: CachePolicy.none,
       additionalHeaders: {
