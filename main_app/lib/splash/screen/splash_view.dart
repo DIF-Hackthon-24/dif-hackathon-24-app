@@ -4,6 +4,8 @@ import 'package:main_app/splash/coordinator/splash_coordinator.dart';
 import 'package:main_app/splash/state/splash_view_state.dart';
 import 'package:widget_library/common_widget/app_bars/ps_appbar.dart';
 import 'package:widget_library/ps_scaffold.dart';
+import 'package:main_app/route/global_route_manager.dart';
+
 
 final _formKey = GlobalKey<FormState>();
 
@@ -62,6 +64,13 @@ class SplashView extends StatelessWidget {
                   coordinator.navigateToWalletList();
                 },
                 child: const Text('Wallet Credentials'),
+              ),
+              const SizedBox(height: 10.0),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, GlobalRouteManager.permissionRequest);
+                },
+                child: const Text('Go to Permission Request'),
               ),
             ],
           ),
