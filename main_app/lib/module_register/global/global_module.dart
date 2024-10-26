@@ -33,6 +33,8 @@ import 'package:presentation/credential_exchange/coordinator/wallet_credentials_
 import 'package:presentation/credential_exchange/navigation_handler/wallet_credentials_list_navigation_handler.dart';
 import 'package:presentation/wallet_credentials_list/coordinator/wallet_credentials_list_coordinator.dart';
 import 'package:presentation/wallet_credentials_list/navigation_handler/wallet_credentials_list_navigation_handler.dart';
+import 'package:presentation/permission_request/coordinator/permission_request_coordinator.dart';
+import 'package:presentation/permission_request/navigation_handler/permission_request_navigation_handler.dart';
 import 'package:download_manager/download_manager.dart';
 import 'package:download_manager/i_download_manager.dart';
 import 'package:network_manager/client/i_service.dart';
@@ -120,6 +122,20 @@ class GlobalModule implements Module {
                       GetWalletCredentialListRemoteDataSource(
             container.resolve<TaskManager>(),
           )))),
+    );
+
+    DIContainer.container.registerFactory(
+          (container) => PermissionRequestCoordinator(
+          navigationHandler: PermissionRequestNavigationHandler(
+            LanguageDataProviderImpl(
+              taskManager: container.resolve<TaskManager>(),
+            ),
+            StringToMapConvertorImpl(),
+            LanguageCodeDataProviderImpl(
+              taskManager: container.resolve<TaskManager>(),
+            ),
+          ),
+          ),
     );
 
     DIContainer.container.registerSingleton(

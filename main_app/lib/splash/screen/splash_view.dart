@@ -68,7 +68,7 @@ class SplashView extends StatelessWidget {
               const SizedBox(height: 10.0),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, GlobalRouteManager.permissionRequest);
+                  coordinator.navigateToPermissionRequest();
                 },
                 child: const Text('Go to Permission Request'),
               ),

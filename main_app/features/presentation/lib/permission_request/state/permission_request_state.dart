@@ -1,6 +1,16 @@
 // permission_request_state.dart
 class PermissionRequestState {
-  final String requestDetails;
+  String  getPermissionRequestData;
 
-  PermissionRequestState({required this.requestDetails});
+  PermissionRequestState({
+    this.getPermissionRequestData = "",
+  });
+
+  PermissionRequestState copyWith({
+    String?  getPermissionRequestDataCopy
+  }) {
+    return PermissionRequestState(
+      getPermissionRequestData: getPermissionRequestDataCopy ?? getPermissionRequestData,
+    );
+  }
 }

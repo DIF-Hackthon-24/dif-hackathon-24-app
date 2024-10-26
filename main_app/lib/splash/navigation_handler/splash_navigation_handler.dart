@@ -26,6 +26,12 @@ class SplashNavigationHandler extends NoNetworkNavigationHandler {
 
     );
   }
+  void navigateToPermissionRequest() async {
+    await NavigationManager.navigateTo(
+      "${ModuleIdentifiers.global}-${GlobalRouteManager.permissionRequest}",
+      NavigationType.Replace,
+    );
+  }
 
   void showNoNetworkError() async {
     super.showNoNetworkErrorPopup();

@@ -33,6 +33,7 @@ class WalletCredentialsOfferRequestCoordinator
 
   Future<void> submitCredentialsExchangeRequest() async {
     var offerRequest = state.getCredentialsOfferRequestData;
+    print("Offer Request: $offerRequest");
 
     List<WalletCredentialListEntity>? postCredentialsExchangeRequest = [];
 
@@ -58,6 +59,10 @@ class WalletCredentialsOfferRequestCoordinator
       if (postCredentialsExchangeRequest!.isNotEmpty) {
         navigationHandler.navigateToWalletList();
       }
+    }
+    else {
+      print("Permission request use case");
+      var resolvePermissionRequest = await
     }
   }
 

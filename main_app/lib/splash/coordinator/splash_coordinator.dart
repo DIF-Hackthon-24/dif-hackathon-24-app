@@ -55,6 +55,10 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
     navigationHandler.navigateToWalletCredentialExchange();
   }
 
+  void navigateToPermissionRequest() {
+    navigationHandler.navigateToPermissionRequest();
+  }
+
 
   void _listenForNetworkChange() {
     networkSubscription ??= Connectivity().onConnectivityChanged.listen(
