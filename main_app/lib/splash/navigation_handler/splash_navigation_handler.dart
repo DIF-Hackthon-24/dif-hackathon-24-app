@@ -27,6 +27,15 @@ class SplashNavigationHandler extends NoNetworkNavigationHandler {
     );
   }
 
+  void navigateToCompleteIdentityVerification(bool mode) async{
+    await NavigationManager.navigateTo(
+      "${ModuleIdentifiers.global}-${GlobalRouteManager.completeIdentityVerification}",
+      NavigationType.Dialog,
+      arguments: {'mode': mode}
+
+    );
+  }
+
   void showNoNetworkError() async {
     super.showNoNetworkErrorPopup();
   }

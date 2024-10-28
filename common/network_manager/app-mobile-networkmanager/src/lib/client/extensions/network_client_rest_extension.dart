@@ -180,6 +180,7 @@ extension RestExtension on NetworkClient {
         path = path.replaceFirst(element.key, element.value);
       });
     }
+
     final response = await client.get(path, options: Options(headers: headers), queryParameters: queryParameters,data: body);
     return response;
   }
@@ -221,8 +222,14 @@ extension RestExtension on NetworkClient {
         path = path.replaceFirst(element.key, element.value);
       });
     }
+    var storeBaseUrl =  client.options.baseUrl;
+    if(queryParameters != null && queryParameters.isNotEmpty && queryParameters["identity"] == 'identity'){
+      client.options.baseUrl = "https://issuer.portal.walt.id";
+      queryParameters.remove('identity');
+    }
 
     final response = await client.post(path,queryParameters: queryParameters, data: body, options: Options(headers: headers));
+    client.options.baseUrl = storeBaseUrl;
     return response;
   }
 

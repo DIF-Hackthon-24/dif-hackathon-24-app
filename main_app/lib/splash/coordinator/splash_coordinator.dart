@@ -55,6 +55,10 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
     navigationHandler.navigateToWalletCredentialExchange();
   }
 
+  void navigateToCompleteIdentityVerification(bool mode)
+  {
+    navigationHandler.navigateToCompleteIdentityVerification(mode);
+  }
 
   void _listenForNetworkChange() {
     networkSubscription ??= Connectivity().onConnectivityChanged.listen(

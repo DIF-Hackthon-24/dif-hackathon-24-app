@@ -52,6 +52,13 @@ class SplashView extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: (){
+                  coordinator.navigateToCompleteIdentityVerification(true);
+                },
+                child: const Text('Complete Identity Verification'),
+              ),
+              const SizedBox(height: 10.0),
+              ElevatedButton(
+                onPressed: (){
                   coordinator.navigateToWalletCredentialExchange();
                 },
                 child: const Text('Wallet QR Code Scanner'),

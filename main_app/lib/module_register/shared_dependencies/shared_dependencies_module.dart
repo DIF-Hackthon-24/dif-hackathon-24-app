@@ -17,6 +17,7 @@ import 'package:shared_dependencies/error_manager/error_manager.dart';
 import 'package:shared_dependencies/navigation_handler/api_error_navigation_handler.dart';
 import 'package:shared_dependencies/service_identifiers.dart';
 import 'package:task_manager/task_manager.dart';
+import 'package:data/remote_data_source/credential_exchange/service/wallet_credentials_identity_issuance_request_service.dart';
 
 class SharedDependenciesModule implements Module {
   @override
@@ -103,9 +104,15 @@ extension SharedDependenciesModuleRegisterServiceExtension
       name: ServiceIdentifiers.postProcessPresentationRequest,
     );
 
+
     DIContainer.container.registerFactory<IService>(
           (container) => PostWalletCredentialsIssuanceOfferRequestListService(),
       name: ServiceIdentifiers.postWalletCredentialsIssuance,
+    );
+
+    DIContainer.container.registerFactory<IService>(
+          (container) => PostWalletCredentialsIdentityIssuanceService(),
+      name: ServiceIdentifiers.postWalletCredentialsIdentityIssuance,
     );
   }
 }

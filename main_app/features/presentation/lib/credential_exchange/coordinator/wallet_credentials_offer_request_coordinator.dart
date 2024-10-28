@@ -61,6 +61,21 @@ class WalletCredentialsOfferRequestCoordinator
     }
   }
 
+  Future<void> uploadDocumentRequest() async {
+    var getIdentityData = await credentialsExchangeRequestUseCase
+        .postWalletCredentialIssuanceRequest();
+    if (getIdentityData!.isNotEmpty) {
+      // await Future.delayed(const Duration(seconds: 3));
+      var postCredentialsExchangeRequest =
+          await credentialsExchangeRequestUseCase
+              .postWalletCredentialOfferRequest(getIdentityData, false);
+      if (postCredentialsExchangeRequest!.isNotEmpty) {
+        showSessionExpiredToast("Document  submitted successfully!");
+        navigationHandler.navigateToSplash();
+      }
+    }
+  }
+
   void navigateToSplash() {
     navigationHandler.navigateToSplash();
   }

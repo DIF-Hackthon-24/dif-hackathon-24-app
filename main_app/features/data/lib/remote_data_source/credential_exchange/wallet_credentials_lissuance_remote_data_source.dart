@@ -140,4 +140,21 @@ class GetWalletCredentialIssuanceRemoteDataSource extends BaseRemoteDataSource
     return null;
   }
 
+  @override
+  Future<String?> postWalletCredentialIssuanceRequestAPI() async {
+    final result = await executeApiAndHandleErrors(
+      task: Task(
+        subType: TaskSubType.REST,
+        taskType: TaskType.DATA_OPERATION,
+        apiIdentifier:
+        ServiceIdentifiers.postWalletCredentialsIdentityIssuance,
+      ),
+    ) as WalletCredentialsResolvePresentationResponseModel?;
+
+    if (result != null) {
+      return result.restResponse;
+    }
+    return null;
+  }
+
 }

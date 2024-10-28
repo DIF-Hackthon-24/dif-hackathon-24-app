@@ -5,4 +5,5 @@ abstract class IWalletCredentialsIssuanceOfferRequestRepository {
   Future<String?>  postWalletCredentialResolvePresentationRequest(String offerRequest);
   Future<List<WalletCredentialListEntity>?> postWalletMatchCredentialsRequest(String credentialRequest);
   Future<bool?> postWalletProcessCredentialRequest(String credentialRequest,String presentationResponse);
+  Future<String?> postWalletCredentialIssuanceRequest();
 }

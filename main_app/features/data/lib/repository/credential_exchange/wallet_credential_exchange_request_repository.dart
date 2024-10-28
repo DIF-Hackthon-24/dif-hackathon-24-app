@@ -67,4 +67,12 @@ class WalletCredentialExchangeRequestRepository
             ))
         .toList();
   }
+
+  @override
+  Future<String?> postWalletCredentialIssuanceRequest() async {
+    final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
+        .postWalletCredentialIssuanceRequestAPI();
+    return responseData;
+  }
+
 }

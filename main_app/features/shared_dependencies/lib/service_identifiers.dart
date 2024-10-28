@@ -8,5 +8,7 @@ class ServiceIdentifiers {
   static const postMatchCredentialsForPresentationDefinition = 'postMatchCredentialsForPresentationDefinition';
   static const postProcessPresentationRequest = 'postProcessPresentationRequest';
   static const postWalletCredentialsIssuance = 'postWalletCredentialsIssuance';
+  static const postWalletCredentialsIdentityIssuance = 'postWalletCredentialsIdentityIssuance';
+
 
 }

@@ -57,6 +57,13 @@
       "headers": {
         "Content-Type": "application/json"
       }
+    },
+    {
+      "name": "postWalletCredentialsIdentityIssuance",
+      "host": "/openid4vc/jwt/issue",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
   ],
   "gqlEnvironments": [

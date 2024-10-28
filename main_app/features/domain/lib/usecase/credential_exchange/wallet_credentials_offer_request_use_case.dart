@@ -39,4 +39,10 @@ class WalletCredentialsOfferRequestUseCase
     return await walletCredentialsIssuanceOfferRequestRepository
         .postWalletCredentialOfferRequest(offerRequest, isUserInputRequired);
   }
+
+  @override
+  Future<String?> postWalletCredentialIssuanceRequest() async{
+    return await walletCredentialsIssuanceOfferRequestRepository
+        .postWalletCredentialIssuanceRequest();
+  }
 }

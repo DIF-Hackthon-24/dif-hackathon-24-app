@@ -4,15 +4,12 @@ import 'package:presentation/credential_exchange/view/wallet_credentials_offer_r
 import 'package:presentation/wallet_credentials_list/view/wallet_credentials_list_view.dart';
 import 'package:flutter/material.dart';
 
-
 class GlobalRouteManager extends IRouteManager {
   static const splash = 'splash';
   static const mockedLogin = 'mocked_login';
   static const walletCredentialList = 'wallet_credential_list';
   static const walletCredentialExchange = 'wallet_credential_exchange';
-
-
-
+  static const completeIdentityVerification = 'complete_identity_verification';
 
   @override
   Widget getView(RouteSettings settings) {
@@ -22,7 +19,7 @@ class GlobalRouteManager extends IRouteManager {
       case GlobalRouteManager.walletCredentialList:
         return const WalletCredentialsListView();
       case GlobalRouteManager.walletCredentialExchange:
-        return const WalletCredentialsOfferRequestView();
+        return const WalletCredentialsOfferRequestView(mode: false,);
 
       default:
         throw Exception('Not implemented');
@@ -43,7 +40,12 @@ class GlobalRouteManager extends IRouteManager {
   Widget getDialog(String dialogName, arguments) {
     // return super.getDialog(dialogName, arguments);
     switch (dialogName) {
-      case GlobalRouteManager.mockedLogin:
+      case GlobalRouteManager.completeIdentityVerification:
+        return Material(
+          color: Colors.transparent,
+          child: WalletCredentialsOfferRequestView(
+              mode: arguments['mode'] as bool),
+        );
       default:
         throw Exception('Route ${arguments.number} not found');
     }
