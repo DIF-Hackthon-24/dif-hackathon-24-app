@@ -6,5 +6,6 @@ abstract class IWalletCredentialsExchangeIssuanceRemoteDataSource {
   Future<WalletCredentialListModel?> postWalletMatchCredentialsRequestAPI(String credentialRequest);
   Future<bool?> postWalletProcessCredentialRequestAPI(String credentialRequest,String presentationResponse);
   Future<String?> postWalletCredentialIssuanceRequestAPI();
+  Future<bool?> postPermissionRequestAPI(Map<String, dynamic>? permissionRequest);
 
 }

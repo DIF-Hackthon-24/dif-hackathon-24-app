@@ -9,6 +9,7 @@ import 'package:widget_library/ps_scaffold.dart';
 
 class WalletCredentialsOfferRequestView extends StatelessWidget {
   final bool mode;
+
   const WalletCredentialsOfferRequestView({super.key, required this.mode});
 
   @override
@@ -19,37 +20,45 @@ class WalletCredentialsOfferRequestView extends StatelessWidget {
         await coordinator.initialize(context);
       },
       builder: (
-          context,
-          state,
-          viewModel,
-          ) =>
+        context,
+        state,
+        viewModel,
+      ) =>
           buildWithState(
-            context,
-            state,
-            viewModel,
-          ),
+        context,
+        state,
+        viewModel,
+      ),
     );
   }
 
   Widget buildWithState(
-      BuildContext context,
-      WalletCredentialsOfferRequestState state,
-      WalletCredentialsOfferRequestCoordinator coordinator,
-      ) {
+    BuildContext context,
+    WalletCredentialsOfferRequestState state,
+    WalletCredentialsOfferRequestCoordinator coordinator,
+  ) {
     return PSScaffold(
-      appBarAttributes: PSAppBarAttributes(title: mode ? "Complete Identity Verification" : "Wallet QR Code Scanner",left: [
-        PSAppBarButtonAttributes(
-          type: PSAppBarButtons.back,
-          onPressed: () => coordinator.navigateToSplash(),
-        ),
-      ],),
-      body:  mode ? DocumentUploadWidget( submitButtonPressed: coordinator.uploadDocumentRequest) : CredentialOfferInputFormWidget(
-        attributes: CredentialOfferInputFormAttributes(
-            offerRequestData: state.getCredentialsOfferRequestData,
-            issueOfferRequestInputForm:
-            coordinator.postWalletCredentialsOfferRequest,
-            submitButtonPressed: coordinator.submitCredentialsExchangeRequest),
+      appBarAttributes: PSAppBarAttributes(
+        title:
+            mode ? "Complete Identity Verification" : "Wallet QR Code Scanner",
+        left: [
+          PSAppBarButtonAttributes(
+            type: PSAppBarButtons.back,
+            onPressed: () => coordinator.navigateToSplash(),
+          ),
+        ],
       ),
+      body: mode
+          ? DocumentUploadWidget(
+              submitButtonPressed: coordinator.uploadDocumentRequest)
+          : CredentialOfferInputFormWidget(
+              attributes: CredentialOfferInputFormAttributes(
+                  offerRequestData: state.getCredentialsOfferRequestData,
+                  issueOfferRequestInputForm:
+                      coordinator.postWalletCredentialsOfferRequest,
+                  submitButtonPressed:
+                      coordinator.submitCredentialsExchangeRequest),
+            ),
     );
   }
 }

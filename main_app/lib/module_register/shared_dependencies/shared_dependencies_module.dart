@@ -1,5 +1,6 @@
 import 'package:core/ioc/di_container.dart';
 import 'package:core/module/module.dart';
+import 'package:data/remote_data_source/credential_exchange/service/dwn_request_permission_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_credentials_issuance_offer_request_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_credentials_resolve_presentation_request_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_match_credentials_request_service.dart';
@@ -113,6 +114,11 @@ extension SharedDependenciesModuleRegisterServiceExtension
     DIContainer.container.registerFactory<IService>(
           (container) => PostWalletCredentialsIdentityIssuanceService(),
       name: ServiceIdentifiers.postWalletCredentialsIdentityIssuance,
+    );
+
+    DIContainer.container.registerFactory<IService>(
+          (container) => PostDwnRequestPermissionService(),
+      name: ServiceIdentifiers.postPermissionRequest,
     );
   }
 }

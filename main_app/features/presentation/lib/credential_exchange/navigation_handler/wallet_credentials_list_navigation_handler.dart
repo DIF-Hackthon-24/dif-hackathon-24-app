@@ -4,31 +4,31 @@ import 'package:shared_dependencies/navigation_handler/no_network_navigation_han
 import 'package:main_app/route/global_route_manager.dart';
 
 class CredentialExchangeNavigationHandler extends NoNetworkNavigationHandler {
-
   CredentialExchangeNavigationHandler(
-      super.languageDataProvider,
-      super.stringToMapConvertorImpl,
-      super.codeDataProviderImpl,
-      );
+    super.languageDataProvider,
+    super.stringToMapConvertorImpl,
+    super.codeDataProviderImpl,
+  );
 
-  void navigateToWalletList() async{
+  void navigateToWalletList(String recipient,
+      {Map<String, dynamic>? permissionRequest}) async {
     await NavigationManager.navigateTo(
-      "${ModuleIdentifiers.global}-${GlobalRouteManager.walletCredentialList}",
-      NavigationType.Replace,
-
-    );
+        "${ModuleIdentifiers.global}-${GlobalRouteManager.walletCredentialList}",
+        NavigationType.Replace,
+        arguments: {
+          'recipient': recipient,
+          'permissionRequest': permissionRequest
+        });
   }
 
-  void navigateToSplash() async{
+  void navigateToSplash() async {
     await NavigationManager.navigateTo(
       "${ModuleIdentifiers.global}-${GlobalRouteManager.splash}",
       NavigationType.Replace,
-
     );
   }
 
   void showNoNetworkError() async {
     super.showNoNetworkErrorPopup();
   }
-
 }

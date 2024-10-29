@@ -75,4 +75,11 @@ class WalletCredentialExchangeRequestRepository
     return responseData;
   }
 
+  @override
+  Future<bool?> postPermissionRequest(Map<String, dynamic>? permissionRequest) async{
+    final responseData = await walletCredentialsExchangeIssuanceRemoteDataSource
+        .postPermissionRequestAPI(permissionRequest);
+    return responseData;
+  }
+
 }

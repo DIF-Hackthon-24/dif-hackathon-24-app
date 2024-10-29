@@ -89,11 +89,33 @@ class _DocumentUploadWidgetState extends State<DocumentUploadWidget> {
             ),
           ),
           const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: _submitDocument,
-            child: const Text('Upload Passport Document'),
+          _buildCTAButton(
+            context,
+            icon: Icons.upload,
+            title: 'Upload Passport Document',
+            onTap: _submitDocument,
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildCTAButton(BuildContext context,
+      {required IconData icon, required String title, required VoidCallback onTap}) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+        side: const BorderSide(
+          color: Colors.blue, // Set the border color here
+          width: 2.0,         // Set the border width here
+        ),
+
+      ),
+      child: ListTile(
+        trailing: Icon(icon, color: Theme.of(context).primaryColor),
+        title: Center(child: Text(title, style: const TextStyle(fontWeight: FontWeight.bold,color: Colors.black))),
+        onTap: onTap,
       ),
     );
   }
