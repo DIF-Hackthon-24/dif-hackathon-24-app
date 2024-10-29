@@ -77,6 +77,13 @@ class SplashView extends StatelessWidget {
                 },
                 child: const Text('Wallet Credentials'),
               ),
+              const SizedBox(height: 10.0),
+              ElevatedButton(
+                onPressed: (){
+                  coordinator.navigateToChat();
+                },
+                child: const Text('Chat'),
+              ),
             ],
           ),
         ),

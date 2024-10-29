@@ -43,6 +43,13 @@ class SplashNavigationHandler extends NoNetworkNavigationHandler {
     );
   }
 
+  void navigateToChat() async{
+    await NavigationManager.navigateTo(
+      "${ModuleIdentifiers.global}-${GlobalRouteManager.chat}",
+      NavigationType.Replace,
+    );
+  }
+
   void showNoNetworkError() async {
     super.showNoNetworkErrorPopup();
   }

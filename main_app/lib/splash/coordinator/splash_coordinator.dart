@@ -60,6 +60,11 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
     navigationHandler.navigateToPreferenceCollection();
   }
 
+  void navigateToChat()
+  {
+    navigationHandler.navigateToChat();
+  }
+
   void navigateToCompleteIdentityVerification(bool mode)
   {
     navigationHandler.navigateToCompleteIdentityVerification(mode);
