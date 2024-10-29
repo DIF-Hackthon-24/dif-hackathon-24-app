@@ -98,6 +98,7 @@ dependencies:
 
   youtube_player_iframe: ^5.1.2
   shimmer: ^3.0.0
+  http: ^1.2.2
 
 
 dev_dependencies:

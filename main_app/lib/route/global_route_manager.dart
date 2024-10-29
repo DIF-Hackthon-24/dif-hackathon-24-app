@@ -2,6 +2,7 @@ import 'package:core/navigation/i_route_manager.dart';
 import 'package:main_app/splash/screen/splash_view.dart';
 import 'package:presentation/credential_exchange/view/wallet_credentials_offer_request_view.dart';
 import 'package:presentation/wallet_credentials_list/view/wallet_credentials_list_view.dart';
+import 'package:presentation/preference_collection/view/preference_collection_view.dart';
 import 'package:flutter/material.dart';
 
 class GlobalRouteManager extends IRouteManager {
@@ -10,6 +11,7 @@ class GlobalRouteManager extends IRouteManager {
   static const walletCredentialList = 'wallet_credential_list';
   static const walletCredentialExchange = 'wallet_credential_exchange';
   static const completeIdentityVerification = 'complete_identity_verification';
+  static const preferenceCollection = 'preference_collection';
 
   @override
   Widget getView(RouteSettings settings) {
@@ -20,6 +22,8 @@ class GlobalRouteManager extends IRouteManager {
         return const WalletCredentialsListView();
       case GlobalRouteManager.walletCredentialExchange:
         return const WalletCredentialsOfferRequestView(mode: false,);
+      case GlobalRouteManager.preferenceCollection:
+        return const PreferenceCollectionView();
 
       default:
         throw Exception('Not implemented');

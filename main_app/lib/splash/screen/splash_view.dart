@@ -59,6 +59,13 @@ class SplashView extends StatelessWidget {
               const SizedBox(height: 10.0),
               ElevatedButton(
                 onPressed: (){
+                  coordinator.navigateToPreferenceCollection();
+                },
+                child: const Text('Add Traveler Preferences'),
+              ),
+              const SizedBox(height: 10.0),
+              ElevatedButton(
+                onPressed: (){
                   coordinator.navigateToWalletCredentialExchange();
                 },
                 child: const Text('Wallet QR Code Scanner'),
