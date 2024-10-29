@@ -9,10 +9,11 @@ class CredentialOfferInputFormAttributes {
   String offerRequestData;
   ValueSetter<String> issueOfferRequestInputForm;
   Function submitButtonPressed;
+
   CredentialOfferInputFormAttributes(
       {required this.offerRequestData,
-        required this.issueOfferRequestInputForm,
-        required this.submitButtonPressed});
+      required this.issueOfferRequestInputForm,
+      required this.submitButtonPressed});
 }
 
 class CredentialOfferInputFormWidget extends StatelessWidget {
@@ -22,7 +23,6 @@ class CredentialOfferInputFormWidget extends StatelessWidget {
     Key? key,
     required this.attributes,
   }) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -80,10 +80,8 @@ class CredentialOfferInputFormWidget extends StatelessWidget {
           //       backgroundColor: ColorConstants.COLOR_52E0E0E0,
           //       isRtl: true,
           //       controller: textEditingController,
-          //       onSubmitted:
-          //       attributes.issueOfferRequestInputForm,
-          //       onChanged:
-          //       attributes.issueOfferRequestInputForm,
+          //       onSubmitted: attributes.issueOfferRequestInputForm,
+          //       onChanged: attributes.issueOfferRequestInputForm,
           //       hint: "Please enter openid-credential-offer",
           //     ),
           //   ),
@@ -91,16 +89,42 @@ class CredentialOfferInputFormWidget extends StatelessWidget {
           const SizedBox(
             height: DimensionConstants.size20,
           ),
-          ElevatedButton(
-            onPressed: () {
+          _buildCTAButton(
+            context,
+            icon: Icons.save,
+            title: 'Submit',
+            onTap: () {
               attributes.offerRequestData == ''
                   ? null
                   : attributes.submitButtonPressed.call();
             },
-            child: const Text('Submit'),
           ),
-
         ],
+      ),
+    );
+  }
+
+  Widget _buildCTAButton(BuildContext context,
+      {required IconData icon,
+      required String title,
+      required VoidCallback onTap}) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+        side: const BorderSide(
+          color: Colors.blue, // Set the border color here
+          width: 2.0, // Set the border width here
+        ),
+      ),
+      child: ListTile(
+        trailing: Icon(icon, color: Theme.of(context).primaryColor),
+        title: Center(
+          child: Text(title,
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.black)),
+        ),
+        onTap: onTap,
       ),
     );
   }

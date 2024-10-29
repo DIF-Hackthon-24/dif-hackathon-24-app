@@ -71,13 +71,14 @@ class CredentialCard extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => onShared!(credentialCard.id),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black, // Background color
+                    backgroundColor: Colors.green, // Background color
                     minimumSize: const Size(150, 40), // Width and height
                   ),
                   child: const Text(
-                    'Share Id',
+                    'Share',
                     style: TextStyle(
-                      color: Colors.white, // Text color
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold// Text color
                     ),
                   ),
                 ),

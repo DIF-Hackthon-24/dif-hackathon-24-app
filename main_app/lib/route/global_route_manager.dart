@@ -17,7 +17,8 @@ class GlobalRouteManager extends IRouteManager {
       case GlobalRouteManager.splash:
         return const SplashView();
       case GlobalRouteManager.walletCredentialList:
-        return const WalletCredentialsListView();
+        var arguments = settings.arguments as Map<String, dynamic>? ?? {};
+        return WalletCredentialsListView(recipient: arguments['recipient'],permissionRequest: arguments['permissionRequest'],);
       case GlobalRouteManager.walletCredentialExchange:
         return const WalletCredentialsOfferRequestView(mode: false,);
 

@@ -11,11 +11,11 @@ class SplashNavigationHandler extends NoNetworkNavigationHandler {
     super.codeDataProviderImpl,
   );
 
-  void navigateToWalletList() async{
+  void navigateToWalletList(String recipient) async{
     await NavigationManager.navigateTo(
       "${ModuleIdentifiers.global}-${GlobalRouteManager.walletCredentialList}",
       NavigationType.Replace,
-
+      arguments: {'recipient': recipient}
     );
   }
 

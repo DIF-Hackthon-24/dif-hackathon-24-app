@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:core/base_classes/base_coordinator.dart';
 import 'package:domain/entity/wallet_credentials_list/wallet_credentials_list_entity.dart';
 import 'package:domain/usecase/credential_exchange/i_wallet_credentials_issuance_offer_request_use_case.dart';
@@ -56,8 +58,15 @@ class WalletCredentialsOfferRequestCoordinator
               getPresentationDefinitionDecodedURL(resolvePresentationRequest!));
 
       if (postCredentialsExchangeRequest!.isNotEmpty) {
-        navigationHandler.navigateToWalletList();
+        navigationHandler.navigateToWalletList('');
       }
+    }
+
+    if (offerRequest.isNotEmpty) {
+      Map<String, dynamic>? permissionRequestData = jsonDecode(offerRequest);
+      navigationHandler.navigateToWalletList(
+          _processDid(permissionRequestData!['recipient'] ?? ''),
+          permissionRequest: permissionRequestData);
     }
   }
 
@@ -65,12 +74,11 @@ class WalletCredentialsOfferRequestCoordinator
     var getIdentityData = await credentialsExchangeRequestUseCase
         .postWalletCredentialIssuanceRequest();
     if (getIdentityData!.isNotEmpty) {
-      // await Future.delayed(const Duration(seconds: 3));
       var postCredentialsExchangeRequest =
           await credentialsExchangeRequestUseCase
               .postWalletCredentialOfferRequest(getIdentityData, false);
       if (postCredentialsExchangeRequest!.isNotEmpty) {
-        showSessionExpiredToast("Document  submitted successfully!");
+        showSessionExpiredToast("Document verified successfully!");
         navigationHandler.navigateToSplash();
       }
     }
@@ -103,5 +111,14 @@ class WalletCredentialsOfferRequestCoordinator
       textColor: Colors.white,
       fontSize: 16.0,
     );
+  }
+
+  String _processDid(String did) {
+    List<String> components = did.split(':');
+    if (components.length > 1) {
+      return components.sublist(2).join(':');
+    } else {
+      return 'Invalid DID format';
+    }
   }
 }

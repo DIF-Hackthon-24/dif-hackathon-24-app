@@ -64,6 +64,13 @@
       "headers": {
         "Content-Type": "application/json"
       }
+    },
+    {
+      "name": "postPermissionRequest",
+      "host": "/permissions/grant",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
   ],
   "gqlEnvironments": [

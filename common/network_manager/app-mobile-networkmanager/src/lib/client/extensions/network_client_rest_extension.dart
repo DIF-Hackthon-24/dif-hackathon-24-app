@@ -223,9 +223,15 @@ extension RestExtension on NetworkClient {
       });
     }
     var storeBaseUrl =  client.options.baseUrl;
+
     if(queryParameters != null && queryParameters.isNotEmpty && queryParameters["identity"] == 'identity'){
       client.options.baseUrl = "https://issuer.portal.walt.id";
       queryParameters.remove('identity');
+    }
+
+    if(queryParameters != null && queryParameters.isNotEmpty && queryParameters["dwn_request"] == 'dwn_request'){
+      client.options.baseUrl = "http://188.245.52.145:80";
+      queryParameters.remove('dwn_request');
     }
 
     final response = await client.post(path,queryParameters: queryParameters, data: body, options: Options(headers: headers));

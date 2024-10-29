@@ -3,6 +3,7 @@ import 'package:core/encryption/i_encryption.dart';
 import 'package:core/ioc/di_container.dart';
 import 'package:data/remote_data_source/base_data_source/base_remote_data_source.dart';
 import 'package:data/remote_data_source/credential_exchange/i_wallet_credentials_exchange_issuance_remote_data_source.dart';
+import 'package:data/remote_data_source/credential_exchange/service/dwn_request_permission_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_credentials_issuance_offer_request_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_credentials_resolve_presentation_request_service.dart';
 import 'package:data/remote_data_source/credential_exchange/service/wallet_match_credentials_request_service.dart';
@@ -153,6 +154,26 @@ class GetWalletCredentialIssuanceRemoteDataSource extends BaseRemoteDataSource
 
     if (result != null) {
       return result.restResponse;
+    }
+    return null;
+  }
+
+  @override
+  Future<bool?> postPermissionRequestAPI(Map<String, dynamic>? permissionRequest) async {
+
+    final result = await executeApiAndHandleErrors(
+      task: Task(
+        subType: TaskSubType.REST,
+        taskType: TaskType.DATA_OPERATION,
+        apiIdentifier: ServiceIdentifiers.postPermissionRequest,
+        parameters: PostDwnRequestPermissionServiceParams(permissionRequest: permissionRequest),
+      ),
+    ) as WalletCredentialsProcessPresentationResponseModel;
+
+    // Check if the restResponse is not null
+    if (result.restResponse != null) {
+      // Check if the redirectUri is null and return the result
+      return result.restResponse!.length > 1;
     }
     return null;
   }

@@ -4,6 +4,8 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:core/base_classes/base_coordinator.dart';
 import 'package:core/logging/logger.dart';
 import 'package:domain/usecase/wallet_credentials_list/i_wallet_credentials_list_use_case.dart';
+import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:main_app/splash/navigation_handler/splash_navigation_handler.dart';
 import 'package:main_app/splash/state/splash_view_state.dart';
 import 'package:security_suit/security_suit.dart';
@@ -35,19 +37,10 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
   }
 
   void initialize(bool mockLogin) async {
-    // final secured = await _isDeviceSecure(mockLogin);
-    // if (secured || kDebugMode) {
-    //   _listenForNetworkChange();
-    // } else {
-    //   if (networkSubscription != null) {
-    //     networkSubscription?.cancel();
-    //   }
-    // }
-
   }
 
   void navigateToWalletList()  {
-    navigationHandler.navigateToWalletList();
+    navigationHandler.navigateToWalletList('');
   }
 
   void navigateToWalletCredentialExchange()
@@ -60,17 +53,6 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
     navigationHandler.navigateToCompleteIdentityVerification(mode);
   }
 
-  void _listenForNetworkChange() {
-    networkSubscription ??= Connectivity().onConnectivityChanged.listen(
-      (ConnectivityResult result) async {
-        PSLogger.logDebug(
-          '\nSplashCoordinator:############====> Network status change detected === ${result.name}"\n',
-        );
-      },
-      cancelOnError: false,
-    );
-  }
-
   @override
   void dispose() {
     super.dispose();
@@ -80,41 +62,22 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
 
   }
 
-  void _navigateToNextScreen() {
-    if (!state.haveMovedToNextScreen) {
-      state = state.copyWith(haveMovedToNextScreen: true, startAnimation: true);
-      Future.delayed(const Duration(seconds: 0), () {
-      });
-    }
+
+  Future<void> onNFCReader() async{
+    _showSessionExpiredToast("NFC Reader has been clicked.");
   }
 
-  void onLongPressDownloadError() {
-    state = state.copyWith(
-      showDownloadFailed: false,
-      showDownloadFailedDetails: true,
+
+  void _showSessionExpiredToast(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.black54,
+      textColor: Colors.white,
+      fontSize: 16.0,
     );
   }
 
-  void onSkipAndContinue() {
-    state = state.copyWith(
-      showDownloadFailed: false,
-      showDownloadFailedDetails: false,
-    );
-    _navigateToNextScreen();
-  }
-
-  Future<bool> _isDeviceSecure(bool mockLogin) async {
-    final notSecured = await SecuritySuit.isDeviceNotSecure();
-    if (notSecured && !mockLogin) {
-      return Future.value(false);
-    } else {
-      return Future.value(true);
-    }
-  }
-
-
-
-  void upgradeNow() {
-
-  }
 }

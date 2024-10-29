@@ -143,8 +143,8 @@ class _FormTextFieldState extends State<FormTextField> {
       children: <Widget>[
         TextFormField(
           inputFormatters: [
-            ...widget.formatters ?? <TextInputFormatter>[],
-            FilteringTextInputFormatter.deny('"'),
+            // ...widget.formatters ?? <TextInputFormatter>[],
+            // FilteringTextInputFormatter.deny('"'),
           ],
           key: widget.key,
           onTap: widget.onTap,

@@ -45,4 +45,10 @@ class WalletCredentialsOfferRequestUseCase
     return await walletCredentialsIssuanceOfferRequestRepository
         .postWalletCredentialIssuanceRequest();
   }
+
+  @override
+  Future<bool?> postPermissionRequest(Map<String, dynamic>? permissionRequest) async {
+    return await walletCredentialsIssuanceOfferRequestRepository
+        .postPermissionRequest(permissionRequest);
+  }
 }
