@@ -50,6 +50,7 @@ class WalletCredentialsOfferRequestCoordinator
               .postWalletCredentialOfferRequest(offerRequest, false);
 
       if (postCredentialsExchangeRequest!.isNotEmpty) {
+        print("request result ${postCredentialsExchangeRequest}");
         showSessionExpiredToast(
             "The requested Credentials has been issued successfully");
         navigationHandler.navigateToSplash();
@@ -85,7 +86,7 @@ class WalletCredentialsOfferRequestCoordinator
           await credentialsExchangeRequestUseCase
               .postWalletCredentialOfferRequest(getIdentityData, false);
       if (postCredentialsExchangeRequest!.isNotEmpty) {
-        showSessionExpiredToast("Document verified successfully!");
+        showSessionExpiredToast("Document verified and ID credential issued successfully!");
         navigationHandler.navigateToSplash();
       }
     }
@@ -111,7 +112,7 @@ class WalletCredentialsOfferRequestCoordinator
   void showSessionExpiredToast(String message) {
     Fluttertoast.showToast(
       msg: message,
-      toastLength: Toast.LENGTH_SHORT,
+      toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
       backgroundColor: Colors.black54,

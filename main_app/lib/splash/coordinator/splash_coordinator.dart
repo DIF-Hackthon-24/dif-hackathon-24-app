@@ -81,7 +81,7 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
   void _showSessionExpiredToast(String message) {
     Fluttertoast.showToast(
       msg: message,
-      toastLength: Toast.LENGTH_SHORT,
+      toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
       backgroundColor: Colors.black54,

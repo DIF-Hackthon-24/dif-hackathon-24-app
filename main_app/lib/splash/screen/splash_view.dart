@@ -54,7 +54,7 @@ class SplashView extends StatelessWidget {
               child: PSImage(
                 PSImageModel(
                   iconPath: 'assets/images/digital_wallet.png',
-                  height: 250,
+                  height: 220,
                 ),
               ),
             ),

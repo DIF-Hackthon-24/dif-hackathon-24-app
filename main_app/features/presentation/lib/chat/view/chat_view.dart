@@ -25,14 +25,14 @@ String extractAuthor(Map<String, dynamic> auth) {
 Future<void> sendMessage({
   required String data,
 }) async {
-  final url = 'http://188.245.52.145:80/records/create';
+  final url = 'http://188.245.52.145:80/dwn/records/create';
   final response = await http.post(
     Uri.parse(url),
     headers: {'Content-Type': 'application/json'},
     body: jsonEncode({
       'protocol': 'http://chat-protocol.xyz',
       'protocolPath': 'thread/message',
-      'parentContextId': 'bafyreigpj6drhqhtgltzcsrldnuti35sophnxvq2jlul5wzs2eb7djkho4',
+      'parentContextId': 'bafyreie3hfatwhevd5sxig7oo23jjnwozaqivdpbzqvljqm72sbsxv5uy4',
       'dataFormat': 'application/json',
       'recipient': 'did:key:z6MkeXmNA9HutZcYei7YsU5jimrMcb7EU43BWTXqLXw59VRq',
       'data': data,
@@ -59,17 +59,46 @@ Future<void> sendMessage({
   }
 }
 
-Future<List<ChatMessage>> fetchChatMessages() async {
-  print("fetching chat messages");
-  final url = 'http://188.245.52.145:80/records/query';
-  final response = await http.post(
-    Uri.parse(url),
-    headers: {'Content-Type': 'application/json'},
-    body: jsonEncode({
-      'protocol': 'http://chat-protocol.xyz',
-      'protocolPath': 'thread/message',
-      'parentId': 'bafyreigpj6drhqhtgltzcsrldnuti35sophnxvq2jlul5wzs2eb7djkho4',
-      'keyInfo': {
+class ChatView extends StatefulWidget {
+  @override
+  _ChatViewState createState() => _ChatViewState();
+}
+
+class _ChatViewState extends State<ChatView> {
+  late Future<List<ChatMessage>> futureMessages;
+  List<ChatMessage> messages = [];
+
+  @override
+  void initState() {
+    super.initState();
+    futureMessages = fetchChatMessages();
+  }
+
+  Future<void> fetchAndSetMessages() async {
+    List<ChatMessage> newMessages = await fetchChatMessages();
+    setState(() {
+      messages = newMessages;
+      futureMessages = Future.value(newMessages);
+    });
+  }
+
+  Future<void> sendMessageAndFetchMessages() async {
+    await sendMessage(data:
+    "{\"title\":\"Okay, I'm ready to check-in!\"}");
+    await fetchAndSetMessages();
+  }
+
+  Future<List<ChatMessage>> fetchChatMessages() async {
+    print("fetching chat messages");
+    final url = 'http://188.245.52.145:80/dwn/records/query';
+    final response = await http.post(
+      Uri.parse(url),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'protocol': 'http://chat-protocol.xyz',
+        'protocolPath': 'thread/message',
+        'parentId': 'bafyreie3hfatwhevd5sxig7oo23jjnwozaqivdpbzqvljqm72sbsxv5uy4',
+        'keyInfo': {
           "keyId": "did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW#z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW",
           "privateJwk": {
             "crv": "Ed25519",
@@ -79,44 +108,29 @@ Future<List<ChatMessage>> fetchChatMessages() async {
             "kid": "U4ePCnrZP0IOeE45gBnHpHT6IHQNeXG1H53ik-SJfIA",
             "alg": "EdDSA"
           }
-      },
-      'target': 'did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW',
-    }),
-  );
-  if (response.statusCode == 200) {
-    final List<dynamic> data = jsonDecode(response.body);
-    print("data: ${data}");
-    return data.map((item) => ChatMessage(
-      text: item['encodedData']['title'],
-      actionLabel: item['encodedData']['action'],
-      isSentByUser: extractAuthor(item['authorization']) == "did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW",
-      initialOffer: item['encodedData']['initialOffer'],
-      onActionPressed: () {
-        print("action pressed");
-        if (item['encodedData']['action'] == "Start check-in") {
-          sendMessage(data:
-          "{\"title\":\"Okay, I'm ready to check-in!\"}");
-        }
-        
-      },
-    )).toList();
-  } else {
-    throw Exception('Failed to load chat messages');
-  }
-}
+        },
+        'target': 'did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW',
+      }),
+    );
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      print("data: ${data}");
+      return data.map((item) => ChatMessage(
+        text: item['encodedData']['title'],
+        actionLabel: item['encodedData']['action'],
+        isSentByUser: extractAuthor(item['authorization']) == "did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW",
+        initialOffer: item['encodedData']['initialOffer'],
+        onActionPressed: () async {
+          print("action pressed");
+          if (item['encodedData']['action'] == "Start check-in") {
+            await sendMessageAndFetchMessages();
+          }
 
-class ChatView extends StatefulWidget {
-  @override
-  _ChatViewState createState() => _ChatViewState();
-}
-
-class _ChatViewState extends State<ChatView> {
-  late Future<List<ChatMessage>> futureMessages;
-
-  @override
-  void initState() {
-    super.initState();
-    futureMessages = fetchChatMessages();
+        },
+      )).toList();
+    } else {
+      throw Exception('Failed to load chat messages');
+    }
   }
 
   @override
@@ -166,7 +180,7 @@ class _ChatViewState extends State<ChatView> {
             return ListView.builder(
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
-                return ChatMessageWidget(coordinator: coordinator, message: snapshot.data![index]);
+                return ChatMessageWidget(coordinator: coordinator, message: snapshot.data![index], refetchMessages: fetchAndSetMessages);
               },
             );
           }

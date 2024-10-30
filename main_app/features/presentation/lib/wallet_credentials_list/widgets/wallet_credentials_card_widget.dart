@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+
 class CredentialCard extends StatelessWidget {
   final WalletCredentialListEntity credentialCard;
   final Function(String?)? onShared;
@@ -50,11 +51,11 @@ class CredentialCard extends StatelessWidget {
             const Text('Credential Details',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 5),
-            _buildCredentialList(getData['vc']['credentialSubject']),
+            _buildCredentialList(getData?['vc']['credentialSubject']),
             const SizedBox(height: 10),
             const Text('VC Type',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            Text('${getData!['vc']['type'].map((item) => splitCamelCase(item)).join(', ')}',
+            Text('${getData!['vc']['type'].map((item) => _splitCamelCase(item)).join(', ')}',
                 style: const TextStyle(
                     fontSize: 16, fontWeight: FontWeight.normal)),
             const SizedBox(height: 10),
@@ -139,8 +140,8 @@ class CredentialCard extends StatelessWidget {
     }
   }
 
-  String _formatDate(String dateString) {
-    DateTime dateTime = DateTime.parse(dateString);
+  String _formatDate(String? dateString) {
+    DateTime dateTime = DateTime.parse(dateString!);
     String formattedDate = DateFormat('dd-MMM-yyyy').format(dateTime);
     return formattedDate;
   }
@@ -192,7 +193,7 @@ class CredentialCard extends StatelessWidget {
       itemWidgets = items.entries.map((entry) {
         String displayValue;
         if (entry.key == 'ExpiresAt') {
-          displayValue = formatDate(entry.value);
+          displayValue = _formatDate(entry.value);
         } else if (entry.key == 'TotalAmount') {
           displayValue = '\$${entry.value}';
         } else {

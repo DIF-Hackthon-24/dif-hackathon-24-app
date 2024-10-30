@@ -44,7 +44,11 @@ class PreferenceCollectionView extends StatelessWidget {
         ),
       ],),
       body:  PreferencesOnboardingInputFormWidget(
-        attributes: PreferencesOnboardingInputFormAttributes(submitButtonPressed: () => coordinator.navigateToSplash()),
+        attributes: PreferencesOnboardingInputFormAttributes(submitButtonPressed: () =>
+        {
+          coordinator.showSessionExpiredToast('Preferences saved successfully'),
+          coordinator.navigateToSplash()
+        }),
       ),
     );
   }

@@ -34,14 +34,14 @@ class ChatMessage {
 Future<void> sendMessage({
   required String data,
 }) async {
-  final url = 'http://188.245.52.145:80/records/create';
+  final url = 'http://188.245.52.145:80/dwn/records/create';
   final response = await http.post(
     Uri.parse(url),
     headers: {'Content-Type': 'application/json'},
     body: jsonEncode({
       'protocol': 'http://chat-protocol.xyz',
       'protocolPath': 'thread/message',
-      'parentContextId': 'bafyreigpj6drhqhtgltzcsrldnuti35sophnxvq2jlul5wzs2eb7djkho4',
+      'parentContextId': 'bafyreie3hfatwhevd5sxig7oo23jjnwozaqivdpbzqvljqm72sbsxv5uy4',
       'dataFormat': 'application/json',
       'recipient': 'did:key:z6MkeXmNA9HutZcYei7YsU5jimrMcb7EU43BWTXqLXw59VRq',
       'data': data,
@@ -71,8 +71,9 @@ Future<void> sendMessage({
 class ChatMessageWidget extends StatelessWidget {
   final ChatMessage message;
   final ChatCoordinator coordinator;
+  final Function refetchMessages;
 
-  const ChatMessageWidget({Key? key, required this.message, required this.coordinator}) : super(key: key);
+  const ChatMessageWidget({Key? key, required this.message, required this.coordinator, required this.refetchMessages}) : super(key: key);
 
   handleShareBooking(String? action) {
     if (action == "Share booking") {
@@ -86,35 +87,47 @@ class ChatMessageWidget extends StatelessWidget {
     print("initialOffer ${message.initialOffer}");
     return Align(
       alignment: message.isSentByUser ? Alignment.centerRight : Alignment.centerLeft,
-      child: Card(
-        margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-        shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.grey, width: 1),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                message.text,
-                style: const TextStyle(fontSize: 16.0),
-              ),
-              if (message.actionLabel != null)
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: TextButton(
-                    onPressed: message.actionLabel == "Share booking" || message.actionLabel == "Save room key" ? () => {
-                      handleShareBooking(message.actionLabel)
-                    } : message.onActionPressed!,
-                    child: Text(message.actionLabel!, style: const TextStyle(color: Colors.white)),
-                  ),
+      child: InkWell(
+        onTap: () {
+          if (message.actionLabel == null) {
+            print("refetching!");
+            refetchMessages();
+          }
+          else {
+            print("No refetch, just clicked");
+          }
+        },
+        child:
+        Card(
+          margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.grey, width: 1),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  message.text,
+                  style: const TextStyle(fontSize: 16.0),
                 ),
-            ],
+                if (message.actionLabel != null)
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: TextButton(
+                      onPressed: message.actionLabel == "Share booking" || message.actionLabel == "Save room key" ? () => {
+                        handleShareBooking(message.actionLabel)
+                      } : message.onActionPressed!,
+                      child: Text(message.actionLabel!, style: const TextStyle(color: Colors.white)),
+                    ),
+                  ),
+              ],
+            ),
           ),
         ),
-      ),
+      )
     );
   }
 }

@@ -9,7 +9,7 @@ import 'dart:convert';
 
 // Static mapping of attributes
 final List<Map<String, dynamic>> userPreferences = [
-  {'label': 'Room Type', "path": "roomType", 'type': 'checkbox', 'options': ['Single', 'Double', 'Suite']},
+  {'label': 'Room Type', "path": "roomType", 'type': 'checkbox', 'options': ['Standard room', 'Deluxe Room', 'Joint room', 'Suite']},
   {'label': 'Smoking', "path": "smoking", 'type': 'checkbox'},
   {'label': 'Wheelchair Accessible', "path": "wheelchairAccessible", 'type': 'checkbox'},
   {'label': 'Breakfast Included', "path": "breakfastIncluded", 'type': 'checkbox'},
@@ -25,7 +25,7 @@ String mapToCommaSeparatedString(Map<dynamic, dynamic> inputMap) {
 
 Future<void> submitPreferences(Map<String, dynamic> preferences) async {
   print('Submitting preferences: $preferences');
-  const String url = 'http://188.245.52.145:80/records/create';
+  const String url = 'http://188.245.52.145:80/dwn/records/create';
 
   for (var entry in preferences.entries) {
     String label = entry.key;
@@ -74,6 +74,7 @@ Future<void> submitPreferences(Map<String, dynamic> preferences) async {
 
       if (response.statusCode == 200) {
         print('Successfully submitted $label');
+
       } else {
         print('Failed to submit $label: ${response.statusCode}');
       }

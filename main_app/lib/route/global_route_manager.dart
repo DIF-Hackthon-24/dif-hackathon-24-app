@@ -54,7 +54,7 @@ class GlobalRouteManager extends IRouteManager {
         return Material(
           color: Colors.transparent,
           child: WalletCredentialsOfferRequestView(
-              mode: arguments['mode'] as bool, initialOffer: arguments['initialOffer'] as String),
+              mode: arguments['mode'] as bool, initialOffer: ''),
 
         );
       default:
