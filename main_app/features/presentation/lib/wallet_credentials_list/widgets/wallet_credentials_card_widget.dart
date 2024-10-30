@@ -54,7 +54,7 @@ class CredentialCard extends StatelessWidget {
             const SizedBox(height: 10),
             const Text('VC Type',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            Text('${getData!['vc']['type'].join(', ')}',
+            Text('${getData!['vc']['type'].map((item) => splitCamelCase(item)).join(', ')}',
                 style: const TextStyle(
                     fontSize: 16, fontWeight: FontWeight.normal)),
             const SizedBox(height: 10),
@@ -143,6 +143,13 @@ class CredentialCard extends StatelessWidget {
     DateTime dateTime = DateTime.parse(dateString);
     String formattedDate = DateFormat('dd-MMM-yyyy').format(dateTime);
     return formattedDate;
+  }
+
+  String _splitCamelCase(String text) {
+    return text.replaceAllMapped(
+      RegExp(r'(?<!^)(?=[A-Z])'),
+      (Match match) => ' ',
+    );
   }
 
   Widget _buildCredentialList(Map<String, dynamic> items) {
