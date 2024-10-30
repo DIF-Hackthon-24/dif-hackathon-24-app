@@ -19,11 +19,11 @@ class SplashNavigationHandler extends NoNetworkNavigationHandler {
     );
   }
 
-  void navigateToWalletCredentialExchange() async{
+  void navigateToWalletCredentialExchange([String? initialOffer]) async{
     await NavigationManager.navigateTo(
       "${ModuleIdentifiers.global}-${GlobalRouteManager.walletCredentialExchange}",
       NavigationType.Replace,
-
+        arguments: {'initialOffer': initialOffer ?? ''}
     );
   }
 

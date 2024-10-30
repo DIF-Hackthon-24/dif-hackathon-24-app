@@ -5,6 +5,83 @@ import 'package:shared_dependencies/constants/dimension_constants.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:widget_library/input_text_view/form_text_field.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+// Static mapping of attributes
+final List<Map<String, dynamic>> userPreferences = [
+  {'label': 'Room Type', "path": "roomType", 'type': 'checkbox', 'options': ['Single', 'Double', 'Suite']},
+  {'label': 'Smoking', "path": "smoking", 'type': 'checkbox'},
+  {'label': 'Wheelchair Accessible', "path": "wheelchairAccessible", 'type': 'checkbox'},
+  {'label': 'Breakfast Included', "path": "breakfastIncluded", 'type': 'checkbox'},
+  {'label': 'Spa Treatments', "path": "spaTreatments", 'type': 'checkbox', 'options': ['Massage', 'Facial', 'Manicure', 'Pedicure', 'General']},
+];
+
+String mapToCommaSeparatedString(Map<dynamic, dynamic> inputMap) {
+  return inputMap.entries
+      .where((entry) => entry.value)
+      .map((entry) => entry.key)
+      .join(',');
+}
+
+Future<void> submitPreferences(Map<String, dynamic> preferences) async {
+  print('Submitting preferences: $preferences');
+  const String url = 'http://188.245.52.145:80/records/create';
+
+  for (var entry in preferences.entries) {
+    String label = entry.key;
+    var value = entry.value;
+
+    String protocolPath = userPreferences.firstWhere((element) => element['label'] == label)['path'];
+    var dataFormat = '';
+    if (value is Map) {
+      value = mapToCommaSeparatedString(value);
+      dataFormat = 'text/csv';
+    }
+    else if (value is bool) {
+      value = value == true ? "Yes" : "No";
+      dataFormat = 'text/plain';
+    }
+
+    // Construct the data for the API call
+    Map<String, dynamic> data = {
+      'protocol': 'https://dif-hackathon-2024/schemas/travelerProfile',
+      'protocolPath': protocolPath,
+      'data': value,
+      'dataFormat': dataFormat,
+      'keyInfo': {
+        "keyId": "did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW#z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW",
+        "privateJwk": {
+          "crv": "Ed25519",
+          "d": "XRax-83L3XJJjMXsocJP_VxjF0u8ZwxUNqlkUmc8s54",
+          "kty": "OKP",
+          "x": "Xr80ytPQM3T4fkbCjHhTDBBZJF0orXhEFuiH5Ahky8c",
+          "kid": "U4ePCnrZP0IOeE45gBnHpHT6IHQNeXG1H53ik-SJfIA",
+          "alg": "EdDSA"
+        }
+      },
+      'target': 'did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW',
+    };
+
+    print('api call data: $data');
+
+    // Make the API call
+    try {
+      final response = await http.post(
+        Uri.parse(url),
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode(data),
+      );
+
+      if (response.statusCode == 200) {
+        print('Successfully submitted $label');
+      } else {
+        print('Failed to submit $label: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error submitting $label: $e');
+    }
+  }
+}
 
 class PreferencesOnboardingInputFormAttributes{
   Function submitButtonPressed;
@@ -33,15 +110,6 @@ class _PreferencesOnboardingInputFormWidgetState
 
   _PreferencesOnboardingInputFormWidgetState(this.attributes);
 
-  // Static mapping of attributes
-  final List<Map<String, dynamic>> userPreferences = [
-    {'label': 'Room type', 'type': 'checkbox', 'options': ['Single', 'Double', 'Suite']},
-    {'label': 'Smoking', 'type': 'checkbox'},
-    {'label': 'Wheelchair Accessible', 'type': 'checkbox'},
-    {'label': 'Breakfast Included', 'type': 'checkbox'},
-    {'label': 'Spa services', 'type': 'checkbox', 'options': ['Massage', 'Facial', 'Manicure', 'Pedicure', 'General']},
-
-  ];
 
   // State to hold checkbox values
   final Map<String, dynamic> checkboxValues = {};
@@ -164,6 +232,7 @@ class _PreferencesOnboardingInputFormWidgetState
           ElevatedButton(
             onPressed: () {
               print("Submit button pressed");
+              submitPreferences(checkboxValues);
               attributes.submitButtonPressed.call();
             },
             child: const Text('Submit'),

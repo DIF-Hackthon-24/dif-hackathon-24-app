@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:presentation/wallet_credentials_list/navigation_handler/wallet_credentials_list_navigation_handler.dart';
 import 'package:presentation/wallet_credentials_list/state/wallet_credentials_list_state.dart';
+import 'package:http/http.dart' as http;
 
 class WalletCredentialsListCoordinator
     extends BaseCoordinator<WalletCredentialsListState> {
@@ -53,7 +54,7 @@ class WalletCredentialsListCoordinator
 
     if (gerSharedResponse != null && gerSharedResponse == true) {
       showSessionExpiredToast(
-          "Your Credential Id has been shared successfully");
+          "Your Credential has been shared successfully");
       navigationHandler.navigateToSplash();
     } else {
       showSessionExpiredToast("Your Session has expired, Please proceed again");

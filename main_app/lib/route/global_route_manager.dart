@@ -24,7 +24,8 @@ class GlobalRouteManager extends IRouteManager {
         var arguments = settings.arguments as Map<String, dynamic>? ?? {};
         return WalletCredentialsListView(recipient: arguments['recipient'],permissionRequest: arguments['permissionRequest'],);
       case GlobalRouteManager.walletCredentialExchange:
-        return const WalletCredentialsOfferRequestView(mode: false,);
+        var arguments = settings.arguments as Map<String, dynamic>? ?? {};
+        return WalletCredentialsOfferRequestView(mode: false, initialOffer: arguments['initialOffer'],);
       case GlobalRouteManager.preferenceCollection:
         return const PreferenceCollectionView();
       case GlobalRouteManager.chat:
@@ -53,7 +54,8 @@ class GlobalRouteManager extends IRouteManager {
         return Material(
           color: Colors.transparent,
           child: WalletCredentialsOfferRequestView(
-              mode: arguments['mode'] as bool),
+              mode: arguments['mode'] as bool, initialOffer: arguments['initialOffer'] as String),
+
         );
       default:
         throw Exception('Route ${arguments.number} not found');
