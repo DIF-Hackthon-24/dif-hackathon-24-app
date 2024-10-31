@@ -143,7 +143,7 @@ class _PreferencesOnboardingInputFormWidgetState
       child: Column(
         children: [
           Container(
-            height: 700,
+            height: 550,
             decoration: BoxDecoration(
               border: Border.all(
                 color: ColorConstants.COLOR_BLACK,
@@ -238,6 +238,9 @@ class _PreferencesOnboardingInputFormWidgetState
             },
             child: const Text('Submit'),
           ),
+          // const SizedBox(
+          //   height: DimensionConstants.size40,
+          // ),
         ],
       ),
     );

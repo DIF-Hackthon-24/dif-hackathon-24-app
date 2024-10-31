@@ -102,8 +102,8 @@ class WalletCredentialsListCoordinator
   void showSessionExpiredToast(String message) {
     Fluttertoast.showToast(
       msg: message,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM,
+      toastLength: Toast.LENGTH_LONG,
+      gravity: ToastGravity.TOP,
       timeInSecForIosWeb: 1,
       backgroundColor: Colors.black54,
       textColor: Colors.white,

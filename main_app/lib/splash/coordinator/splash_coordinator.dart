@@ -82,7 +82,7 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
     Fluttertoast.showToast(
       msg: message,
       toastLength: Toast.LENGTH_LONG,
-      gravity: ToastGravity.BOTTOM,
+      gravity: ToastGravity.TOP,
       timeInSecForIosWeb: 1,
       backgroundColor: Colors.black54,
       textColor: Colors.white,

@@ -32,7 +32,7 @@ Future<void> sendMessage({
     body: jsonEncode({
       'protocol': 'http://chat-protocol.xyz',
       'protocolPath': 'thread/message',
-      'parentContextId': 'bafyreie3hfatwhevd5sxig7oo23jjnwozaqivdpbzqvljqm72sbsxv5uy4',
+      'parentContextId': 'bafyreickat554aesogqh6ddy2klj3qlvcaau34xivehl4e3btxvirbfrui',
       'dataFormat': 'application/json',
       'recipient': 'did:key:z6MkeXmNA9HutZcYei7YsU5jimrMcb7EU43BWTXqLXw59VRq',
       'data': data,
@@ -97,7 +97,7 @@ class _ChatViewState extends State<ChatView> {
       body: jsonEncode({
         'protocol': 'http://chat-protocol.xyz',
         'protocolPath': 'thread/message',
-        'parentId': 'bafyreie3hfatwhevd5sxig7oo23jjnwozaqivdpbzqvljqm72sbsxv5uy4',
+        'parentId': 'bafyreickat554aesogqh6ddy2klj3qlvcaau34xivehl4e3btxvirbfrui',
         'keyInfo': {
           "keyId": "did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW#z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW",
           "privateJwk": {

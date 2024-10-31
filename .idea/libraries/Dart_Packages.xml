@@ -421,7 +421,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/git/drift-ab93107224d59ee1fab75c1a2d632224fb6457ce/extras/encryption/lib" />
-              <option value="$USER_HOME$/.pub-cache/git/drift-178d8c605bf3d13dbc07ded7f3eb2a692d0b1297/extras/encryption/lib" />
+              <option value="$USER_HOME$/.pub-cache/git/drift-dd1bbb9c62aff2d257fee52f3d90b0a76fa6615a/extras/encryption/lib" />
               <option value="$USER_HOME$/.pub-cache/git/drift-8da6fed19878dec172047d54a8a67e09e7caa9cd/extras/encryption/lib" />
             </list>
           </value>
@@ -625,6 +625,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/flutter/packages/flutter_localizations/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_nfc_kit">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_nfc_kit-3.4.2/lib" />
             </list>
           </value>
         </entry>
@@ -1089,6 +1096,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.5.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.6.0/lib" />
             </list>
           </value>
         </entry>
@@ -1139,6 +1147,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/mockito-5.4.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="ndef">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/ndef-0.3.3/lib" />
             </list>
           </value>
         </entry>
@@ -1217,7 +1232,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_parsing-1.0.1/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_parsing-1.0.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_parsing-1.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -1225,6 +1240,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider-2.1.4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider-2.1.5/lib" />
             </list>
           </value>
         </entry>
@@ -2013,9 +2029,9 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/.pub-cache/git/drift-178d8c605bf3d13dbc07ded7f3eb2a692d0b1297/extras/encryption/lib" />
       <root url="file://$USER_HOME$/.pub-cache/git/drift-8da6fed19878dec172047d54a8a67e09e7caa9cd/extras/encryption/lib" />
       <root url="file://$USER_HOME$/.pub-cache/git/drift-ab93107224d59ee1fab75c1a2d632224fb6457ce/extras/encryption/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/git/drift-dd1bbb9c62aff2d257fee52f3d90b0a76fa6615a/extras/encryption/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-61.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-72.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/adaptive_dialog-2.2.0/lib" />
@@ -2120,6 +2136,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications-17.2.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.2.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_nfc_kit-3.4.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_pdfview-1.3.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_pdfview-1.3.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.22/lib" />
@@ -2192,6 +2209,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lottie-2.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_ui-2.0.9/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.5.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.6.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macros-0.1.2-main.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1/lib" />
@@ -2200,6 +2218,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mime-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mobile_scanner-5.2.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mockito-5.4.4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/ndef-0.3.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/nm-0.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/normalize-0.8.2+1/lib" />
@@ -2212,8 +2231,9 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus_platform_interface-3.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.9.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_parsing-1.0.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_parsing-1.0.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_parsing-1.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider-2.1.4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider-2.1.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_android-2.2.10/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_android-2.2.12/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.0/lib" />

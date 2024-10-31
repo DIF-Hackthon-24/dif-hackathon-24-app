@@ -41,7 +41,7 @@ Future<void> sendMessage({
     body: jsonEncode({
       'protocol': 'http://chat-protocol.xyz',
       'protocolPath': 'thread/message',
-      'parentContextId': 'bafyreie3hfatwhevd5sxig7oo23jjnwozaqivdpbzqvljqm72sbsxv5uy4',
+      'parentContextId': 'bafyreickat554aesogqh6ddy2klj3qlvcaau34xivehl4e3btxvirbfrui',
       'dataFormat': 'application/json',
       'recipient': 'did:key:z6MkeXmNA9HutZcYei7YsU5jimrMcb7EU43BWTXqLXw59VRq',
       'data': data,

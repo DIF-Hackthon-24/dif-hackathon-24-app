@@ -230,7 +230,7 @@ extension RestExtension on NetworkClient {
     }
 
     if(queryParameters != null && queryParameters.isNotEmpty && queryParameters["dwn_request"] == 'dwn_request'){
-      client.options.baseUrl = "http://188.245.52.145:80";
+      client.options.baseUrl = "http://188.245.52.145:80/dwn";
       queryParameters.remove('dwn_request');
     }
 
