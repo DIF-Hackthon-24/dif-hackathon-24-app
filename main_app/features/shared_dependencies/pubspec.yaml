@@ -66,6 +66,11 @@ dependencies:
   widget_library:
     path: ../../../common/widgets/app-mobile-widgets/src/
 
+  # NFC
+  flutter_nfc_kit: ^3.4.2
+  ndef: ^0.3.3
+  jwt_decoder: ^2.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

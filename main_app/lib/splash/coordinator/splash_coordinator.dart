@@ -10,6 +10,7 @@ import 'package:main_app/splash/navigation_handler/splash_navigation_handler.dar
 import 'package:main_app/splash/state/splash_view_state.dart';
 import 'package:security_suit/security_suit.dart';
 import 'package:shared_dependencies/data_providers/language_data_provider.dart';
+import 'package:shared_dependencies/nfc/nfc.dart';
 
 class SplashCoordinator extends BaseCoordinator<SplashViewState> {
   final ILanguageDataProvider languageDataProvider;
@@ -17,7 +18,6 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
   StreamSubscription? networkSubscription;
   final IWalletCredentialsListUseCase getWalletCredentialsListUseCase;
   Map<String, dynamic> content = {};
-
 
   SplashCoordinator({
     required this.languageDataProvider,
@@ -32,34 +32,30 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
           ),
         );
 
-  void onSkipPress(){
-    state=state.copyWith(isForceUpgradeRequired: false,isForceUpgradeSkipped:true);
+  void onSkipPress() {
+    state = state.copyWith(
+        isForceUpgradeRequired: false, isForceUpgradeSkipped: true);
   }
 
-  void initialize(bool mockLogin) async {
-  }
+  void initialize(bool mockLogin) async {}
 
-  void navigateToWalletList()  {
+  void navigateToWalletList() {
     navigationHandler.navigateToWalletList('');
   }
 
-  void navigateToWalletCredentialExchange()
-  {
+  void navigateToWalletCredentialExchange() {
     navigationHandler.navigateToWalletCredentialExchange();
   }
 
-  void navigateToPreferenceCollection()
-  {
+  void navigateToPreferenceCollection() {
     navigationHandler.navigateToPreferenceCollection();
   }
 
-  void navigateToChat()
-  {
+  void navigateToChat() {
     navigationHandler.navigateToChat();
   }
 
-  void navigateToCompleteIdentityVerification(bool mode)
-  {
+  void navigateToCompleteIdentityVerification(bool mode) {
     navigationHandler.navigateToCompleteIdentityVerification(mode);
   }
 
@@ -68,15 +64,25 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
     super.dispose();
   }
 
-  void onConfigRetry() async {
+  void onConfigRetry() async {}
 
+  Future<void> onNFCReader() async {
+    try {
+      NfcService nfcService = NfcService();
+      _showSessionExpiredToast("NFC: Scanning ...");
+      String request = await nfcService.readNfc();
+      _showSessionExpiredToast('NFC: Requested $request');
+      String credential = nfcService.credential(request);
+      if (credential.isEmpty) {
+        _showSessionExpiredToast('NFC: No key for $request');
+      } else {
+        await nfcService.writeNfc(credential);
+        _showSessionExpiredToast('NFC: Sent $request');
+      }
+    } catch (e) {
+      _showSessionExpiredToast('NFC error: $e');
+    }
   }
-
-
-  Future<void> onNFCReader() async{
-    _showSessionExpiredToast("NFC Reader has been clicked.");
-  }
-
 
   void _showSessionExpiredToast(String message) {
     Fluttertoast.showToast(
@@ -89,5 +95,4 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
       fontSize: 16.0,
     );
   }
-
 }
