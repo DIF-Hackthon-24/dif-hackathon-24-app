@@ -8,10 +8,15 @@ import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:presentation/credential_exchange/navigation_handler/wallet_credentials_list_navigation_handler.dart';
 import 'package:presentation/credential_exchange/state/wallet_credentials_offer_request_state.dart';
+import 'package:http/http.dart' as http;
 
 class _Constants {
   static const issuanceRequests = 'issuancerequests';
   static const presentationRequests = 'presentationrequests';
+  static const didsToNames = {
+    'did:key:z6MkeXmNA9HutZcYei7YsU5jimrMcb7EU43BWTXqLXw59VRq': 'Starlight Hotels',
+    'did:key:z6Mkftos2iAt9hL2joUGvjDVVkeaWPYBj9CYehUxx4niRfKv': "Horizon Spa & Wellness"
+  };
 }
 
 class WalletCredentialsOfferRequestCoordinator
@@ -35,6 +40,7 @@ class WalletCredentialsOfferRequestCoordinator
 
   Future<void> submitCredentialsExchangeRequest() async {
     var offerRequest = state.getCredentialsOfferRequestData;
+    print(offerRequest);
 
     List<WalletCredentialListEntity>? postCredentialsExchangeRequest = [];
 
@@ -44,9 +50,11 @@ class WalletCredentialsOfferRequestCoordinator
               .postWalletCredentialOfferRequest(offerRequest, false);
 
       if (postCredentialsExchangeRequest!.isNotEmpty) {
+        print("request result ${postCredentialsExchangeRequest}");
         showSessionExpiredToast(
             "The requested Credentials has been issued successfully");
         navigationHandler.navigateToSplash();
+
       }
     }
 
@@ -78,7 +86,7 @@ class WalletCredentialsOfferRequestCoordinator
           await credentialsExchangeRequestUseCase
               .postWalletCredentialOfferRequest(getIdentityData, false);
       if (postCredentialsExchangeRequest!.isNotEmpty) {
-        showSessionExpiredToast("Document verified successfully!");
+        showSessionExpiredToast("Document verified and ID credential issued successfully!");
         navigationHandler.navigateToSplash();
       }
     }
@@ -104,8 +112,8 @@ class WalletCredentialsOfferRequestCoordinator
   void showSessionExpiredToast(String message) {
     Fluttertoast.showToast(
       msg: message,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM,
+      toastLength: Toast.LENGTH_LONG,
+      gravity: ToastGravity.TOP,
       timeInSecForIosWeb: 1,
       backgroundColor: Colors.black54,
       textColor: Colors.white,
@@ -114,11 +122,10 @@ class WalletCredentialsOfferRequestCoordinator
   }
 
   String _processDid(String did) {
-    List<String> components = did.split(':');
-    if (components.length > 1) {
-      return components.sublist(2).join(':');
-    } else {
-      return 'Invalid DID format';
+    // lookup did in didsToNames and return the name
+    if (_Constants.didsToNames.containsKey(did)) {
+      return _Constants.didsToNames[did]!;
     }
+    return "Name not found";
   }
 }

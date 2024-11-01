@@ -17,9 +17,22 @@ allprojects {
                     if (namespace == null) {
                         namespace project.group
                     }
+                    compileOptions {
+                        // align with android/app/build.gradle JavaVersion.VERSION_...
+                        sourceCompatibility JavaVersion.VERSION_1_8 
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
                 }
             }
         }
+    }
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        // align with android/app/build.gradle JavaVersion.VERSION_...
+        kotlinOptions.jvmTarget = "1.8" 
+    }
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KaptGenerateStubs).configureEach {
+        // align with android/app/build.gradle JavaVersion.VERSION_...
+        kotlinOptions.jvmTarget = "1.8"
     }
 }
 

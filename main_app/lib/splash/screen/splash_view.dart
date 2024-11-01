@@ -54,7 +54,7 @@ class SplashView extends StatelessWidget {
               child: PSImage(
                 PSImageModel(
                   iconPath: 'assets/images/digital_wallet.png',
-                  height: 250,
+                  height: 100,
                 ),
               ),
             ),
@@ -70,11 +70,11 @@ class SplashView extends StatelessWidget {
             ),
             _buildCTAButton(
               context,
-              icon: Icons.qr_code_scanner,
-              title: 'QR Code Scanner',
+              icon: Icons.travel_explore,
+              title: 'Traveler Profile',
               onTap: () {
-                // Handle QR Code Scanner action
-                coordinator.navigateToWalletCredentialExchange();
+                // Handle Credentials List action
+                coordinator.navigateToPreferenceCollection();
               },
             ),
             _buildCTAButton(
@@ -88,10 +88,28 @@ class SplashView extends StatelessWidget {
             ),
             _buildCTAButton(
               context,
+              icon: Icons.qr_code_scanner,
+              title: 'QR Code Scanner',
+              onTap: () {
+                // Handle QR Code Scanner action
+                coordinator.navigateToWalletCredentialExchange();
+              },
+            ),
+            _buildCTAButton(
+              context,
               icon: Icons.nfc,
               title: 'NFC Reader',
               onTap: () {
                 coordinator.onNFCReader();
+              },
+            ),
+            _buildCTAButton(
+              context,
+              icon: Icons.chat,
+              title: 'Chat',
+              onTap: () {
+                // Handle Credentials List action
+                coordinator.navigateToChat();
               },
             ),
           ],

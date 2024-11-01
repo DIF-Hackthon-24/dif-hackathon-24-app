@@ -92,7 +92,9 @@ class CredentialOfferInputFormWidget extends StatelessWidget {
           _buildCTAButton(
             context,
             icon: Icons.save,
-            title: 'Submit',
+            title: attributes.offerRequestData.toLowerCase().contains('issuancerequests') || attributes.offerRequestData.toLowerCase().contains('presentationrequests')
+                ? 'Accept'
+                : 'Next',
             onTap: () {
               attributes.offerRequestData == ''
                   ? null

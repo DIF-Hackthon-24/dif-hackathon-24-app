@@ -29,6 +29,8 @@ import 'package:domain/usecase/manage_wallet_credentials/delete_wallet_credentia
 import 'package:domain/usecase/wallet_credentials_list/wallet_credentials_list_use_case.dart';
 import 'package:main_app/splash/coordinator/splash_coordinator.dart';
 import 'package:main_app/splash/navigation_handler/splash_navigation_handler.dart';
+import 'package:presentation/chat/coordinator/chat_coordinator.dart';
+import 'package:presentation/chat/navigation_handler/chat_navigation_handler.dart';
 import 'package:presentation/credential_exchange/coordinator/wallet_credentials_offer_request_coordinator.dart';
 import 'package:presentation/credential_exchange/navigation_handler/wallet_credentials_list_navigation_handler.dart';
 import 'package:presentation/wallet_credentials_list/coordinator/wallet_credentials_list_coordinator.dart';
@@ -120,6 +122,19 @@ class GlobalModule implements Module {
                       GetWalletCredentialListRemoteDataSource(
             container.resolve<TaskManager>(),
           )))),
+    );
+
+    DIContainer.container.registerFactory(
+          (container) => ChatCoordinator(
+          navigationHandler: ChatNavigationHandler(
+            LanguageDataProviderImpl(
+              taskManager: container.resolve<TaskManager>(),
+            ),
+            StringToMapConvertorImpl(),
+            LanguageCodeDataProviderImpl(
+              taskManager: container.resolve<TaskManager>(),
+            ),
+          ),)
     );
 
     DIContainer.container.registerSingleton(

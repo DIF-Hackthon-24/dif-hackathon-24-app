@@ -19,11 +19,11 @@ class SplashNavigationHandler extends NoNetworkNavigationHandler {
     );
   }
 
-  void navigateToWalletCredentialExchange() async{
+  void navigateToWalletCredentialExchange([String? initialOffer]) async{
     await NavigationManager.navigateTo(
       "${ModuleIdentifiers.global}-${GlobalRouteManager.walletCredentialExchange}",
       NavigationType.Replace,
-
+        arguments: {'initialOffer': initialOffer ?? ''}
     );
   }
 
@@ -33,6 +33,20 @@ class SplashNavigationHandler extends NoNetworkNavigationHandler {
       NavigationType.Dialog,
       arguments: {'mode': mode}
 
+    );
+  }
+
+  void navigateToPreferenceCollection() async{
+    await NavigationManager.navigateTo(
+        "${ModuleIdentifiers.global}-${GlobalRouteManager.preferenceCollection}",
+        NavigationType.Replace,
+    );
+  }
+
+  void navigateToChat() async{
+    await NavigationManager.navigateTo(
+      "${ModuleIdentifiers.global}-${GlobalRouteManager.chat}",
+      NavigationType.Replace,
     );
   }
 

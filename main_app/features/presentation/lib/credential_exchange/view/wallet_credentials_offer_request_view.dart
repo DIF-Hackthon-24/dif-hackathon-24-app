@@ -9,8 +9,9 @@ import 'package:widget_library/ps_scaffold.dart';
 
 class WalletCredentialsOfferRequestView extends StatelessWidget {
   final bool mode;
+  final String initialOffer;
 
-  const WalletCredentialsOfferRequestView({super.key, required this.mode});
+  const WalletCredentialsOfferRequestView({super.key, required this.mode, required this.initialOffer});
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +38,14 @@ class WalletCredentialsOfferRequestView extends StatelessWidget {
     WalletCredentialsOfferRequestState state,
     WalletCredentialsOfferRequestCoordinator coordinator,
   ) {
+    if (initialOffer != '') {
+      state.getCredentialsOfferRequestData = initialOffer;
+    }
+    print('data: ${state.getCredentialsOfferRequestData}');
     return PSScaffold(
       appBarAttributes: PSAppBarAttributes(
         title:
-            mode ? "Complete Identity Verification" : "Wallet QR Code Scanner",
+            mode ? "Complete Identity Verification" : "QR Code Scanner",
         left: [
           PSAppBarButtonAttributes(
             type: PSAppBarButtons.back,
@@ -53,7 +58,7 @@ class WalletCredentialsOfferRequestView extends StatelessWidget {
               submitButtonPressed: coordinator.uploadDocumentRequest)
           : CredentialOfferInputFormWidget(
               attributes: CredentialOfferInputFormAttributes(
-                  offerRequestData: state.getCredentialsOfferRequestData,
+                  offerRequestData: initialOffer == '' ? state.getCredentialsOfferRequestData : initialOffer,
                   issueOfferRequestInputForm:
                       coordinator.postWalletCredentialsOfferRequest,
                   submitButtonPressed:

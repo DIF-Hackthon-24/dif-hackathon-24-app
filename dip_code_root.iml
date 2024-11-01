@@ -142,6 +142,27 @@
       <sourceFolder url="file://$MODULE_DIR$/main_app/windows/flutter/ephemeral/.plugin_symlinks/dynamic_color/example/android/app/src/main/kotlin/io/material/plugins/example" isTestSource="false" packagePrefix="io.material.plugins.dynamic_color_example" />
       <sourceFolder url="file://$MODULE_DIR$/main_app/windows/flutter/ephemeral/.plugin_symlinks/package_info_plus/android/src/main/kotlin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main_app/windows/flutter/ephemeral/.plugin_symlinks/package_info_plus/example/android/app/src/androidTest/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/common/database/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/common/database/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/common/database/build" />
+      <excludeFolder url="file://$MODULE_DIR$/common/firebase_monitor/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/common/firebase_monitor/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/common/firebase_monitor/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/common/theme_font/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/common/theme_font/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/common/theme_font/build" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/data/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/data/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/data/build" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/domain/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/domain/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/domain/build" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/presentation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/presentation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/main_app/features/presentation/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
