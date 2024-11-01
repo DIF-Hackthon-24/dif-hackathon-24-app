@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 
 class DeviceInstallationService {
   static const methodChannel = MethodChannel(
-      'com.dgda.wadisafar.push_notification/deviceinstallation');
+      'com.push_notification/deviceinstallation');
   static const String getDeviceIdChannelMethod = 'getDeviceId';
   static const String getDeviceTokenChannelMethod = 'getDeviceToken';
   static const String getDevicePlatformChannelMethod = 'getDevicePlatform';

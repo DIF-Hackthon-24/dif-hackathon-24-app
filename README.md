@@ -1,4 +1,4 @@
-## Demo App - Hotel and Booking
+## My Digital Wallet
 
 ### Required dependency
     
@@ -83,12 +83,12 @@ flutter run --flavor dev
 ### Important
 
 For the content, in this project used the CMS to store all data.
-CMS can be operated usign base url and security token (`XGQLToken`).
+CMS can be operated usign base url
 
-Here is setps to update `Base URL` of CMS and it's `XGQLToken`.
+Here is setps to update `Base URL` of CMS
 
 To update base URL, got to `main/assets/configuration/network_configuration_dev.json` or `network_configuration_prod.json`
-and update the value of `defaultBaseURL` using `IEncryption`
+and update the value of `defaultBaseURL` 
 ```
 {
   "baseUrlMap": {
@@ -97,20 +97,6 @@ and update the value of `defaultBaseURL` using `IEncryption`
 }
 ```
 
-###### How to encrypt/decrypt   
-```
-    final encrypter = DIContainer.container.resolve<IEncryption>();
-    final encryptValue = encrypter.encrypt('https://YOUR_URL');
-    final decryptValue = encrypter.decrypt(encryptValue);
-```
-
-###### How to update `XGQLToken`
-Go to `main/assets/environment/.env.dev` or `main/assets/environment/.env.prod` and update value of XGQLToken
-
-Value should be encrypt by using `IEncryption`
-```
-XGQLToken = '....'
-```
 
 # dif-hackathon-24-wallet
 # dif-hackathon-24-wallet

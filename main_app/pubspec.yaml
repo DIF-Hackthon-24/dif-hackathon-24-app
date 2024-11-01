@@ -67,9 +67,6 @@ dependencies:
   network_manager:
     path: ../common/network_manager/app-mobile-networkmanager/src/
 
-  deeplink_manager:
-    path: ../common/deeplink_manager/app_mobile_deeplinkmanager/src
-
   widget_library:
     path: ../common/widgets/app-mobile-widgets/src/
 
@@ -82,16 +79,6 @@ dependencies:
     path: features/domain/
   data:
     path: features/data/
-  database:
-    path: ../common/database/
-  download_manager:
-    path: ../common/download_manager/
-
-  # firebase_monitor:
-  #   path: ../common/firebase_monitor/
-
-  security_suit:
-    path: ../common/security_suit/
 
   theme_font:
     path: ../common/theme_font

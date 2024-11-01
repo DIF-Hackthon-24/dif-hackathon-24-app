@@ -1,14 +1,10 @@
 import 'dart:async';
-
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:core/base_classes/base_coordinator.dart';
-import 'package:core/logging/logger.dart';
 import 'package:domain/usecase/wallet_credentials_list/i_wallet_credentials_list_use_case.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:main_app/splash/navigation_handler/splash_navigation_handler.dart';
 import 'package:main_app/splash/state/splash_view_state.dart';
-import 'package:security_suit/security_suit.dart';
 import 'package:shared_dependencies/data_providers/language_data_provider.dart';
 import 'package:shared_dependencies/nfc/nfc.dart';
 

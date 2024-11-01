@@ -1,4 +1,4 @@
-# main_app
+# Wallet App
 
 It's for booking demo app.
 

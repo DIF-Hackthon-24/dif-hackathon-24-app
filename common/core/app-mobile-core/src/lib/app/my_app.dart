@@ -90,7 +90,7 @@ class _MyAppState extends State<MyApp> {
       },
       child: OverlaySupport.global(
         child: PSMaterialApp(
-          key: Key('WadiSafarAppMaterialApp'),
+          key: Key('app'),
           title: widget.appTitle,
           theme: widget.theme, // Set the theme Here
           home: widget.homeWidget,

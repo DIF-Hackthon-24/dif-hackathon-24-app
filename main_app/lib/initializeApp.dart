@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:download_manager/i_download_manager.dart';
 import 'package:main_app/global_app_initializer.dart';
 import 'package:main_app/module_register/shared_dependencies/shared_dependencies_module.dart';
 import 'package:main_app/route/global_route_manager.dart';
@@ -53,7 +52,6 @@ Future<void> initializeApp(Widget homeWidget, {String? environment, String? toke
           secureStorageService: storageService,
         );
 
-        // DIContainer.container<IDownloadManager>().init();
 
         final globalAppInitializer = GlobalAppInitializer();
 
@@ -77,7 +75,7 @@ Future<void> initializeApp(Widget homeWidget, {String? environment, String? toke
         PSMediaQuery().init(context);
       },
       onApplicationDetach: () {
-        DIContainer.container<IDownloadManager>().cleanup();
+
       },
       sdkPackageName: "main_app",
       );

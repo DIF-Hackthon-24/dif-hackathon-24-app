@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 class NotificationActionService {
   static const notificationAction =
-      MethodChannel('com.dgda.wadisafar.push_notification/notificationaction');
+      MethodChannel('com.push_notification/notificationaction');
   static const String triggerActionChannelMethod = 'triggerAction';
   static const String getLaunchActionChannelMethod = 'getLaunchAction';
   static const String getShowNotificationChannelMethod = 'getShowNotification';

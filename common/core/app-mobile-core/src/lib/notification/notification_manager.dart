@@ -23,8 +23,8 @@ abstract class INotificationManager {
 }
 
 class _Constant {
-  static const CHANNEL_ID = 'com.dgda.wadisafar';
-  static const CHANNEL_NAME = 'ADHA App channel';
+  static const CHANNEL_ID = 'com.app';
+  static const CHANNEL_NAME = 'App channel';
 }
 
 class NotificationManager implements INotificationManager {

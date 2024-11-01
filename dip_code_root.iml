@@ -163,6 +163,9 @@
       <excludeFolder url="file://$MODULE_DIR$/main_app/features/presentation/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/main_app/features/presentation/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/main_app/features/presentation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/common/widgets/app-mobile-widgets/src/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/common/widgets/app-mobile-widgets/src/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/common/widgets/app-mobile-widgets/src/example/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />

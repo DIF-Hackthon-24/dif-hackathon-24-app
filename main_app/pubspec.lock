@@ -343,13 +343,6 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  database:
-    dependency: "direct main"
-    description:
-      path: "../common/database"
-      relative: true
-    source: path
-    version: "0.0.1"
   dbus:
     dependency: transitive
     description:
@@ -358,13 +351,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.10"
-  deeplink_manager:
-    dependency: "direct main"
-    description:
-      path: "../common/deeplink_manager/app_mobile_deeplinkmanager/src"
-      relative: true
-    source: path
-    version: "0.0.1"
   device_info:
     dependency: transitive
     description:
@@ -381,22 +367,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-  device_info_plus:
-    dependency: transitive
-    description:
-      name: device_info_plus
-      sha256: a7fd703482b391a87d60b6061d04dfdeab07826b96f9abd8f5ed98068acc0074
-      url: "https://pub.dev"
-    source: hosted
-    version: "10.1.2"
-  device_info_plus_platform_interface:
-    dependency: transitive
-    description:
-      name: device_info_plus_platform_interface
-      sha256: "282d3cf731045a2feb66abfe61bbc40870ae50a3ed10a4d3d217556c35c8c2ba"
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.0.1"
   dio:
     dependency: transitive
     description:
@@ -420,21 +390,6 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  download_manager:
-    dependency: "direct main"
-    description:
-      path: "../common/download_manager"
-      relative: true
-    source: path
-    version: "0.0.1"
-  drift:
-    dependency: transitive
-    description:
-      name: drift
-      sha256: d6ff1ec6a0f3fa097dda6b776cf601f1f3d88b53b287288e09c1306f394fb1b3
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.20.3"
   dynamic_color:
     dependency: transitive
     description:
@@ -451,15 +406,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.3"
-  encrypted_drift:
-    dependency: transitive
-    description:
-      path: "extras/encryption"
-      ref: HEAD
-      resolved-ref: ab93107224d59ee1fab75c1a2d632224fb6457ce
-      url: "https://github.com/simolus3/drift.git"
-    source: git
-    version: "1.0.0"
   equatable:
     dependency: transitive
     description:
@@ -553,14 +499,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.0"
-  flutter_downloader:
-    dependency: transitive
-    description:
-      name: flutter_downloader
-      sha256: b6da5495b6258aa7c243d0f0a5281e3430b385bccac11cc508f981e653b25aa6
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.11.8"
   flutter_hooks:
     dependency: transitive
     description:
@@ -625,14 +563,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.4+1"
-  flutter_jailbreak_detection:
-    dependency: transitive
-    description:
-      name: flutter_jailbreak_detection
-      sha256: "67ff11ea41965152d24db7104da1f9b343f94ada64c2a9e309ec4d753a12d281"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.10.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -671,7 +601,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_nfc_kit:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_nfc_kit
       sha256: "586a8309a7be4d9be307c46d5e9db1460a9f59a37a097c77d53e2f6bfc11be2d"
@@ -1064,6 +994,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.8.0"
+  jwt_decoder:
+    dependency: transitive
+    description:
+      name: jwt_decoder
+      sha256: "54774aebf83f2923b99e6416b4ea915d47af3bde56884eb622de85feabbc559f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   kiwi:
     dependency: transitive
     description:
@@ -1241,7 +1179,7 @@ packages:
     source: hosted
     version: "5.4.4"
   ndef:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: ndef
       sha256: "634d2b5c6f2c186e953218bac9905f3f5e1824b15e30bd1ed6e03a91cdbc7293"
@@ -1566,13 +1504,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.27.7"
-  security_suit:
-    dependency: "direct main"
-    description:
-      path: "../common/security_suit"
-      relative: true
-    source: path
-    version: "0.0.1"
   shared_dependencies:
     dependency: "direct main"
     description:
@@ -1737,22 +1668,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.5.4"
-  sqflite_sqlcipher:
-    dependency: transitive
-    description:
-      name: sqflite_sqlcipher
-      sha256: e1dfb55bf21ee5a18c43f28faa4291272a801da4ab34a6ba9973b6c0e1ed77da
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.2.1"
-  sqlite3:
-    dependency: transitive
-    description:
-      name: sqlite3
-      sha256: "45f168ae2213201b54e09429ed0c593dc2c88c924a1488d6f9c523a255d567cb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.4.6"
   stack_trace:
     dependency: transitive
     description:
@@ -2086,14 +2001,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.5.5"
-  win32_registry:
-    dependency: transitive
-    description:
-      name: win32_registry
-      sha256: "21ec76dfc731550fd3e2ce7a33a9ea90b828fdf19a5c3bcf556fa992cfa99852"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.5"
   xdg_directories:
     dependency: transitive
     description:

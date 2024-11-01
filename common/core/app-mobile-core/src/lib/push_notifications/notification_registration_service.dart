@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 class NotificationRegistrationService {
   static const notificationRegistration =
-      MethodChannel('com.dgda.wadisafar.push_notification/notificationregistration');
+      MethodChannel('com.push_notification/notificationregistration');
 
   static const String refreshRegistrationChannelMethod = 'refreshRegistration';
   static const String installationsEndpoint = 'api/notifications/installations';
