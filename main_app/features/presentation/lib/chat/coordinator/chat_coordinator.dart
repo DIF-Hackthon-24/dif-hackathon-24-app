@@ -5,11 +5,8 @@ import 'package:presentation/chat/navigation_handler/chat_navigation_handler.dar
 import 'package:presentation/chat/state/chat_state.dart';
 
 class ChatCoordinator extends BaseCoordinator<ChatViewState> {
-  // final ILanguageDataProvider languageDataProvider;
   final ChatNavigationHandler navigationHandler;
   StreamSubscription? networkSubscription;
-  // final IWalletCredentialsListUseCase getWalletCredentialsListUseCase;
-  // Map<String, dynamic> content = {};
 
 
   ChatCoordinator({

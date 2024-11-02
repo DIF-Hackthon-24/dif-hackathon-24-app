@@ -12,7 +12,6 @@ class ChatNavigationHandler extends NoNetworkNavigationHandler {
       );
 
   void navigateToWalletCredentialExchange(String initialOffer) async{
-    print("navigator offer URL: $initialOffer");
     await NavigationManager.navigateTo(
       "${ModuleIdentifiers.global}-${GlobalRouteManager.walletCredentialExchange}",
       NavigationType.Replace,

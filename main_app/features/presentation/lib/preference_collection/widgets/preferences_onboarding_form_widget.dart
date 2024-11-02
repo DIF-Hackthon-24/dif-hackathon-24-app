@@ -62,7 +62,7 @@ Future<void> submitPreferences(Map<String, dynamic> preferences) async {
       'target': 'did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW',
     };
 
-    print('api call data: $data');
+    debugPrint('api call data: $data');
 
     // Make the API call
     try {
@@ -73,13 +73,13 @@ Future<void> submitPreferences(Map<String, dynamic> preferences) async {
       );
 
       if (response.statusCode == 200) {
-        print('Successfully submitted $label');
+        debugPrint('Successfully submitted $label');
 
       } else {
-        print('Failed to submit $label: ${response.statusCode}');
+        debugPrint('Failed to submit $label: ${response.statusCode}');
       }
     } catch (e) {
-      print('Error submitting $label: $e');
+      debugPrint('Error submitting $label: $e');
     }
   }
 }
@@ -165,7 +165,7 @@ class _PreferencesOnboardingInputFormWidgetState
                     child: TextFormField(
                       decoration: InputDecoration(
                         labelText: attribute['label'],
-                        border: OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                   );
@@ -178,7 +178,7 @@ class _PreferencesOnboardingInputFormWidgetState
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 8.0),
-                          child: Text(attribute['label'], style: TextStyle(
+                          child: Text(attribute['label'], style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold
                           )),
@@ -187,7 +187,7 @@ class _PreferencesOnboardingInputFormWidgetState
                           return Padding(
                             padding: const EdgeInsets.only(right: 8.0),
                             child: CheckboxListTile(
-                              title: Text(option, style: TextStyle(color: ColorConstants.COLOR_BLACK)),
+                              title: Text(option, style: const TextStyle(color: ColorConstants.COLOR_BLACK)),
                               value: checkboxValues[attribute['label']][option],
                               onChanged: (bool? value) {
                                 setState(() {
@@ -197,7 +197,7 @@ class _PreferencesOnboardingInputFormWidgetState
                               },
                               activeColor: ColorConstants.COLOR_BLACK, // Set active color to black
                               checkColor: Colors.white,
-                              side: BorderSide(color: ColorConstants.COLOR_BLACK, width: 2),
+                              side: const BorderSide(color: ColorConstants.COLOR_BLACK, width: 2),
                             ),
                           );
                         }).toList(),
@@ -208,7 +208,7 @@ class _PreferencesOnboardingInputFormWidgetState
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 8.0),
                       child: CheckboxListTile(
-                        title: Text(attribute['label'], style: TextStyle(color: ColorConstants.COLOR_BLACK, fontSize: 18,
+                        title: Text(attribute['label'], style: const TextStyle(color: ColorConstants.COLOR_BLACK, fontSize: 18,
                             fontWeight: FontWeight.bold)),
                         value: checkboxValues[attribute['label']],
                         onChanged: (bool? value) {
@@ -218,7 +218,7 @@ class _PreferencesOnboardingInputFormWidgetState
                         },
                         activeColor: ColorConstants.COLOR_BLACK, // Set active color to black
                         checkColor: Colors.white,
-                        side: BorderSide(color: ColorConstants.COLOR_BLACK, width: 2),
+                        side: const BorderSide(color: ColorConstants.COLOR_BLACK, width: 2),
                       ),
                     );
                   }
@@ -232,7 +232,7 @@ class _PreferencesOnboardingInputFormWidgetState
           ),
           ElevatedButton(
             onPressed: () {
-              print("Submit button pressed");
+              debugPrint("Submit button pressed");
               submitPreferences(checkboxValues);
               attributes.submitButtonPressed.call();
             },
@@ -246,87 +246,3 @@ class _PreferencesOnboardingInputFormWidgetState
     );
   }
 }
-
-
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   TextEditingController textEditingController = TextEditingController();
-  //   ScrollController scrollController = ScrollController();
-  //   return Padding(
-  //     padding: const EdgeInsets.only(
-  //       left: DimensionConstants.size20,
-  //       right: DimensionConstants.size20,
-  //     ),
-  //     child: Column(
-  //       children: [
-  //         Container(
-  //           height: DimensionConstants.size350,
-  //           decoration: BoxDecoration(
-  //             border: Border.all(
-  //               color: ColorConstants.COLOR_FF188006,
-  //               width: DimensionConstants.size1,
-  //             ),
-  //             borderRadius: const BorderRadius.all(
-  //               Radius.circular(DimensionConstants
-  //                   .size4), //                 <--- border radius here
-  //             ),
-  //           ),
-  //           child: attributes.offerRequestData == ''
-  //               ? QRCodeScanner(
-  //             attributes: QRCodeScannerAttributes(onQrDetect: (capture) {
-  //               final List<Barcode> barcodes = capture.barcodes;
-  //               for (final barcode in barcodes) {
-  //                 if (barcode.rawValue != '') {
-  //                   attributes
-  //                       .issueOfferRequestInputForm(barcode.rawValue!);
-  //                 }
-  //               }
-  //             }),
-  //           )
-  //               : Text(attributes.offerRequestData),
-  //         ),
-  //         // Container(
-  //         //   height: DimensionConstants.size180,
-  //         //   decoration: BoxDecoration(
-  //         //     border: Border.all(
-  //         //       color: ColorConstants.COLOR_FF188006,
-  //         //       width: DimensionConstants.size1,
-  //         //     ),
-  //         //     borderRadius: const BorderRadius.all(
-  //         //       Radius.circular(DimensionConstants
-  //         //           .size4), //                 <--- border radius here
-  //         //     ),
-  //         //   ),
-  //         //   child: Scrollbar(
-  //         //     controller: scrollController,
-  //         //     child: FormTextField(
-  //         //       maxLines: 6,
-  //         //       backgroundColor: ColorConstants.COLOR_52E0E0E0,
-  //         //       isRtl: true,
-  //         //       controller: textEditingController,
-  //         //       onSubmitted:
-  //         //       attributes.issueOfferRequestInputForm,
-  //         //       onChanged:
-  //         //       attributes.issueOfferRequestInputForm,
-  //         //       hint: "Please enter openid-credential-offer",
-  //         //     ),
-  //         //   ),
-  //         // ),
-  //         const SizedBox(
-  //           height: DimensionConstants.size20,
-  //         ),
-  //         ElevatedButton(
-  //           onPressed: () {
-  //             attributes.offerRequestData == ''
-  //                 ? null
-  //                 : attributes.submitButtonPressed.call();
-  //           },
-  //           child: const Text('Submit'),
-  //         ),
-  //
-  //       ],
-  //     ),
-  //   );
-  // }
-// }

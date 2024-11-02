@@ -8,13 +8,6 @@ import 'package:http/http.dart' as http;
 import 'package:presentation/chat/coordinator/chat_coordinator.dart';
 import 'dart:convert';
 
-
-// class PreferencesOnboardingInputFormAttributes{
-//   Function submitButtonPressed;
-//   PreferencesOnboardingInputFormAttributes(
-//       { required this.submitButtonPressed});
-// }
-
 class ChatMessage {
   final String text;
   final String? actionLabel;
@@ -34,7 +27,7 @@ class ChatMessage {
 Future<void> sendMessage({
   required String data,
 }) async {
-  final url = 'http://188.245.52.145:80/dwn/records/create';
+  const url = 'http://188.245.52.145:80/dwn/records/create';
   final response = await http.post(
     Uri.parse(url),
     headers: {'Content-Type': 'application/json'},
@@ -61,7 +54,7 @@ Future<void> sendMessage({
   );
 
   if (response.statusCode == 200) {
-    print('Record created successfully');
+    debugPrint('Record created successfully');
 
   } else {
     throw Exception('Failed to create record: ${response.body}');
@@ -84,17 +77,16 @@ class ChatMessageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("initialOffer ${message.initialOffer}");
     return Align(
       alignment: message.isSentByUser ? Alignment.centerRight : Alignment.centerLeft,
       child: InkWell(
         onTap: () {
           if (message.actionLabel == null) {
-            print("refetching!");
+            debugPrint("Refetching!");
             refetchMessages();
           }
           else {
-            print("No refetch, just clicked");
+            debugPrint("No refetch, just clicked");
           }
         },
         child:
@@ -132,28 +124,6 @@ class ChatMessageWidget extends StatelessWidget {
   }
 }
 
-// class ChatWidget extends StatelessWidget {
-//   // final PreferencesOnboardingInputFormAttributes attributes;
-//
-//   final List<ChatMessage> messages;
-//
-//   const ChatWidget({Key? key, required this.messages}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Chat'),
-//       ),
-//       body: ListView.builder(
-//         itemCount: messages.length,
-//         itemBuilder: (context, index) {
-//           return ChatMessageWidget(coordinator: coordinator, message: messages[index]);
-//         },
-//       ),
-//     );
-//   }
-// }
 
 
 

@@ -11,24 +11,16 @@ import 'package:network_manager/auth/i_auth_manager.dart';
 import 'package:network_manager/utils/connectivity/jwt_parser.dart';
 import 'package:shared_dependencies/base_usecase/enum_api_errors.dart';
 import 'package:shared_dependencies/config_manager/i_config_manager.dart';
-import 'package:shared_dependencies/constants/string_constants.dart';
 import 'package:shared_dependencies/data_providers/language_code_data_provider.dart';
 import 'package:shared_dependencies/data_providers/language_data_provider.dart';
 import 'package:shared_dependencies/error_manager/error_manager.dart';
 import 'package:shared_dependencies/navigation_handler/api_error_navigation_handler.dart';
-import 'package:shared_dependencies/widgets/send_report_overlay_notification/send_report_overlay_notification.dart';
-import 'package:shared_dependencies/widgets/send_report_overlay_notification/send_report_overlay_notification_attributes.dart';
 import 'package:task_manager/task.dart';
 import 'package:task_manager/task_manager_impl/task_manager_impl.dart';
-import 'package:widget_library/common_widget/theme/ps_theme.dart';
 
 class _Constants {
   static const String xOssToken = 'x-oss-token';
-  static const sendReportApiErrorTheme = 'send_report_api_error';
   static const String sendApiErrorReport = "send_api_error_report";
-  static const String adhaSendAPIErrorReportSuccessTitle = "adhaSendAPIErrorReportSuccessTitle";
-  static const String adhaSendAPIErrorReportSuccessDescription = "adhaSendAPIErrorReportSuccessDescription";
-  static const String adhaSendAPIErrorReportFailedTitle = "adhaSendAPIErrorReportFailedTitle";
   static const String adhaSendAPIErrorReportFailedDescription = "adhaSendAPIErrorReportFailedDescription";
   static const String SUPPORT_TEAM_EMAIL_ID_KEY = "SUPPORT_TEAM_EMAIL_ID";
   static const String SUPPORT_TEAM_EMAIL_ID = "<SUPPORT_TEAM_EMAIL_ID>";
@@ -364,86 +356,12 @@ abstract class BaseUseCase {
     bool isReport,
     String? restUrl,
   ) async {
-    /* final deviceId = await DeviceInfo.getDeviceId();
-    final traceId = await UUIDDataProviderImpl(
-      taskManager: _taskManager,
-      uuidManager: UUIDManagerImpl(
-        uuidClient: const Uuid(),
-      ),
-    ).getUuidFromSecureStorage();
-    String? newToken;
-    newToken = await DIContainer.container.resolve<IAuthManager>().getAccessToken();
-    var timestamp = DateTime.now().millisecondsSinceEpoch;
-    final packageInfo = await PackageInfo.fromPlatform();
-    final appVersion = '${packageInfo.version} (${packageInfo.buildNumber})';
-    var deviceType = '';
-    if (Platform.isAndroid) {
-      deviceType = 'android';
-    } else if (Platform.isIOS) {
-      deviceType = 'iOS';
-    }
-    var deviceDetail = await DeviceInfo.getAllDeviceIfno() ?? {'deviceType': deviceType};
-    try {
-      final result = await executeApiAndHandleErrors(
-        showErrorBottomSheet: false,
-        task: Task(
-          apiIdentifier: ServiceIdentifiers.sendAPIErrorReport,
-          subType: TaskSubType.REST,
-          taskType: TaskType.DATA_OPERATION,
-          parameters: SendAPIErrorReportServiceParams(
-            deviceId: deviceId,
-            traceId: traceId,
-            token: newToken ?? '',
-            statusCode: statusCode,
-            timestamp: '$timestamp',
-            appVersion: '$appVersion',
-            reference: '$reference',
-            errorCode: errorCode,
-            applicationNumber: "applicationNumber",
-            deviceType: deviceType,
-            response: response ?? '',
-            request: request ?? '',
-            deviceDetail: deviceDetail,
-            isReport: isReport,
-            restUrl: restUrl ?? '',
-          ),
-        ),
-      ) as SendAPIErrorReportResponseModel?;
-      if (result?.response != null) {
-        return result?.response ?? '';
-      }
-      return null;
-    } catch (e) {
-      PSLogger.logError(e.toString());
-      throw e;
-    } */
     return null;
   }
 
   void _sendReportShowSuccessNotification(
     Map<String, dynamic> sendApiErrorReport,
   ) async {
-    final successTitle = sendApiErrorReport[_Constants.adhaSendAPIErrorReportSuccessTitle] ?? '';
-    final successDescription = sendApiErrorReport[_Constants.adhaSendAPIErrorReportSuccessDescription] ?? '';
-    final key = await DIContainer.container.resolve<ILanguageCodeDataProvider>().getLanguageKey();
-    final isArabic = key == StringConstants.arabicKey;
-
-    Future.delayed(const Duration(milliseconds: 600), () {
-      SendReportOverlayNotification.showCustomNotifcation(
-        NavigationManager.navigatorKey.currentContext!,
-        attributes: SendReportOverlayNotificationAttributes(
-          title: successTitle,
-          isArabic: isArabic,
-          description: [
-            TextSpanAttributes(
-              text: successDescription,
-              style: PSTheme().themeFor(_Constants.sendReportApiErrorTheme).textTheme.headlineSmall!,
-            ),
-          ],
-          iconType: NotificationIcon.checkMark,
-        ),
-      );
-    });
   }
 
   void _sendReportShowUnsuccessNotification(
@@ -452,49 +370,9 @@ abstract class BaseUseCase {
     String supportOfficeMobile,
     String traceId,
   ) async {
-    final failedTitle = sendApiErrorReport[_Constants.adhaSendAPIErrorReportFailedTitle] ?? '';
     var failedDescription = sendApiErrorReport[_Constants.adhaSendAPIErrorReportFailedDescription] as String? ?? '';
-
-    String desc1 = failedDescription.split(_Constants.SUPPORT_TEAM_EMAIL_ID).first;
     failedDescription = failedDescription.split(_Constants.SUPPORT_TEAM_EMAIL_ID).last;
-
-    String desc2 = failedDescription.split(_Constants.SUPPORT_TEAM_MOBILE_NUMBER).first;
     failedDescription = failedDescription.split(_Constants.SUPPORT_TEAM_MOBILE_NUMBER).last;
 
-    final key = await DIContainer.container.resolve<ILanguageCodeDataProvider>().getLanguageKey();
-    final isArabic = key == StringConstants.arabicKey;
-
-    Future.delayed(const Duration(milliseconds: 600), () {
-      SendReportOverlayNotification.showCustomNotifcation(
-        NavigationManager.navigatorKey.currentContext!,
-        attributes: SendReportOverlayNotificationAttributes(
-          title: failedTitle,
-          isArabic: isArabic,
-          description: [
-            TextSpanAttributes(
-              text: desc1,
-              style: PSTheme().themeFor(_Constants.sendReportApiErrorTheme).textTheme.headlineSmall!,
-            ),
-            TextSpanAttributes(
-              text: supportOfficeAddress,
-              style: PSTheme().themeFor(_Constants.sendReportApiErrorTheme).textTheme.titleLarge!,
-            ),
-            TextSpanAttributes(
-              text: desc2,
-              style: PSTheme().themeFor(_Constants.sendReportApiErrorTheme).textTheme.headlineSmall!,
-            ),
-            TextSpanAttributes(
-              text: supportOfficeMobile,
-              style: PSTheme().themeFor(_Constants.sendReportApiErrorTheme).textTheme.titleLarge!,
-            ),
-             TextSpanAttributes(
-              text: failedDescription,
-              style: PSTheme().themeFor(_Constants.sendReportApiErrorTheme).textTheme.headlineSmall!,
-            ),
-          ],
-          iconType: NotificationIcon.warning,
-        ),
-      );
-    });
   }
 }

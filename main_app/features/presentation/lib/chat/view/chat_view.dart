@@ -25,7 +25,7 @@ String extractAuthor(Map<String, dynamic> auth) {
 Future<void> sendMessage({
   required String data,
 }) async {
-  final url = 'http://188.245.52.145:80/dwn/records/create';
+  const url = 'http://188.245.52.145:80/dwn/records/create';
   final response = await http.post(
     Uri.parse(url),
     headers: {'Content-Type': 'application/json'},
@@ -52,7 +52,7 @@ Future<void> sendMessage({
   );
 
   if (response.statusCode == 200) {
-    print('Record created successfully');
+    debugPrint('Record created successfully');
 
   } else {
     throw Exception('Failed to create record: ${response.body}');
@@ -89,7 +89,7 @@ class _ChatViewState extends State<ChatView> {
   }
 
   Future<List<ChatMessage>> fetchChatMessages() async {
-    print("fetching chat messages");
+    debugPrint("fetching chat messages");
     final url = 'http://188.245.52.145:80/dwn/records/query';
     final response = await http.post(
       Uri.parse(url),
@@ -114,14 +114,14 @@ class _ChatViewState extends State<ChatView> {
     );
     if (response.statusCode == 200) {
       final List<dynamic> data = jsonDecode(response.body);
-      print("data: ${data}");
+      debugPrint("data: ${data}");
       return data.map((item) => ChatMessage(
         text: item['encodedData']['title'],
         actionLabel: item['encodedData']['action'],
         isSentByUser: extractAuthor(item['authorization']) == "did:key:z6Mkkq7UNpMq9cdYoC5bqG2C4reWkPTgwDzKqBy1Y8utc4gW",
         initialOffer: item['encodedData']['initialOffer'],
         onActionPressed: () async {
-          print("action pressed");
+          debugPrint("action pressed");
           if (item['encodedData']['action'] == "Start check-in") {
             await sendMessageAndFetchMessages();
           }

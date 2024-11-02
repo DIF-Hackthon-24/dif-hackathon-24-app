@@ -8,7 +8,6 @@ import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:presentation/credential_exchange/navigation_handler/wallet_credentials_list_navigation_handler.dart';
 import 'package:presentation/credential_exchange/state/wallet_credentials_offer_request_state.dart';
-import 'package:http/http.dart' as http;
 
 class _Constants {
   static const issuanceRequests = 'issuancerequests';
@@ -40,7 +39,7 @@ class WalletCredentialsOfferRequestCoordinator
 
   Future<void> submitCredentialsExchangeRequest() async {
     var offerRequest = state.getCredentialsOfferRequestData;
-    print(offerRequest);
+    debugPrint(offerRequest);
 
     List<WalletCredentialListEntity>? postCredentialsExchangeRequest = [];
 
@@ -50,7 +49,7 @@ class WalletCredentialsOfferRequestCoordinator
               .postWalletCredentialOfferRequest(offerRequest, false);
 
       if (postCredentialsExchangeRequest!.isNotEmpty) {
-        print("request result ${postCredentialsExchangeRequest}");
+        debugPrint("request result ${postCredentialsExchangeRequest}");
         showSessionExpiredToast(
             "The requested Credentials has been issued successfully");
         navigationHandler.navigateToSplash();
