@@ -8,10 +8,10 @@ import 'package:data/remote_data_source/wallet_credentials_list/model/wallet_cre
 import 'package:data/remote_data_source/wallet_credentials_list/model/wallet_credentials_list_response_model.dart';
 import 'package:data/remote_data_source/wallet_credentials_list/service/wallet_credentials_list_service.dart';
 import 'package:network_manager/auth/i_auth_manager.dart';
-import 'package:shared_dependencies/nfc/nfc.dart';
 import 'package:shared_dependencies/service_identifiers.dart';
 import 'package:task_manager/task.dart';
 import 'package:task_manager/task_manager.dart';
+import 'package:shared_dependencies/nfc/swiss_safe_lock_nfc.dart';
 
 class GetWalletCredentialListRemoteDataSource extends BaseRemoteDataSource
     implements IGetWalletCredentialListRemoteDataSource {
@@ -36,7 +36,7 @@ class GetWalletCredentialListRemoteDataSource extends BaseRemoteDataSource
       // final encryption = DIContainer.container.resolve<IEncryption>();
       // final encryptedData = encryption.encrypt(jsonEncode(result.restResponse)) ;
       // await storeWalletCredKey(encryptedData);
-      NfcService().decodeWalletCredentials(result.restResponse!);
+      SwissSafeLockNfc().updateCredentialsList(result.restResponse!);
       return WalletCredentialListModel.fromJson(result.restResponse!);
     }
     return null;

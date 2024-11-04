@@ -6,7 +6,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:main_app/splash/navigation_handler/splash_navigation_handler.dart';
 import 'package:main_app/splash/state/splash_view_state.dart';
 import 'package:shared_dependencies/data_providers/language_data_provider.dart';
-import 'package:shared_dependencies/nfc/nfc.dart';
+import 'package:shared_dependencies/nfc/swiss_safe_lock_nfc.dart';
 
 class SplashCoordinator extends BaseCoordinator<SplashViewState> {
   final ILanguageDataProvider languageDataProvider;
@@ -63,21 +63,7 @@ class SplashCoordinator extends BaseCoordinator<SplashViewState> {
   void onConfigRetry() async {}
 
   Future<void> onNFCReader() async {
-    try {
-      NfcService nfcService = NfcService();
-      _showSessionExpiredToast("NFC: Scanning ...");
-      String request = await nfcService.readNfc();
-      _showSessionExpiredToast('NFC: Requested $request');
-      String credential = nfcService.credential(request);
-      if (credential.isEmpty) {
-        _showSessionExpiredToast('NFC: No key for $request');
-      } else {
-        await nfcService.writeNfc(credential);
-        _showSessionExpiredToast('NFC: Sent $request');
-      }
-    } catch (e) {
-      _showSessionExpiredToast('NFC error: $e');
-    }
+    SwissSafeLockNfc().scanToggle();
   }
 
   void _showSessionExpiredToast(String message) {
