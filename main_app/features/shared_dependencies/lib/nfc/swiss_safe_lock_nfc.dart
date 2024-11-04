@@ -38,7 +38,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SwissSafeLockNfc {
   static final String _BANNER =
-      "╔═══════════════╗\n║   Swiss Safe Lock NFC  ║\n╚═══════════════╝\n\n";
+      "╔══════════╗\n║ Swiss Safe Lock NFC ║\n╚══════════╝\n\n";
 
   static final bool _DIAGNOSTIC_MODE = false;
 
