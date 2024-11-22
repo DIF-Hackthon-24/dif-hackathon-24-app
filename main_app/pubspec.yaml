@@ -34,8 +34,6 @@ flutter:
     - assets/
     - assets/images/
     - assets/icons/
-    - assets/animations/
-    - assets/video/
 
 dependencies:
   json_annotation: ^4.8.1

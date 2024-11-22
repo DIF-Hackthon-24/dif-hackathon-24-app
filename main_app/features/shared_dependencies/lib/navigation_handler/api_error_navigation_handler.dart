@@ -32,7 +32,7 @@ class _Constants {
   static const ok = 'Ok';
   static const warningSymbol = 'assets/images/warning_symbol.svg';
   static const String EXEMPTION_NO_ACTIVE_APPLICATION_ERROR_CODE = 'DHP-MS-62-404';
-  static const String exemptionContent = 'adhaExemptionServicesSubmitConfirmationContent';
+  static const String exemptionContent = 'hackExemptionServicesSubmitConfirmationContent';
   static const String noActiveApplicationDescription = 'exemptionNoActiveApplicationDescription';
 }
 
@@ -74,7 +74,7 @@ class ApiErrorNavigationHandler extends NoNetworkNavigationHandler implements IA
   void showApiError(String message, String statusCode,
       {bool sendReportEnable = false, String errorCode = '', Function()? sendReportOnTap,bool? dismissCurrentScreen}) async {
     var data = await languageDataProvider.readFromLanguageFile();
-    final errorBtnTitle = data[StringConstants.dictionary]['adhaOKBtnLabel'] ?? '';
+    final errorBtnTitle = data[StringConstants.dictionary]['hackOKBtnLabel'] ?? '';
     //var _configManager = DIContainer.container.resolve<IConfigManager>();
     final key = await codeDataProviderImpl.getLanguageKey();
     //var configData = await _configManager.retrieveConfigData();
@@ -83,7 +83,7 @@ class ApiErrorNavigationHandler extends NoNetworkNavigationHandler implements IA
     Function()? primaryButtonOnTap;
     if (sendReportEnable) {
       primaryCtaEnabled = true;
-      primaryCTAText = data[StringConstants.dictionary]['adhaSendReport'] ?? '';
+      primaryCTAText = data[StringConstants.dictionary]['hackSendReport'] ?? '';
       primaryButtonOnTap = sendReportOnTap;
     }
 

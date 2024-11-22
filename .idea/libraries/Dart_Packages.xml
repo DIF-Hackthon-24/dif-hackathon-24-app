@@ -197,7 +197,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+5/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17/lib" />
             </list>
           </value>
@@ -272,8 +272,8 @@
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/connectivity_plus-5.0.2/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/connectivity_plus-6.1.0/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/connectivity_plus-6.0.5/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/connectivity_plus-6.0.3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/connectivity_plus-6.0.5/lib" />
             </list>
           </value>
         </entry>
@@ -322,13 +322,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/csslib-0.17.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="cupertino_icons">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
             </list>
           </value>
         </entry>
@@ -396,6 +389,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/equatable-2.0.5/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/equatable-2.0.7/lib" />
             </list>
           </value>
         </entry>
@@ -668,7 +662,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.10+1/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.11/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.15/lib" />
             </list>
           </value>
         </entry>
@@ -748,6 +742,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/gql-1.0.1-alpha+1717789143880/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/gql-1.0.1-alpha+1730759315362/lib" />
             </list>
           </value>
         </entry>
@@ -783,6 +778,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/gql_link-1.0.1-alpha+1717789143896/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/gql_link-1.0.1-alpha+1730759315378/lib" />
             </list>
           </value>
         </entry>
@@ -941,6 +937,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.8.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.9.0/lib" />
             </list>
           </value>
         </entry>
@@ -1039,6 +1036,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logger-2.4.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logger-2.5.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logger-2.3.0/lib" />
             </list>
           </value>
@@ -1070,7 +1068,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.5.0/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.6.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.6.1/lib" />
             </list>
           </value>
         </entry>
@@ -1187,7 +1185,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.0.2/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.1.1/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.0.0/lib" />
             </list>
           </value>
@@ -1416,6 +1414,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.3.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.3.3/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.2.3/lib" />
             </list>
           </value>
@@ -1516,6 +1515,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sms_autofill-2.4.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sms_autofill-2.4.1/lib" />
             </list>
           </value>
         </entry>
@@ -1551,7 +1551,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite-2.3.3+1/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite-2.4.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite-2.4.1/lib" />
             </list>
           </value>
         </entry>
@@ -1566,14 +1566,14 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_common-2.5.4/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_common-2.5.4+5/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_common-2.5.4+6/lib" />
             </list>
           </value>
         </entry>
         <entry key="sqflite_darwin">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.1-1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.1/lib" />
             </list>
           </value>
         </entry>
@@ -1726,6 +1726,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.1/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_linux-3.1.1/lib" />
             </list>
           </value>
@@ -1775,7 +1776,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics-1.1.11+1/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics-1.1.12/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics-1.1.15/lib" />
             </list>
           </value>
         </entry>
@@ -1791,7 +1792,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.11+1/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.12/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.15/lib" />
             </list>
           </value>
         </entry>
@@ -1904,8 +1905,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-1.1.0/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-1.0.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.5.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-1.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -1920,7 +1921,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter-4.8.0/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter-4.9.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter-4.10.0/lib" />
             </list>
           </value>
         </entry>
@@ -1928,7 +1929,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.8/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.9/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-4.1.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.7/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.4/lib" />
             </list>
@@ -1945,7 +1946,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.14.0/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.16.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.16.2/lib" />
             </list>
           </value>
         </entry>
@@ -1953,7 +1954,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.5.5/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.7.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.8.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.5.4/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.5.1/lib" />
             </list>
@@ -1985,7 +1986,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.1.5/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.2.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.2.1/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.1.3/lib" />
             </list>
           </value>
@@ -1994,7 +1995,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.0.3/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.1.1/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.0.2/lib" />
             </list>
           </value>
@@ -2043,7 +2044,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_android-0.10.9+16/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_android-0.10.9+8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_platform_interface-2.8.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/camera_web-0.3.4/lib" />
@@ -2072,7 +2073,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/csslib-0.17.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.7/lib" />
@@ -2086,6 +2086,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dynamic_color-1.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/encrypt-5.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/equatable-2.0.5/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/equatable-2.0.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/extended_image-8.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/extended_image-8.3.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/extended_image_library-4.0.5/lib" />
@@ -2134,7 +2135,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_slidable-3.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.10+1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.11/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.15/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_swipe_button-2.1.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fluttertoast-8.2.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fluttertoast-8.2.8/lib" />
@@ -2146,11 +2147,13 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/glob-2.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/golden_toolkit-0.15.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql-1.0.1-alpha+1717789143880/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql-1.0.1-alpha+1730759315362/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql_dedupe_link-2.0.4-alpha+1715521079596/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql_error_link-1.0.0+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql_exec-1.1.1-alpha+1699813812660/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql_http_link-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql_link-1.0.1-alpha+1717789143896/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql_link-1.0.1-alpha+1730759315378/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gql_transform_link-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/gradient_borders-1.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/graphql-5.2.0-beta.8/lib" />
@@ -2177,6 +2180,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.6.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.9.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.8.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_serializable-6.9.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/jwt_decoder-2.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/kiwi-4.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/leak_tracker-10.0.5/lib" />
@@ -2198,13 +2202,14 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/local_auth_windows-1.0.11/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logger-2.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logger-2.4.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logger-2.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lottie-2.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_ui-2.0.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_ui-2.0.9/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.5.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.6.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macos_window_utils-1.6.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/macros-0.1.2-main.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1/lib" />
@@ -2226,7 +2231,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_config-2.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.0.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.1.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus-8.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus_platform_interface-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_info_plus_platform_interface-3.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.9.0/lib" />
@@ -2269,6 +2274,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.27.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.2.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.3.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.3.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.2.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.3.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.3.3/lib" />
@@ -2289,16 +2295,17 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/simple_gesture_detector-0.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sliver_tools-0.2.12/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sms_autofill-2.4.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sms_autofill-2.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_gen-1.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_helper-1.3.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.10.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sprintf-7.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite-2.3.3+1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite-2.4.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite-2.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_android-2.4.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_common-2.5.4+5/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_common-2.5.4+6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_common-2.5.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.1-1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_platform_interface-2.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/state_notifier-1.0.0/lib" />
@@ -2326,6 +2333,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_linux-3.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_platform_interface-2.3.2/lib" />
@@ -2338,11 +2346,11 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/uuid-4.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/uuid-4.5.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics-1.1.11+1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics-1.1.12/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics-1.1.15/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.11+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.12/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.11+1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.12/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.15/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/video_player-2.9.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/video_player_android-2.7.1/lib" />
@@ -2362,29 +2370,29 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter-4.10.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter-4.8.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter-4.9.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.8/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.9/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-4.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_platform_interface-2.10.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.14.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.16.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.16.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.5.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.5.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.5.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.7.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.8.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.0.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xml-6.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.1.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.1.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.2.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe-5.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.0.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.1.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_iframe_web-3.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../../../flutter/bin/cache/dart-sdk/pkg/_macros/lib" />
       <root url="file://$PROJECT_DIR$/../../../../flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../../../../flutter/packages/flutter/lib" />

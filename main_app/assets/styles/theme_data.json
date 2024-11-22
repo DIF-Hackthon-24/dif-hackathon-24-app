@@ -15,7 +15,7 @@
     "panelColorSecondary": "0xFFF4F4F0",
     "panelColorTertiary": "0xFFFCF2EF"
   },
-  "screens": [
+  "screens":[
     {
       "screenName": "default",
       "primaryColor": "0xFF0F1A38",

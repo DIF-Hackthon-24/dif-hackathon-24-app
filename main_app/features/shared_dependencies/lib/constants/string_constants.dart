@@ -12,8 +12,8 @@ class StringConstants {
 
   /// image paths
   static const String logoPath = "assets/login_logo.png";
-  static const String govOfAdhaLogoPath = "assets/gov_of_adha_logo.svg";
-  static const String govOfAdhaUAEPassLogoPath = "assets/gov_of_adha_uae_logo.svg";
+  static const String govOfhackLogoPath = "assets/gov_of_hack_logo.svg";
+  static const String govOfhackUAEPassLogoPath = "assets/gov_of_hack_uae_logo.svg";
 
   /// localisation attribute
   static const String languageFileName = "lang";
